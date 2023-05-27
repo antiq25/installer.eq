@@ -35,7 +35,7 @@ sleep 1
 
 #Run Helper
 
-exec ~/.local/bin/helper
+make ~/.config/sketchybar/helper/helper
 
 echo "helper initialized.."
 
