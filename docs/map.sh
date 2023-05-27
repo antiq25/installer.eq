@@ -42,8 +42,13 @@ To generate a key for a specific `/bin/`, follow these steps:
 ## Checking Secure Input
 ─────────────────────────────────────
 
-To check for Secure Input, run the following command:
+##To check for Secure Input, run the following command:
 ioreg -l -w 0 | grep SecureInput
+
+
+##restore all permissions
+tcutil reset All
+
 
 ## Flags
 ─────────────────────────────────────
