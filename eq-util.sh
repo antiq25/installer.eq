@@ -26,7 +26,7 @@ execute_script() {
       ;;
     "Restart Config")
       echo "Restarting Config..."
-      cd ~/installer.eq/mtn && ./execute.py
+      cd ~/installer.eq/mtn/restart.sh
       ;;
     "Cheat Sheet")
      echo "Opening Cheat Sheet.. you can also type 'flagz' to view."
