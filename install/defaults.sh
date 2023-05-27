@@ -1,4 +1,4 @@
-#!/bin/bash 
+#!/bin/bash
 
 
 sudo -v
@@ -330,7 +330,7 @@ defaults write com.apple.dock largesize -int 48
 
     echo "Reloading plist changes..."
     /System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
-    
+
 
 
 # Restart affected apps
@@ -341,9 +341,23 @@ curl -L https://github.com/kvndrsslr/sketchybar-app-font/releases/download/v1.0.
 
 sudo mv ~/.fonts/* ~/Library/Fonts/
 
+read -p "Do you want to install unixporn wallpapers? (yes/no): " response
 
+if [[ "$response" == "yes" ]]; then
+    echo "Downloading Wallpapers...."
 git clone https://github.com/BitterSweetcandyshop/wallpapers
-
+elif [[ "$response" == "no" ]]; then
+    echo "You chose 'no'."
+echo "INSTALLATION COMPLETE!!"
+    # Perform the desired action when the user chooses 'no'
+else
+    echo "Invalid response. Please enter 'yes' or 'no'."
+fi
 
 echo "INSTALLATION COMPLETE!!"
+
+
+
+
+
 

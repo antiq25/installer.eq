@@ -6,11 +6,11 @@ execute_script() {
   case "$script_name" in
     "Prepare Installer")
       echo "Preparing Installer"
-      sh ~/installer/install/installbrew.sh
+      sh ~/installer.eq/install/installbrew.sh
       ;;
     "Run Installer")
       echo "Running Installer.."
-      sh ~/installer/docs/brewinstaller.sh
+      sh ~/installer.eq/docs/brewinstaller.sh
       ;;
     "Coming Soon..")
       echo "Running Script 3..."
@@ -18,19 +18,19 @@ execute_script() {
       ;;
     "Cleaner")
       echo "Running Cleaner..."
-      sh ~/installer/mtn/cleaner.sh
+      sh ~/installer.eq/mtn/cleaner.sh
       ;;
     "Debloater")
       echo "Running Debloater..."
-      sh ~/installer/utils/macos.sh
+      sh ~/installer.eq/utils/macos.sh
       ;;
     "Restart Config")
       echo "Restarting Config..."
-      cd ~/installer/mtn && ./execute.py
+      cd ~/installer.eq/mtn && ./execute.py
       ;;
     "Cheat Sheet")
      echo "Opening Cheat Sheet.. you can also type 'flagz' to view."
-     sh ~/installer/docs/script1.sh
+     sh ~/installer.eq/docs/script1.sh
      ;;
     *)
       echo "Invalid script: $script_name"
