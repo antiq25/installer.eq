@@ -11,10 +11,14 @@ execute_script() {
     "Run Installer")
       echo "Running Installer.."
       sh ~/installer/docs/brewin.sh
-      ;; 
+      ;;
+    "Coming Soon..")
+      echo "Running Script 3..."
+      # Add your script execution command here
+      ;;
     "Cleaner")
       echo "Running Cleaner..."
-      sh ~/installer/mtn/testclean.sh
+      sh ~/installer/mtn/cleaner.sh
       ;;
     "Debloater")
       echo "Running Debloater..."
@@ -46,8 +50,9 @@ display_menu() {
     "Exit"
     "Prepare Installer"
     "Run Installer"
-    "Documentation"
+    "Coming Soon"
     "Performance Menu"
+    "Documentation"
   )
   for i in "${!options[@]}"; do
     echo "$((i)). ${options[$i]}"
@@ -114,7 +119,7 @@ while true; do
       previous_menu=""
     fi
     ;;
-  [1-2]) # Execute script or Return to previous menu
+  [1-3]) # Execute script or Return to previous menu
     if [[ $previous_menu == "" ]]; then
       script_name="${options[$input]}"
       execute_script "$script_name"
