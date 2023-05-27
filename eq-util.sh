@@ -18,7 +18,7 @@ execute_script() {
       ;;
     "Cleaner")
       echo "Running Cleaner..."
-      sh ~/installer.eq/mtn/cleaner.sh
+      sh ~/installer.eq/mtn/testclean.sh
       ;;
     "Debloater")
       echo "Running Debloater..."

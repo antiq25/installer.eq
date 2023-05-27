@@ -20,8 +20,8 @@ spinner()
 }
 
 # Define color codes
-YELLOW=$(tput setaf 3)
-GREEN=$(tput setaf 2)
+YELLOW=$(tput setaf 2)
+GREEN=$(tput setaf 4)
 RESET=$(tput sgr0)
 
 # Define cleanup tasks
@@ -71,8 +71,8 @@ declare -a commands=("sudo diskutil unmount force /Volumes/*"
 
 # Loop over each task and run corresponding command
 for i in "${!tasks[@]}"; do
-    echo -e "${tasks[$i]}"
-    echo -e "${GREEN}Running command: ${commands[$i]}${RESET}"
+    echo  "${tasks[$i]}"
+    echo  "${GREEN}Running command: ${commands[$i]}${RESET}"
     ( ${commands[$i]} &>/dev/null ) & spinner $!
     echo
 done
