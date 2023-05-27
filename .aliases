@@ -126,10 +126,10 @@ alias reload="exec ${SHELL} -l"
 alias path='echo -e ${PATH//:/\\n}'
 
 #skhd binds
-alias eckoss="sh ~/installer/docs/binds.sh"
+alias eckoss="sh ~/installer.eq/docs/binds.sh"
 
 #important informatino
-alias flag1="sh ~/installer/docs/map.sh"
+alias flag1="sh ~/installer.eq/docs/map.sh"
 
 #config
 alias cfgz="~/.config"
