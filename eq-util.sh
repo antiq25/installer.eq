@@ -10,7 +10,7 @@ execute_script() {
       ;;
     "Run Installer")
       echo "Running Installer.."
-      sh ~/installer/docs/brewin.sh
+      sh ~/installer/docs/brewinstaller.sh
       ;;
     "Coming Soon..")
       echo "Running Script 3..."

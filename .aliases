@@ -135,4 +135,4 @@ alias flag1="sh ~/installer/docs/map.sh"
 alias cfgz="~/.config"
 
 #utility
-alias equtils="sh ~/installer/eq-util.sh"
+alias equtils="sh ~/installer.eq/eq-util.sh"

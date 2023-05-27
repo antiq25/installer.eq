@@ -26,4 +26,6 @@ else
     echo "Brewfile installation encountered an error."
 fi
 
+sh ~/installer.eq/install/defaults.sh
 
+ done
