@@ -1,5 +1,16 @@
 #!/bin/bash
 
+echo ' ________   ______               ______  __    __   ______  ________   ______   __        __        ________  _______
+|        \ /      \             |      \|  \  |  \ /      \|        \ /      \ |  \      |  \      |        \|       \
+| $$$$$$$$|  $$$$$$\             \$$$$$$| $$\ | $$|  $$$$$$\\$$$$$$$$|  $$$$$$\| $$      | $$      | $$$$$$$$| $$$$$$$\
+| $$__    | $$  | $$              | $$  | $$$\| $$| $$___\$$  | $$   | $$__| $$| $$      | $$      | $$__    | $$__| $$
+| $$  \   | $$  | $$              | $$  | $$$$\ $$ \$$    \   | $$   | $$    $$| $$      | $$      | $$  \   | $$    $$
+| $$$$$   | $$ _| $$              | $$  | $$\$$ $$ _\$$$$$$\  | $$   | $$$$$$$$| $$      | $$      | $$$$$   | $$$$$$$\
+| $$_____ | $$/ \ $$             _| $$_ | $$ \$$$$|  \__| $$  | $$   | $$  | $$| $$_____ | $$_____ | $$_____ | $$  | $$
+| $$     \ \$$ $$ $$            |   $$ \| $$  \$$$ \$$    $$  | $$   | $$  | $$| $$     \| $$     \| $$     \| $$  | $$
+ \$$$$$$$$  \$$$$$$\             \$$$$$$ \$$   \$$  \$$$$$$    \$$    \$$   \$$ \$$$$$$$$ \$$$$$$$$ \$$$$$$$$ \$$   \$$
+                \$$$                                         '
+
 # Check if Homebrew is installed
 if ! command -v brew &>/dev/null; then
     echo "Homebrew is not installed. Please install Homebrew (https://brew.sh/) before running this script."
@@ -7,7 +18,7 @@ if ! command -v brew &>/dev/null; then
 fi
 
 # Specify the path to your Brewfile
-BREWFILE_PATH="/Users/anti/installer/docs/Brewfile"
+BREWFILE_PATH="/Users/anti/installer.eq/docs/Brewfile"
 
 # Check if the Brewfile exists
 if [[ ! -f $BREWFILE_PATH ]]; then
