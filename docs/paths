@@ -1,0 +1,107 @@
+
+SHA Keys
+
+
+Yabai
+
+this generates the key
+
+shasum -a 256 $(which yabai) | awk '{print $1}'
+
+-- this gives you the access to write the key into source --
+
+sudo visudo -f /private/etc/sudoers.d/yabai
+
+-- this executes it --
+
+anti ALL = (root) NOPASSWD: sha256:[enterkeyhere] /opt/homebrew/bin/yabai --load-sa
+
+
+--remove secure keyboard entry -- (skhd)
+ioreg -l -w 0 | grep SecureInput
+
+
+
+-- FLAGS--
+
+-- For compilers to find zlib you may need to set: --
+  export LDFLAGS="-L/opt/homebrew/opt/zlib/lib"
+  export CPPFLAGS="-I/opt/homebrew/opt/zlib/include"
+  export PKG_CONFIG_PATH="/opt/homebrew/opt/zlib/lib/pkgconfig"
+
+
+--build kitty from source--
+
+export CFLAGS="-I/opt/homebrew/Cellar/librsync/2.3.4/include"
+export LDFLAGS="-L/opt/homebrew/Cellar/librsync/2.3.4/lib"
+export LD_LIBRARY_PATH="/opt/homebrew/Cellar/librsync/2.3.4/lib:$LD_LIBRARY_PATH"
+
+--and then--
+
+python3 -m pip install -r docs/requirements.txt && make docs
+
+--and then--
+make app
+
+
+--install vulkan from root--
+
+// Install Vulkan
+sudo ./InstallVulkan.app/Contents/MacOS/InstallVulkan --root ~/VulkanSDK/1.2.176.1 --accept-licenses --default-answer --confirm-command install com.lunarg.vulkan.core com.lunarg.vulkan.usr com.lunarg.vulkan.sdl2 com.lunarg.vulkan.glm com.lunarg.vulkan.volk com.lunarg.vulkan.vma
+
+
+//BISON
+
+export LDFLAGS="-L/opt/homebrew/opt/bison/lib"
+echo 'export PATH="/opt/homebrew/opt/bison/bin:$PATH"' >> ~/.zshrc
+
+
+
+//IMAGEMAGICK
+If you need to have imagemagick@6 first in your PATH, run:
+  echo 'export PATH="/opt/homebrew/opt/imagemagick@6/bin:$PATH"' >> ~/.zshrc
+
+For compilers to find imagemagick@6 you may need to set:
+  export LDFLAGS="-L/opt/homebrew/opt/imagemagick@6/lib"
+  export CPPFLAGS="-I/opt/homebrew/opt/imagemagick@6/include"
+  export PKG_CONFIG_PATH="/opt/homebrew/opt/imagemagick@6/lib/pkgconfig"
+
+
+
+//LLVM
+ echo 'export PATH="/opt/homebrew/opt/llvm/bin:$PATH"' >> ~/.zshrc
+For compilers to find llvm you may need to set:
+  export LDFLAGS="-L/opt/homebrew/opt/llvm/lib"
+  export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"
+
+
+//VULKAN
+
+export VK_ICD_FILENAMES=/opt/homebrew/opt/vulkan-tools/lib/mock_icd/VkICD_mock_icd.json
+export VK_ICD_FILENAMES=/opt/homebrew/opt/vulkan-tools/lib/mock_icd/VkICD_mock_icd.json
+export VK_LAYER_PATH=/opt/homebrew/opt/vulkan-extensionlayer/share/vulkan/explicit_layer.d
+export VK_LAYER_PATH=/opt/homebrew/opt/vulkan-extensionlayer/share/vulkan/explicit_layer.d
+
+
+// LIB CLC
+
+export PKG_CONFIG_PATH="/opt/homebrew/opt/opencl-clhpp-headers/share/pkgconfig"
+export CPPFLAGS="-I/opt/homebrew/opt/opencl-clhpp-headers/include"
+export CPPFLAGS="-I/opt/homebrew/opt/opencl-clhpp-headers/include"
+
+-- GITS --
+
+git clone https://github.com/kovidgoyal/kitty
+git clone https://github.com/FelixKratz/dotfiles
+git clone https://github.com/LinusDierheimer/fastfetch
+
+
+-- KEYS --
+Cleanshot X
+ZOKSZFMI-RX1G0AGT-FLXPGIQS-IXMLIMIW
+Sound Souce
+ZLAT-YY9Z-QQMA-46YM-DYCJ-JAJN-GUV3-FZCY-3H4V
+Active Dock2
+GWU2-N6H7-8WSK-57ZD
+
+

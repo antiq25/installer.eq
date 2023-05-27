@@ -1,0 +1,16 @@
+## At beginning of Install , restart mac and type csrutil disable in terminal.
+
+restart 
+
+# open terminal and run #
+
+sudo nvram boot-args=-arm64e_preview_abi
+
+
+
+
+
+
+
+
+
