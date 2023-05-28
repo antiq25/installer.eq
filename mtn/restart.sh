@@ -3,16 +3,22 @@
 echo "Running Refresh Script.. please wait.."
 sleep 1
 
+echo "Restarting Brew Files"
+
+brew services restart --all
+
+wait 2
+
 #Reset NVRAM + Cache
 sh ~/installer.eq/mtn/testclean.sh
-
-# Set boot args
-sudo nvram boot-args=-arm64e_preview_abi
-
 # Wait for 2 seconds
 echo "Waiting..."
 sleep 2
 
+
+sudo nvram boot-args=-arm64e_preview_abi
+
+sleep 1
 # Run yabairc script
 sh ~/.config/yabai/yabairc
 echo "yabairc CONFIG LOADED COMPLETE"
@@ -43,11 +49,5 @@ sleep 2
 
 ioreg -l -w 0 | grep SecureInput
 
-
-echo "Restarting Brew Files"
-
-brew services restart --all
-
-# Done!
 echo "Complete!"
 

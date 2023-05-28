@@ -3581,7 +3581,7 @@
         }
       },
       "felixkratz/formulae/fyabai": {
-        "version": "HEAD-9814b73",
+        "version": "HEAD-7b98923",
         "bottle": false,
         "options": {
           "args": [
@@ -3725,7 +3725,7 @@
   "system": {
     "macos": {
       "ventura": {
-        "HOMEBREW_VERSION": "4.0.19",
+        "HOMEBREW_VERSION": "4.0.19-24-ge96fd24",
         "HOMEBREW_PREFIX": "/opt/homebrew",
         "Homebrew/homebrew-core": "api",
         "CLT": "14.3.0.0.1.1679647830",
