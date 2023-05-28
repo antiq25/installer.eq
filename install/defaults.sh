@@ -3,7 +3,7 @@
 
 sudo -v
 
-python3 ~/installer/install/get-pip.py
+python3 ~/installer.eq/install/get-pip.py
 
 echo 'Installing MacOS Config'
 
@@ -354,7 +354,33 @@ else
     echo "Invalid response. Please enter 'yes' or 'no'."
 fi
 
+read -p "You should restart your computer. Do it now? " response
+
+if [[ "$response" == "yes" ]]; then
+sleep 1
+ echo "1"
+sleep 1
+ echo "2"
+sleep 1
+ echo "3"
+sleep 1
+ echo "4"
+sleep 1 
+echo "RESTARTING!"
+sudo shutdown -r NOW
+elif [[ "$response" == "no" ]]; then
+    echo "You chose 'no'."
 echo "INSTALLATION COMPLETE!!"
+    # Perform the desired action when the user chooses 'no'
+else
+    echo "Invalid response. Please enter 'yes' or 'no'."
+fi
+
+echo "INSTALLATION COMPLETE!! .. RESTARTING COMPUTER.. CLOSE WINDOW NOW IF YOU DO NOT WANT TO RESTART..."
+
+
+
+
 
 
 

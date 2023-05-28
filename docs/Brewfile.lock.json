@@ -8,10 +8,10 @@
         "revision": "ab014794c2dc14b1179de68f960479d898c5bc22"
       },
       "homebrew/cask-fonts": {
-        "revision": "53827c9e916a512548225119b227a38897fdc257"
+        "revision": "5036c3d8801a6d2c06a3b8c3f66c7e876b215b24"
       },
       "homebrew/cask-versions": {
-        "revision": "9f95bbcfdc1662cbcd0ee1c0670c49304a60f003"
+        "revision": "2d464633844d1365fda3a337a5a79a1e7cc0cc94"
       },
       "homebrew/services": {
         "revision": "507510e783fe37293220253caff0d76f72c5daed"
@@ -3581,7 +3581,7 @@
         }
       },
       "felixkratz/formulae/fyabai": {
-        "version": "HEAD-7b98923",
+        "version": "HEAD-9814b73",
         "bottle": false,
         "options": {
           "args": [
@@ -3725,7 +3725,7 @@
   "system": {
     "macos": {
       "ventura": {
-        "HOMEBREW_VERSION": "4.0.19-24-ge96fd24",
+        "HOMEBREW_VERSION": "4.0.19",
         "HOMEBREW_PREFIX": "/opt/homebrew",
         "Homebrew/homebrew-core": "api",
         "CLT": "14.3.0.0.1.1679647830",
