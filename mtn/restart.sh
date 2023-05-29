@@ -7,7 +7,7 @@ echo "Restarting Brew Files"
 
 brew services restart --all
 
-wait 2
+sleep 2
 
 #Reset NVRAM + Cache
 sh ~/installer.eq/mtn/testclean.sh

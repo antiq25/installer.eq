@@ -3,6 +3,7 @@
 
 sudo -v
 
+
 python3 ~/installer.eq/install/get-pip.py
 
 echo 'Installing MacOS Config'
@@ -365,7 +366,7 @@ sleep 1
  echo "3"
 sleep 1
  echo "4"
-sleep 1 
+sleep 1
 echo "RESTARTING!"
 sudo shutdown -r NOW
 elif [[ "$response" == "no" ]]; then

@@ -15,7 +15,7 @@ if ! command -v brew &>/dev/null; then
 fi
 
 # Specify the path to your Brewfile
-BREWFILE_PATH="/Users/anti/installer.eq/docs/Brewfile"
+BREWFILE_PATH="$HOME/installer.eq/docs/Brewfile"
 
 # Check if the Brewfile exists
 if [[ ! -f $BREWFILE_PATH ]]; then
