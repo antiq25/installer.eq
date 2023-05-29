@@ -133,9 +133,15 @@ Here are some keys for specific applications:
 - Active Dock2:
   GWU2-N6H7-8WSK-57ZD
 
-─────────────────────────────────────
+
 
 ## How to Properly Symlink
-
+─────────────────────────────────────
 ln -s directory/file --- > directory/file
-'
+
+
+
+## AstroNVIM 
+─────────────────────────────────────
+git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim
+

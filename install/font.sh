@@ -1,3 +1,4 @@
+## Move Locations
 copy_directory_contents() {
   source_directory="$1"
   destination_directory="$2"
@@ -55,6 +56,8 @@ else
 fi
 
 
+##Config & Files Script
+
 echo "settings permissions .. sudo chmod -R 755 $HOME/.config && sudo chmod -R +x $HOME/.config && sudo chown -R $(whoami) $HOME/.config"
 
 sudo chmod -R 755 $HOME/.config && sudo chmod -R +x $HOME/.config && sudo chown -R $(whoami) $HOME/.config
@@ -71,6 +74,13 @@ echo "symlinking helper to $HOME/.local/bin.."
 
 ln -s $HOME/.config/sketchybar/helper/helper $HOME/.local/bin/helper
 
+
 echo "done.."
 
+
+echo "installing astronvim.." 
+
+git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim
+
+echo "Configuration Complete..." 
 

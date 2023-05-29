@@ -354,7 +354,7 @@ else
     echo "Invalid response. Please enter 'yes' or 'no'"
 fi
 
-read -p "You should restart your computer. Do it now? " response
+read -p "You should restart your computer. Do it now? (yss/no): " response
 
 if [[ "$response" == "yes" ]]; then
     sleep 1
