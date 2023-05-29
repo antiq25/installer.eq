@@ -35,9 +35,11 @@ To generate a key for a specific `/bin/`, follow these steps:
 2. To write the key into the source, execute the following command with administrative privileges:
    sudo visudo -f /private/etc/sudoers.d/yabai
 
-3. Execute the key by running:
-   anti ALL = (root) NOPASSWD: sha256:[enterkeyhere] /opt/homebrew/bin/yabai --load-sa
+   3. Execute the key by running: *change name of admin with name of your $HOME*
 
+NAMEOFADMIN ALL = (root) NOPASSWD: sha256:[enterkeyhere] /opt/homebrew/bin/yabai --load-sa
+
+   (--load-sa is just for yabai)
 
 ## Checking Secure Input
 ─────────────────────────────────────
@@ -70,7 +72,9 @@ python3 -m pip install -r docs/requirements.txt && make docs
 make app
 
 ### Vulkan
-sudo ./InstallVulkan.app/Contents/MacOS/InstallVulkan --root ~/VulkanSDK/ --accept-licenses --default-answer --confirm-command install com.lunarg.vulkan.core com.lunarg.vulkan.usr com.lunarg.vulkan.sdl2 com.lunarg.vulkan.glm com.lunarg.vulkan.volk com.lunarg.vulkan.vma
+sudo ./InstallVulkan.app/Contents/MacOS/InstallVulkan --root /opt/Homebrew/Cellar --accept-licenses --default-answer --confirm-command install com.lunarg.vulkan.core com.lunarg.vulkan.usr com.lunarg.vulkan.sdl2 com.lunarg.vulkan.glm com.lunarg.vulkan.volk com.lunarg.vulkan.vma
+brew link VulkanSDK
+leave the rest.
 
 ### Bison
 To set up Bison, use the following commands:
@@ -110,6 +114,7 @@ Clone the following repositories using the provided commands:
 
 - Dotfiles:
   git clone https://github.com/FelixKratz/dotfiles
+  git clone https://github.com/khaneliman/dotfiles
 
 - Fastfetch:
   git clone https://github.com/LinusDierheimer/fastfetch
@@ -126,5 +131,11 @@ Here are some keys for specific applications:
   ZLAT-YY9Z-QQMA-46YM-DYCJ-JAJN-GUV3-FZCY-3H4V
 
 - Active Dock2:
-  GWU2-N6H7-8WSK-57ZD'
+  GWU2-N6H7-8WSK-57ZD
 
+─────────────────────────────────────
+
+## How to Properly Symlink
+
+ln -s directory/file --- > directory/file
+'
