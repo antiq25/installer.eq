@@ -8,6 +8,7 @@ export GIT_EDITOR='nvim'
 export CLICOLOR='truecolor'
 export XDG_CONFIG_HOME="$HOME/.config"
 export PATH="/Users/anti/miniforge3/bin:$PATH"
+export PATH="$HOME/miniforge3/bin:/usr/local/anaconda3/bin:$PATH"
 
 
 export cargo_bin_path="$HOME/.cargo/bin"
@@ -22,4 +23,3 @@ fi
 
 
 source "$HOME/.vulkanpaths"
-
