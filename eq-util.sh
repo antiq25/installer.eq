@@ -6,19 +6,19 @@ execute_script() {
   case "$script_name" in
     "Prepare Installer")
       echo "Preparing Installer"
-      sh ~/installer.eq/install/installbrew.sh
+      sh $HOME/installer.eq/install/installbrew.sh
       ;;
     "Run Installer")
       echo "Running Installer.."
-      sh ~/installer.eq/install/brewinstaller.sh
+      sh $HOME/installer.eq/install/brewinstaller.sh
       ;;
-    "Coming Soon..")
-      echo "Running Script 3..."
-      # Add your script execution command here
+    "Install Fonts & Config")
+      echo "Installing Fonts & Config"
+      sh $HOME/installer.eq/install/defaults.sh
       ;;
     "Cleaner")
       echo "Running Cleaner..."
-      sh ~/installer.eq/mtn/testclean.sh
+      sh $HOME/installer.eq/mtn/testclean.sh 
       ;;
     "Debloater")
       echo "Running Debloater..."
@@ -26,12 +26,15 @@ execute_script() {
       ;;
     "Restart Config")
       echo "Restarting Config..."
-      sh ~/installer.eq/mtn/restart.sh
+      sh $HOME/installer.eq/mtn/restart.sh
       ;;
-    "Cheat Sheet")
-     echo "Opening Cheat Sheet.. you can also type 'flagz' to view."
-     sh ~/installer.eq/docs/script1.sh
-     ;;
+    "Flags")
+     echo "Flags"
+      sh $HOME/installer.eq/docs/flags.sh
+      ;;
+     "Gits & Commands")
+      sh $HOME/installer.eq/docs/map.sh
+      ;;
     *)
       echo "Invalid script: $script_name"
       return
@@ -50,7 +53,7 @@ display_menu() {
     "Exit"
     "Prepare Installer"
     "Run Installer"
-    "Coming Soon"
+    "Install Fonts & Config"
     "Performance Menu"
     "Documentation"
   )
@@ -82,8 +85,8 @@ display_docs_menu() {
   echo "$(tput setaf 9)-----------$(tput sgr0)"
   echo "0. Return to previous menu"
   docs_options=(
-    "Install/Setup Readme"
-    "Cheat Sheet"
+    "Flags"
+    "Gits & Commands"
     "Other Resources"
   )
   for i in "${!docs_options[@]}"; do

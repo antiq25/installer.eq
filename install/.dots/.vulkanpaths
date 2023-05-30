@@ -1,9 +1,8 @@
 #!/bin/zsh env
 
-export VULKAN_SDK=/opt/homebrew/cellar/molten-vk/1.2.4
+export VULKAN_SDK=/opt/homebrew/Cellar/VulkanSDK/macOS
 
 export PATH=$VULKAN_SDK/bin:$PATH
-
 
 export DYLD_LIBRARY_PATH=$VULKAN_SDK/lib:$DYLD_LIBRARY_PATH
 

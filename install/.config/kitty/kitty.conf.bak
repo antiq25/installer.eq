@@ -122,7 +122,7 @@ map ctrl+shift+backspace    restore_font_size
 map ctrl+shift+f6           set_font_size 16.0
 
 # BEGIN_KITTY_THEME
-# Catppuccin-Macchiato
+# Ubuntu
 include current-theme.conf
 # END_KITTY_THEME
 
@@ -140,5 +140,5 @@ map ctrl+alt+enter launch --cwd=current
 
 macos_quit_when_last_window_closed yes
 
-include macos.config.conf
+include $HOME/.config/kitty/macos.kitty.conf
 

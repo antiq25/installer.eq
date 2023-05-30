@@ -21,5 +21,5 @@ if [[ -f /opt/homebrew/bin/brew ]]; then
 fi
 
 
-
+source "$HOME/.vulkanpaths"
 
