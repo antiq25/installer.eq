@@ -1,5 +1,4 @@
- Python Packages
-echo "Installing Python Packages..."
+ #!/bin/sh
 conda install -c apple tensorflow-deps
 conda install -c conda-forge pybind11
 conda install matplotlib

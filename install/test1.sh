@@ -10,7 +10,7 @@ execute_script() {
       ;;
     "runinstall")
       echo "Running Installer.."
-      sh $HOME/installer.eq/install/brewinstaller.sh
+      sh $HOME/installer.eq/install/brewinstaller2.sh
       ;;
     "fontconfig")
       echo "Installing Fonts & Config"

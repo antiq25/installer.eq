@@ -10,8 +10,10 @@ sleep 5
 # Add Homebrew to the shell environment
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> $HOME/.zprofile
 
-# Reload the shell environment
-eval "$(/opt/homebrew/bin/brew shellenv)"
+# Close the current terminal window
+osascript -e 'tell application "Terminal" to close first window'
 
-ECHO HOMEBREW INSTALLED. PLEASE RESTART YOURT TERMINAL TO ACTIVATE 'BREW' 
+# Open a new terminal window
+osascript -e 'tell application "Terminal" to do script ""'
 
+echo "Homebrew installed. The terminal has been restarted to activate 'brew'."
