@@ -18,7 +18,7 @@ execute_script() {
       ;;
     "clean")
       echo "Running Cleaner..."
-      sh $HOME/installer.eq/mtn/testclean.sh 
+      sh $HOME/installer.eq/mtn/cleanv1.sh
       ;;
     "debloat")
       echo "Running Debloater..."

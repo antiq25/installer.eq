@@ -2,6 +2,7 @@
 
 sudo -v
 
+
 echo "Installing pip"
 sleep 1
 
@@ -377,5 +378,3 @@ elif [[ "$response" == "no" ]]; then
 else
     echo "Invalid response. Please enter 'yes' or 'no'."
 fi
-
-

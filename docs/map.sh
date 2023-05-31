@@ -10,7 +10,7 @@ You must run this config with System Integrity Disabled.
 
 To do so follow the following steps
 
-1) Boot into Recovery mode (Dycl0n - just hold down powerbutton untill you see it say enterting system recovery mode)
+1) Boot into Recovery mode (Dycl0n - just hold down powerbutton until you see it say enterting system recovery mode)
 
 2) Go to terminal and type csrutil disable
 
@@ -49,7 +49,7 @@ ioreg -l -w 0 | grep SecureInput
 
 
 ##restore all permissions
-tcutil reset All
+tccutil reset All
 
 
 ## Git Repositories
@@ -94,4 +94,3 @@ example : ln -s ~/kitty/kitty/launcher/kitty /opt/homebrew/bin/kitty
 ## AstroNVIM 
 ─────────────────────────────────────
 git clone --depth 1 https://github.com/AstroNvim/AstroNvim ~/.config/nvim'
-
