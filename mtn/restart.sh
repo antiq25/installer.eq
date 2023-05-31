@@ -9,13 +9,6 @@ brew services restart --all
 
 sleep 2
 
-#Reset NVRAM + Cache
-sh ~/installer.eq/mtn/testclean.sh
-# Wait for 2 seconds
-echo "Waiting..."
-sleep 2
-
-
 sudo nvram boot-args=-arm64e_preview_abi
 
 sleep 1
@@ -50,4 +43,3 @@ sleep 2
 ioreg -l -w 0 | grep SecureInput
 
 echo "Complete!"
-
