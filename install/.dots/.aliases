@@ -136,3 +136,6 @@ alias cfgz="~/.config"
 
 #utility
 alias equtils="sh ~/installer.eq/eq-util.sh"
+
+#flags 
+alias flag2='sh ~/installer.eq/docs/flags.sh'

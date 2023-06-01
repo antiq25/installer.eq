@@ -60,12 +60,13 @@ fi
 
 echo "settings permissions .. sudo chmod -R 755 $HOME/.config && sudo chmod -R +x $HOME/.config && sudo chown -R $(whoami) $HOME/.config"
 
-sudo chmod -R 755 $HOME/.config && sudo chmod -R +x $HOME/.config && sudo chown -R $(whoami) $HOME/.config
+chmod -R 755 $HOME/.config && chmod -R +x $HOME/.config chown -R $(whoami)  $HOME/.config
 
 sleep 1
 
 echo "make helper"
 
+mkdir $HOME/.local/bin && ln -s ~/.local/bin /opt/homebrew/bin 
 make $HOME/.config/sketchybar/helper/helper
 
 echo "done"

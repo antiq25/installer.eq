@@ -31,8 +31,9 @@ znap source zsh-users/zsh-autosuggestions
 znap source zsh-users/zsh-syntax-highlighting
 
 # Auto-completes and Edits
-znap source marlonrichert/zsh-autocomplete
+
 znap source marlonrichert/zsh-edit
+znap source marlonrichert/zsh-autocomplete
 
 znap source marlonrichert/zcolors
 znap eval  zcolors "zcolors ${(q)LS_COLORS}"
