@@ -1,6 +1,6 @@
 #!/bin/zsh env
 
-export VULKAN_SDK=/opt/homebrew/Cellar/VulkanSDK/macOS
+export VULKAN_SDK=/opt/homebrew/cellar/VulkanSDK/macOS
 
 export PATH=$VULKAN_SDK/bin:$PATH
 

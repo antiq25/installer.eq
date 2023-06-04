@@ -114,3 +114,7 @@ cls
 zsh
 ./test12.sh
 zsh
+equtils
+s
+sh
+zsh

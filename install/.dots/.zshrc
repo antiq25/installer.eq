@@ -1,48 +1,37 @@
-#!/bin/zsh env
+#!/bin/zsh
 
+# Array of files to source
+declare -a source_files=("$HOME/.aliases" "$HOME/.zshenv" "$HOME/.functions" "~/.fzf.zsh" "$HOME/.lscolors"  "$HOME/.vulkanpaths")
 
-if [ -f "$HOME"/.aliases ]; then
-  source ~/.aliases
+# Loop through files and source them if they exist
+for file in "${source_files[@]}"; do
+    if [ -f "$file" ]; then
+        source "$file"
+    fi
+done
+
+# Initialize starship
+eval "$(starship init zsh)"
+
+# Setup Znap
+if [ ! -r ~/.config/znap/znap.zsh ]; then
+    git clone --depth 1 -- https://github.com/marlonrichert/zsh-snap.git ~/.config/znap
 fi
 
-if [ -f "$HOME"/.zshenv ]; then
-  source "$HOME"/.zshenv
-fi
+source ~/.config/znap/znap.zsh
 
-# Source functions
-if [ -f "$HOME"/.functions ]; then
-  source "$HOME"/.functions
-fi
-
-
-## Download Znap, if it's not there yet.
-[[ -r ~/.config/zsh-snap/znap/znap.zsh ]] ||
-    git clone --depth 1 -- \
-        https://github.com/marlonrichert/zsh-snap.git ~/.config/zsh-snap/znap
-	source ~/.config/zsh-snap/znap/znap.zsh
-
-
-
-
+# Configure ZSH autosuggest strategy
 ZSH_AUTOSUGGEST_STRATEGY=( history )
-znap source zsh-users/zsh-autosuggestions
 
+# Source ZSH plugins
+declare -a zsh_plugins=("zsh-users/zsh-autosuggestions" "zsh-users/zsh-syntax-highlighting" "marlonrichert/zsh-edit" "marlonrichert/zsh-autocomplete" "marlonrichert/zcolors")
 
-znap source zsh-users/zsh-syntax-highlighting
+for plugin in "${zsh_plugins[@]}"; do
+    znap source "$plugin"
+done
 
-# Auto-completes and Edits
+# Configure zcolors
+znap eval zcolors "zcolors ${(q)LS_COLORS}"
 
-znap source marlonrichert/zsh-edit
-znap source marlonrichert/zsh-autocomplete
-
-znap source marlonrichert/zcolors
-znap eval  zcolors "zcolors ${(q)LS_COLORS}"
-
+# Run fastfetch
 fastfetch
-PS1="%F{green}%~%f $ "
-znap prompt
-
-
-
-
-

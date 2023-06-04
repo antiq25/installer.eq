@@ -14,14 +14,6 @@ alias dl="cd ~/Downloads"
 alias dt="cd ~/Desktop"
 alias p="cd ~/projects"
 alias g="git"
-
-# Detect which `ls` flavor is in use
-
-export CLI_COLOR=1
-typeset -g -A LS_COLORS
-
-alias ls='LS_COLORS="di=1;92:ex=31;100:*.zip=31;41:ow=32;34:" lsd -a --color=auto'
-
 alias vi='nvim'
 
 
@@ -135,7 +127,7 @@ alias flag1="sh ~/installer.eq/docs/map.sh"
 alias cfgz="~/.config"
 
 #utility
-alias equtils="sh ~/installer.eq/eq-util.sh"
+alias equtils="sh $HOME/desktop/test1.sh"
 
 #flags 
 alias flag2='sh ~/installer.eq/docs/flags.sh'
