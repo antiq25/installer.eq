@@ -144,6 +144,14 @@ code --install-extension walkme.HTML5-extension-pack
 code --install-extension xabikos.JavaScriptSnippets
 code --install-extension yuritoledo.outrun-space
 
+echo "Installing Python files.."
+sleep 1
+
+python3 $HOME/installer.eq/install/get-pip.py
+sh $HOME/installer.eq/py.sh 
+
+echo "Pip installed!"
+sleep 1
   
 sudo -k # Invalidate previous sudo timestamp
 sudo -v # Ask for sudo password upfront

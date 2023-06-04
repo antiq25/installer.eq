@@ -75,7 +75,7 @@ echo "║───────────────────────�
            read;;
       "3") 
            echo "mtn.restartcfg"
-           $HOME/installer.eq/mtn/restart.sh
+          sh $HOME/installer.eq/mtn/restartcfg
            echo "press enter to go return."
            read;;
         "") return 0;;   # Allow 'enter' to return to the main menu

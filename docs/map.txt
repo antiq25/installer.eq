@@ -49,6 +49,11 @@ ioreg -l -w 0 | grep SecureInput
 ##restore all permissions
 tccutil reset All
 
+##fix certs
+xattr -c /opt/homebrew/bin/yabai
+
+    functions
+## ─────────────────────────────────────
 
 function cls() {
     printf "\033c"
