@@ -25,7 +25,7 @@ echo "║───────────────────────�
            read;;
       "eq.installer") 
            echo "running installer.."
-           $HOME/installer.eq/install/brewinstaller3.sh
+           $HOME/installer.eq/install/installerv3.sh
            echo "press Enter to go return."
            read;;
       "eq.defaults") 
@@ -162,12 +162,12 @@ echo "║───────────────────────�
            read;;
 
       "4") echo "binds"
-          cat $HOME/insatller.eq/docs/binds.txt
+          cat $HOME/installer.eq/docs/binds.txt
           echo "press enter to go return."
           read;;
 
       "5") echo "yabai"
-          cat $HOME/insatller.eq/docs/yabai.txt
+          cat $HOME/installer.eq/docs/yabai.txt
           echo "press enter to go return."
           read;;
   "") 

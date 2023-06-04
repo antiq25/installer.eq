@@ -42,11 +42,11 @@ tasks=(
   "Clearing logs:sudo rm -rfv /private/var/log/; sleep 1"
   "Clearing unused language files:sudo find / -name '.lproj' -exec rm -rfv {} ;; sleep 1"
   "Clearing DNS cache:sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder; sleep 1"
-  "Clearing temporary files:sudo rm -rfv /private/var/tmp/; sudo rm -rfv /tmp/; sleep 1"
   "Clearing Quick Look cache:qlmanage -r cache; sleep 1"
   "Clearing font cache:sudo atsutil databases -remove; sleep 1"
   "Clearing Xcode caches:rm -rfv ~/Library/Developer/Xcode/DerivedData/; rm -rfv ~/Library/Caches/com.apple.dt.Xcode/; sleep 1"
   "Clearing other application caches - Slack:rm -rfv ~/Library/Application\ Support/Slack/Service\ Worker/CacheStorage/*; sleep 1"
+  "Clearing local caches:sudo rm -rf $HOME/.cache"
 )
 
 

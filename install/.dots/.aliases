@@ -117,17 +117,10 @@ alias reload="exec ${SHELL} -l"
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
 
-#skhd binds
-alias eckoss="sh ~/installer.eq/docs/binds.sh"
-
-#important informatino
-alias flag1="sh ~/installer.eq/docs/map.sh"
-
-#config
-alias cfgz="~/.config"
+alias cfgz="$HOME/.config"
 
 #utility
-alias equtils="sh $HOME/desktop/test1.sh"
+alias equtils="sh $HOME/installer.eq/equtil.sh"
 
 #flags 
-alias flag2='sh ~/installer.eq/docs/flags.sh'
+

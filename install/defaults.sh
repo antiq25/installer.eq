@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo -v
+sudo -k
 
 echo "Installing Python files.."
 sleep 1
