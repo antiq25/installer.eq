@@ -56,7 +56,6 @@ fi
 
 # Make helper
 echo "symlinking bin to .local/bin"
-mkdir -p "$HOME/.local/bin" && ln -s  "$HOME/.local/bin /opt/homebrew/bin"
 make "$HOME/.config/sketchybar/helper/helper"
 
 echo "Done"

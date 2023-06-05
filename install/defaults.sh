@@ -1,15 +1,7 @@
 #!/bin/bash
 
-sudo -k
 
-echo "Installing Python files.."
-sleep 1
-
-python3 $HOME/installer.eq/install/get-pip.py
-sh $HOME/installer.eq/py.sh 
-
-echo "Pip installed!"
-sleep 1
+sudo -k 
 
 echo 'Installing MacOS Config'
 

@@ -1,5 +1,6 @@
-  sudo -k # Invalidate previous sudo timestamp
-    sudo -v # Ask for sudo password again
+ #!/bin/bash
+
+sudo -k # Invalidate previous sudo timestamp
 
 sudo -v # Ask for sudo password upfront
 

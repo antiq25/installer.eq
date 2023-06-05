@@ -10,15 +10,16 @@ for file in "${source_files[@]}"; do
     fi
 done
 
-# Initialize starship
-eval "$(starship init zsh)"
 
 # Setup Znap
-if [ ! -r ~/.config/znap/znap.zsh ]; then
-    git clone --depth 1 -- https://github.com/marlonrichert/zsh-snap.git ~/.config/znap
+if [ ! -r $HOME/.config/zsh-snap/znap/znap.zsh ]; then
+    git clone --depth 1 -- https://github.com/marlonrichert/zsh-snap.git $HOME/.config/zsh-snap/znap
 fi
 
-source ~/.config/znap/znap.zsh
+source $HOME/.config/zsh-snap/znap/znap.zsh
+
+znap eval starship 'starship init zsh'
+
 
 # Configure ZSH autosuggest strategy
 ZSH_AUTOSUGGEST_STRATEGY=( history )
