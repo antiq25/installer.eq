@@ -69,9 +69,9 @@ display_ascii_art2
 echo "    └──  ${YELLOW}equtil${RESET}"
 echo "       ├──  ${YELLOW}install${RESET}"
 echo "       │   ├───   ${GREEN}preinstall${RESET}"
+echo "       │   ├───   ${GREEN}install${RESET}"
 echo "       │   ├───   ${GREEN}defaults${RESET}"
-echo "       │   ├───   ${GREEN}config${RESET}"
-echo "       │   └───   ${GREEN}defaults${RESET}"
+echo "       │   └───   ${GREEN}config${RESET}"
 echo "       └── 󰌑 ${CYAN}return${RESET}"
 echo "type cmd to execute (press 'enter' to go return): "
     read choice
