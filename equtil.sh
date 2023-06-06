@@ -14,7 +14,7 @@ display_ascii_art2() {
   / _ \/ _` | | | | __| | | / __| '_ \   
  |  __/ (_| | |_| | |_| | |_\__ \ | | |  
   \___|\__, |\__,_|\__|_|_(_)___/_| |_|  
-══════════|_|═════════════════════════                                                      
+══════════|_|══════════════════════════                                                      
 EOF
 }
 
@@ -112,6 +112,7 @@ echo "     └──  ${YELLOW}equtil${RESET}"
 echo "         ├── 󰓅 ${YELLOW}optimizer${RESET}"
 echo "         │   ├── 󰬺 ${GREEN}optimize${RESET}"
 echo "         │   ├── 󰬻 ${GREEN}debloat${RESET}"
+echo "         │   ├──   ${GREEN}restartyabai${RESET}"
 echo "         │   └── 󰬼 ${GREEN}restartcfg${RESET}"
 echo "         └── 󰌑 return"
 echo
@@ -130,8 +131,13 @@ case $choice in
            read;;
       "3") 
            echo "mtn.restartcfg"
-          sh $HOME/installer.eq/mtn/restartcfg
-           echo "press enter to go return."
+          $HOME/installer.eq/mtn/restartcfg
+          echo "press enter to go return."
+           read;;
+      "4") 
+          echo "restarting keys.."
+          $HOME/installer.eq/mtn/refreshyab.sh
+          echo "press enter to go return." 
            read;;
         "") return 0;;   # Allow 'enter' to return to the main menu
       *) echo "Invalid option. press enter to try again."; read;;
