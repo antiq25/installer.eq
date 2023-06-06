@@ -7,7 +7,7 @@ function cls() {
 }
 
 
-function kill() {
+function pkill() {
   command pkill -9 "$@"
 }
 

@@ -118,3 +118,5 @@ equtils
 s
 sh
 zsh
+pkill zsh
+pkill WIndowServer

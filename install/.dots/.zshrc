@@ -18,9 +18,6 @@ fi
 
 source $HOME/.config/zsh-snap/znap/znap.zsh
 
-znap eval starship 'starship init zsh'
-
-
 # Configure ZSH autosuggest strategy
 ZSH_AUTOSUGGEST_STRATEGY=( history )
 
@@ -34,5 +31,7 @@ done
 # Configure zcolors
 znap eval zcolors "zcolors ${(q)LS_COLORS}"
 
-# Run fastfetch
-fastfetch
+znap eval starship 'starship init zsh'
+znap prompt 
+
+
