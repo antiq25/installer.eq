@@ -66,13 +66,14 @@ display_install_menu() {
 while true; do
 printf "\033c"
 display_ascii_art2
+echo "    │"
 echo "    └──  ${YELLOW}equtil${RESET}"
-echo "       ├──  ${YELLOW}install${RESET}"
-echo "       │   ├───   ${GREEN}preinstall${RESET}"
-echo "       │   ├───   ${GREEN}install${RESET}"
-echo "       │   ├───   ${GREEN}defaults${RESET}"
-echo "       │   └───   ${GREEN}config${RESET}"
-echo "       └── 󰌑 ${CYAN}return${RESET}"
+echo "        ├──  ${YELLOW}install${RESET}"
+echo "        │   ├───   ${GREEN}preinstall${RESET}"
+echo "        │   ├───   ${GREEN}install${RESET}"
+echo "        │   ├───   ${GREEN}defaults${RESET}"
+echo "        │   └───   ${GREEN}config${RESET}"
+echo "        └── 󰌑 ${CYAN}return${RESET}"
 echo "type cmd to execute (press 'enter' to go return): "
     read choice
     case $choice in
@@ -108,34 +109,35 @@ display_optimize_menu() {
 while true; do
 printf "\033c"
 display_ascii_art2
+echo "     │"
 echo "     └──  ${YELLOW}equtil${RESET}"
 echo "         ├── 󰓅 ${YELLOW}optimizer${RESET}"
-echo "         │   ├── 󰬺 ${GREEN}optimize${RESET}"
-echo "         │   ├── 󰬻 ${GREEN}debloat${RESET}"
-echo "         │   ├──   ${GREEN}restartyabai${RESET}"
-echo "         │   └── 󰬼 ${GREEN}restartcfg${RESET}"
+echo "         │   ├── 󰬺 󰓅 ${GREEN}optimize${RESET}"
+echo "         │   ├── 󰬻 󰓅 ${GREEN}debloat${RESET}"
+echo "         │   ├── 󰬼 󰓅 ${GREEN}restartyabai${RESET}"
+echo "         │   └── 󰬽 󰓅 ${GREEN}restartcfg${RESET}"
 echo "         └── 󰌑 return"
 echo
 echo "hit key to select choice (press 'enter' to go return): "
 read choice
 case $choice in
       "1") 
-           echo "mtn.optimize"
+           echo "optimizing..."
            $HOME/installer.eq/mtn/cleanv1.sh
            echo "press enter to go return."
            read;;
       "2") 
-           echo "mtn.debloat"
+           echo "debloating..."
           $HOME/installer.eq/utils/macos.sh
            echo "press enter to go return."
            read;;
       "3") 
-           echo "mtn.restartcfg"
+           echo "restarting config.."
           $HOME/installer.eq/mtn/restartcfg
           echo "press enter to go return."
            read;;
       "4") 
-          echo "restarting keys.."
+          echo "refreshing sha256 keys..killing zsh.."
           $HOME/installer.eq/mtn/refreshyab.sh
           echo "press enter to go return." 
            read;;
@@ -150,6 +152,7 @@ display_docs_menu() {
 while true; do
 clear
 display_ascii_art2
+echo "   │"
 echo "   └──  ${YELLOW}equtil${RESET} "
 echo "       ├── 󰈙 ${YELLOW}docs${RESET}"
 echo "       │   ├── 󰬺 󰈙 ${GREEN}cmds${RESET}"
@@ -159,7 +162,7 @@ echo "       │   ├── 󰬽 󰈙 ${GREEN}binds${RESET}"
 echo "       │   └── 󰬾 󰈙 ${GREEN}yabai${RESET}"
 echo "       └── 󰌑 return"
 echo " "
-echo "enter your choice (press 'enter' to go return): "
+echo "keys 1-5 (press 'enter' to go return): "
      read choice
     case $choice in
       "1") 
@@ -192,7 +195,7 @@ echo "enter your choice (press 'enter' to go return): "
   "") 
      clear
      return 0;;   # Allow 'enter' to return to the main menu
-      *) echo "Invalid option. press enter to try again."; read;;
+      *) echo "invalid choice.. hit enter to try again"; read;;
     esac
   done
 }
@@ -203,9 +206,9 @@ while true; do
 clear
 display_ascii_art2
 echo "type help to see cmds"
-echo "  ├── 󰬺  install"
-echo "  ├── 󰬻 󰾆 optimize"
-echo "  ├── 󰬼 󰷉 docs"
+echo "  ├── 󰬺  ${YELLOW}install${RESET}"
+echo "  ├── 󰬻 󰾆 ${YELLOW}optimize${RESET}"
+echo "  ├── 󰬼 󰷉 ${YELLOW}docs${RESET}"
 echo "  └── 󰌑 exit "
 echo " " 
 read choice
