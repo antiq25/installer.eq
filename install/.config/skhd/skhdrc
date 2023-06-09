@@ -160,3 +160,4 @@ default < shift + lalt - z : yabai -m space --layout bsp
 default < shift + lalt - x : yabai -m space --layout float
 default < shift + lalt - c : yabai -m space --layout stack
 
+

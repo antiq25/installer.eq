@@ -123,4 +123,4 @@ alias cfgz="$HOME/.config"
 alias equtils="sh $HOME/installer.eq/equtil.sh"
 
 #flags 
-
+alias elafon="python3 $HOME/Downloads/work/hva.py"

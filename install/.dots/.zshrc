@@ -1,4 +1,14 @@
-#!/bin/zsh
+#!/bin/env zsh
+
+# Setup Znap
+if [ ! -r $HOME/.config/zsh-snap/znap/znap.zsh ]; then
+    git clone --depth 1 -- https://github.com/marlonrichert/zsh-snap.git $HOME/.config/zsh-snap/znap
+fi
+
+source $HOME/.config/zsh-snap/znap/znap.zsh
+
+eval "$(starship init zsh)"
+ 
 
 # Array of files to source
 declare -a source_files=("$HOME/.aliases" "$HOME/.zshenv" "$HOME/.functions" "~/.fzf.zsh" "$HOME/.lscolors"  "$HOME/.vulkanpaths")
@@ -11,12 +21,12 @@ for file in "${source_files[@]}"; do
 done
 
 
-# Setup Znap
-if [ ! -r $HOME/.config/zsh-snap/znap/znap.zsh ]; then
-    git clone --depth 1 -- https://github.com/marlonrichert/zsh-snap.git $HOME/.config/zsh-snap/znap
-fi
+if type brew &>/dev/null; then
+  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
 
-source $HOME/.config/zsh-snap/znap/znap.zsh
+  autoload -Uz compinit
+  compinit
+fi
 
 # Configure ZSH autosuggest strategy
 ZSH_AUTOSUGGEST_STRATEGY=( history )
@@ -31,7 +41,4 @@ done
 # Configure zcolors
 znap eval zcolors "zcolors ${(q)LS_COLORS}"
 
-znap eval starship 'starship init zsh'
-znap prompt 
-
-
+fastfetch

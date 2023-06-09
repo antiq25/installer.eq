@@ -1,13 +1,11 @@
 
-
-
 function cls() {
     printf "\033c"
     fastfetch
 }
 
 
-function pkill() {
+function pzkill() {
   command pkill -9 "$@"
 }
 

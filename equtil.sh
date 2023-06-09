@@ -79,22 +79,22 @@ echo "type cmd to execute (press 'enter' to go return): "
     case $choice in
       "preinstall") 
            echo "${GREEN}preparing installer..${RESET}"
-           $HOME/installer.eq/install/installbrew.sh
+           sh $HOME/installer.eq/install/installbrew.sh
            echo "press enter to go return."
            read;;
       "installer") 
            echo "${GREEN}installer..${RESET}"
-           $HOME/installer.eq/install/installerv3.sh
+         sh $HOME/installer.eq/install/installerv3.sh
            echo "press Enter to go return."
            read;;
       "defaults") 
            echo "${GREEN}injecting macos defaults..${RESET}"
-           $HOME/installer.eq/install/defaults.sh
+          sh $HOME/installer.eq/install/defaults.sh
             echo "press enter to go return."
            read;;
       "config") 
            echo "${GREEN}injecting config...${RESET}"
-           $HOME/installer.eq/install/font.sh
+          sh $HOME/installer.eq/install/font.sh
             echo "press enter to go return."
            read;;
         "") 
@@ -114,8 +114,8 @@ echo "     └──  ${YELLOW}equtil${RESET}"
 echo "         ├── 󰓅 ${YELLOW}optimizer${RESET}"
 echo "         │   ├── 󰬺 󰓅 ${GREEN}optimize${RESET}"
 echo "         │   ├── 󰬻 󰓅 ${GREEN}debloat${RESET}"
-echo "         │   ├── 󰬼 󰓅 ${GREEN}restartyabai${RESET}"
-echo "         │   └── 󰬽 󰓅 ${GREEN}restartcfg${RESET}"
+echo "         │   ├── 󰬼 󰓅 ${GREEN}restart configsi${RESET}"
+echo "         │   └── 󰬽 󰓅 ${GREEN}restart yabai${RESET}"
 echo "         └── 󰌑 return"
 echo
 echo "hit key to select choice (press 'enter' to go return): "
@@ -123,22 +123,22 @@ read choice
 case $choice in
       "1") 
            echo "optimizing..."
-           $HOME/installer.eq/mtn/cleanv1.sh
+          sh $HOME/installer.eq/mtn/cleanv1.sh
            echo "press enter to go return."
            read;;
       "2") 
            echo "debloating..."
-          $HOME/installer.eq/utils/macos.sh
+         sh $HOME/installer.eq/utils/macos.sh
            echo "press enter to go return."
            read;;
       "3") 
            echo "restarting config.."
-          $HOME/installer.eq/mtn/restartcfg
+         sh $HOME/installer.eq/mtn/restartcfg.sh
           echo "press enter to go return."
            read;;
       "4") 
           echo "refreshing sha256 keys..killing zsh.."
-          $HOME/installer.eq/mtn/refreshyab.sh
+        sh  $HOME/installer.eq/mtn/updateyabai.sh
           echo "press enter to go return." 
            read;;
         "") return 0;;   # Allow 'enter' to return to the main menu
