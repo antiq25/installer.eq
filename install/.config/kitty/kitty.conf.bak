@@ -122,7 +122,7 @@ map ctrl+shift+backspace    restore_font_size
 map ctrl+shift+f6           set_font_size 16.0
 
 # BEGIN_KITTY_THEME
-# Ayu Mirage
+# Kibble
 include current-theme.conf
 # END_KITTY_THEME
 

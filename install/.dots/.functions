@@ -1,3 +1,5 @@
+#!/bin/env sh
+
 
 function cls() {
     printf "\033c"
@@ -27,3 +29,12 @@ function brew() {
     sketchybar --trigger brew_update
   fi
 }
+
+
+function purge_and_kill() {
+  sudo purge
+  sudo pkill Dock
+  sudo pkill WindowServer
+  sudo pkill yabai
+}
+
