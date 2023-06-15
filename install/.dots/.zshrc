@@ -7,9 +7,6 @@ fi
 
 source $HOME/.config/zsh-snap/znap/znap.zsh
 
-eval "$(starship init zsh)"
- 
-
 # Array of files to source
 declare -a source_files=("$HOME/.aliases" "$HOME/.functions" "~/.fzf.zsh" "$HOME/.lscolors")
 
@@ -27,6 +24,8 @@ if type brew &>/dev/null; then
   autoload -Uz compinit
   compinit
 fi
+
+eval "$(starship init zsh)"
 
 # Configure ZSH autosuggest strategy
 ZSH_AUTOSUGGEST_STRATEGY=( history )

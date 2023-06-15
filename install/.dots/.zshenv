@@ -1,3 +1,5 @@
+#!/usr/bin/env
+
 # Local config
 export CACHEDIR="$HOME/.local/share"
 
