@@ -1,0 +1,11 @@
+Collecting diagnostic info
+
+git version 2.41.0
+cpu: arm64
+no commit associated with this build
+sizeof-long: 8
+sizeof-size_t: 8
+shell-path: /bin/sh
+feature: fsmonitor--daemon
+Repository root: /Users/anti/installer.eq
+Available space on '/Users/anti/installer.eq': 27776.08 GiB (mount flags 0x0)

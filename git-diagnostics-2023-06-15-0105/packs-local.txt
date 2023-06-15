@@ -1,0 +1,4 @@
+Contents of .git/objects:
+pack-9c1c1cf3db49dd357b87e04bf04e5127f90ba395.idx                                 23500
+pack-9c1c1cf3db49dd357b87e04bf04e5127f90ba395.rev                                  3256
+pack-9c1c1cf3db49dd357b87e04bf04e5127f90ba395.pack                            158547147

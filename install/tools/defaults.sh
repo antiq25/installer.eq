@@ -329,20 +329,6 @@ echo "Done"
 
 sleep 1
 
-#Finalize
-read -p "Do you want to install unixporn wallpapers? (yes/no): " response
-
-if [[ "$response" == "yes" ]]; then
-    echo "Downloading Wallpapers...."
-    git clone https://github.com/BitterSweetcandyshop/wallpapers
-elif [[ "$response" == "no" ]]; then
-    echo "You chose 'no'."
-    echo "INSTALLATION COMPLETE!!"
-    # Perform the desired action when the user chooses 'no'
-else
-    echo "Invalid response. Please enter 'yes' or 'no'"
-fi
-
 read -p "You should restart your computer. Do it now? (yes/no): " response
 
 if [[ "$response" == "yes" ]]; then

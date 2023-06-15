@@ -54,19 +54,25 @@ else
   echo "Skipped downloading sketchybar font as it already exists in '$sketchybar_font_file'"
 fi
 
-# Make helper
-echo "symlinking bin to .local/bin"
-make "$HOME/.config/sketchybar/helper/helper"
-
 echo "Done"
 
-# Symlink helper
-echo "symlinking helper script"
-ln -s "$HOME/.config/sketchybar/helper/helper" "$HOME/.local/bin/helper"
 
-echo "Done"
+read -p "Do you want to download wallpapers? (yes/no) " response
+
+if [[ "$response" == "yes" ]]; then
+    echo "Downloading Wallpapers...."
+    git clone https://github.com/BitterSweetcandyshop/wallpapers
+elif [[ "$response" == "no" ]]; then
+    echo "You chose 'no'."
+    echo "INSTALLATION COMPLETE!!"
+    # Perform the desired action when the user chooses 'no'
+else
+    echo "Invalid response. Please enter 'yes' or 'no'"
+fi
 
 echo "installing AstroNvim"
 git clone --depth 1 https://github.com/AstroNvim/AstroNvim "$HOME/.config/nvim"
+
+
 
 echo "Configuration Complete." 
