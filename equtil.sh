@@ -114,7 +114,7 @@ echo "     └──  ${YELLOW}equtil${RESET}"
 echo "         ├── 󰓅 ${YELLOW}optimizer${RESET}"
 echo "         │   ├── 󰬺 󰓅 ${GREEN}optimize${RESET}"
 echo "         │   ├── 󰬻 󰓅 ${GREEN}debloat${RESET}"
-echo "         │   ├── 󰬼 󰓅 ${GREEN}restart configsi${RESET}"
+echo "         │   ├── 󰬼 󰓅 ${GREEN}restart config${RESET}"
 echo "         │   └── 󰬽 󰓅 ${GREEN}restart yabai${RESET}"
 echo "         └── 󰌑 return"
 echo

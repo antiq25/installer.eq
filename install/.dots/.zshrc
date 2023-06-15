@@ -1,4 +1,4 @@
-#!/bin/env zsh
+#!/bin/zsh
 
 # Setup Znap
 if [ ! -r $HOME/.config/zsh-snap/znap/znap.zsh ]; then
@@ -11,7 +11,7 @@ eval "$(starship init zsh)"
  
 
 # Array of files to source
-declare -a source_files=("$HOME/.aliases" "$HOME/.zshenv" "$HOME/.functions" "~/.fzf.zsh" "$HOME/.lscolors"  "$HOME/.vulkanpaths")
+declare -a source_files=("$HOME/.aliases" "$HOME/.functions" "~/.fzf.zsh" "$HOME/.lscolors")
 
 # Loop through files and source them if they exist
 for file in "${source_files[@]}"; do
