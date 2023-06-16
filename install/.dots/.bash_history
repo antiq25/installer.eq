@@ -120,3 +120,7 @@ sh
 zsh
 pkill zsh
 pkill WIndowServer
+n
+npm install next.js
+ls
+zsh
