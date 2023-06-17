@@ -1,5 +1,4 @@
-#!/bin/env sh
-
+#!/bin/sh
 
 function cls() {
     printf "\033c"
@@ -10,6 +9,8 @@ function cls() {
 function pzkill() {
   command pkill -9 "$@"
 }
+
+
 
 
 function suyabai () {

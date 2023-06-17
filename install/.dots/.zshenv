@@ -1,4 +1,4 @@
-#!/usr/bin/env
+#!/usr/bin/env zsh
 
 # Local config
 export CACHEDIR="$HOME/.local/share"
@@ -8,6 +8,7 @@ export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
 
 # PATH settings
+export PATH="/usr/local/bin:$PATH"
 export PATH="$HOME/miniforge3/bin:/usr/local/anaconda3/bin:$PATH"
 
 # nnn settings
@@ -19,7 +20,6 @@ export VISUAL="$(which nvim)"
 
 # Config home settings
 export XDG_CONFIG_HOME="$HOME/.config"
-
 # cargo settings
 export cargo_bin_path="$HOME/.cargo/bin"
 

@@ -124,3 +124,15 @@ n
 npm install next.js
 ls
 zsh
+cls
+cls
+cls
+bash
+cd
+l
+cls
+cd
+cd 
+ls
+cd 
+vi .bashrc

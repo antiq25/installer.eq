@@ -1,1 +1,0 @@
-anti ALL=(root) NOPASSWD: sha256:b9df4c0bedd925a2f2ece365630ded74876b22fece7683c70440bd9474bc242d /opt/homebrew/bin/skhd
