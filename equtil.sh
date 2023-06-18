@@ -82,7 +82,7 @@ echo "type cmd to execute (press 'enter' to go return): "
            sh $HOME/installer.eq/install/installbrew.sh
            echo "press enter to go return."
            read;;
-      "installer") 
+      "install")
            echo "${GREEN}installer..${RESET}"
          sh $HOME/installer.eq/install/installerv3.sh
            echo "press Enter to go return."

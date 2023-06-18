@@ -6,6 +6,8 @@ export CACHEDIR="$HOME/.local/share"
 # Locale settings
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
+export XDG_CONFIG_HOME="$HOME/.config"
+export cargo_bin_path="$HOME/.cargo/bin"
 
 # PATH settings
 export PATH="/usr/local/bin:$PATH"
@@ -17,11 +19,6 @@ export NNN_TMPFILE="$HOME/.config/nnn/.lastd"
 # Editor settings
 export EDITOR="$(which nvim)"
 export VISUAL="$(which nvim)"
-
-# Config home settings
-export XDG_CONFIG_HOME="$HOME/.config"
-# cargo settings
-export cargo_bin_path="$HOME/.cargo/bin"
 
 # micro settings
 export MICRO_TRUECOLOR="1"
