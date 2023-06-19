@@ -1,0 +1,53 @@
+
+##How to codesign on MACOS (using yabai's example as a template) 
+
+Certificate Creation
+ direction:
+     Open Keychain Access.
+     Click on 'Certificate Assistant' in the menu bar, then select 
+
+Create a Certificate
+ direction:   
+     Name: yabai-cert
+     Identity Type: Self-Signed Root
+     Certificate Type: Code Signing
+     Click 'Create' and then 'Continue' to create the certificate.
+
+Installation and Configuration
+ commands:
+  in order:          
+    Install yabai using Homebrew by running the following command:       
+    brew install koekeishiya/formulae/yabai --HEAD       
+    Sign the yabai binary with the created certificate using the following command:
+
+CODESIGNING  
+ commands:
+   in order:
+     codesign -fs 'yabai-cert' $(which yabai)
+		
+     echo "$(whoami) ALL=(root) NOPASSWD: sha256:$(shasum -a 256 $(which yabai) | cut -d " " -f 1) $(which yabai) --load-sa"
+
+     sudo visudo -f /private/etc/sudoers.d/yabai
+
+
+     yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
+    
+
+
+     killAll Dock (or purge_and_kill) 
+
+     yabai --start-service 
+      
+
+UPGRADING
+ commands: 
+   in order:
+     export YABAI_CERT=yabai-cert  (or whatever name the binary is)
+
+     yabai --stop-service
+
+     brew reinstall koekeishiya/formulae/yabai
+
+     codesign -fs \"${YABAI_CERT:-yabai-cert}\" \"$(brew --prefix yabai)/bin/yabai\"
+
+     yabai --start-service    

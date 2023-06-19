@@ -1,0 +1,2 @@
+fontforge -lang=ff -script mergefonts.ff <font1> <font2> <font_size_in_em> <output_merged_font>
+
