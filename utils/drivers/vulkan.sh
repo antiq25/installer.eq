@@ -6,6 +6,10 @@ curl -O https://sdk.lunarg.com/sdk/download/latest/mac/vulkan-sdk.dmg
 
 wait 
 
+open vulkan-sdk.dmg
+
+wait
+
 #Navigate to VulkanSDK and then run the executable... 
 cd /Volumes/VulkanSDK
 #install vulkan 
