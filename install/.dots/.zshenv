@@ -1,17 +1,38 @@
-#!/usr/bin/env zsh
+
 
 # Local config
-export CACHEDIR="$HOME/.local/share"
+
 
 # Locale settings
 export LANG="en_US.UTF-8"
 export LC_ALL="en_US.UTF-8"
-export XDG_CONFIG_HOME="$HOME/.config"
-export cargo_bin_path="$HOME/.cargo/bin"
 
-# PATH settings
+
+export PATH="/opt/homebrew/bin:$PATH"
+export PATH="/opt/homebrew/sbin:$PATH"
+export PATH="/Users/anti/miniforge3/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
-export PATH="$HOME/miniforge3/bin:/usr/local/anaconda3/bin:$PATH"
+export PATH="/Users/anti/.nix-profile/bin:$PATH"
+export PATH="/nix/var/nix/profiles/default/bin:$PATH"
+export PATH="/System/Cryptexes/App/usr/bin:$PATH"
+export PATH="/usr/bin:$PATH"
+export PATH="/bin:$PATH"
+export PATH="/usr/sbin:$PATH"
+export PATH="/sbin:$PATH"
+export PATH="/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:$PATH"
+export PATH="/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:$PATH"
+export PATH="/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:$PATH"
+export PATH="/opt/X11/bin:$PATH"
+export PATH="/Library/Apple/usr/bin:$PATH"
+export PATH="/Library/Frameworks/Mono.framework/Versions/Current/Commands:$PATH"
+export PATH="/Users/anti/.cargo/bin:$PATH"
+export PATH="/Users/anti/kitty/kitty.app/Contents/MacOS:$PATH"
+
+
+export XDG_CACHE_HOME="$HOME/.cache"
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_STATE_HOME="$HOME/.local/state"
 
 # nnn settings
 export NNN_TMPFILE="$HOME/.config/nnn/.lastd"
@@ -23,16 +44,6 @@ export VISUAL="$(which nvim)"
 # micro settings
 export MICRO_TRUECOLOR="1"
 
-# Add cargo bin path to PATH if not already present
-if [[ ":$PATH:" != *":$cargo_bin_path:"* ]]; then
-    export PATH="$cargo_bin_path:$PATH"
-fi
-
-# Brew environment
-if [[ -f /opt/homebrew/bin/brew ]]; then
-	eval "$("/opt/homebrew/bin/brew" shellenv)"
-fi
-
 # Source the cargo environment
 if [[ -f "$HOME/.cargo/env" ]]; then
     . "$HOME/.cargo/env"
@@ -42,3 +53,5 @@ fi
 if [[ -f "$HOME/.vulkanpaths" ]]; then
     . "$HOME/.vulkanpaths"
 fi
+
+

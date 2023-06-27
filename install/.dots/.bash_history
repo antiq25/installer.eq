@@ -136,3 +136,9 @@ cd
 ls
 cd 
 vi .bashrc
+ls
+ls
+which env
+ls
+cd .config
+ls

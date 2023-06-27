@@ -1,12 +1,13 @@
-# Setup Znap
-if [ ! -r $HOME/.config/zsh-snap/znap/znap.zsh ]; then
-    git clone --depth 1 -- https://github.com/marlonrichert/zsh-snap.git $HOME/.config/zsh-snap/znap
-fi
+#!/usr/bin/env zsh
+
+if [ ! -r $HOME/.config/zsh-snap/znap/znap.zsh ]; then           
+    git clone --depth 1 -- https://github.com/marlonrichert/zsh-snap.git $HOME/.config/zsh-snap/znap 
+fi  
 
 source $HOME/.config/zsh-snap/znap/znap.zsh
 
 # Array of files to source
-declare -a source_files=("$HOME/.aliases" "$HOME/.zshenv" "$HOME/.functions" "~/.fzf.zsh" "$HOME/.lscolors"  "$HOME/.vulkanpaths")
+declare -a source_files=("$HOME/.aliases" "$HOME/.zshenv" "$HOME/.functions" "~/.fzf.zsh" "$HOME/.lscolors")
 
 # Loop through files and source them if they exist
 for file in "${source_files[@]}"; do
@@ -16,25 +17,48 @@ for file in "${source_files[@]}"; do
 done
 
 
-if type brew &>/dev/null; then
-  FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
+znap source marlonrichert/zsh-autocomplete
+znap source marlonrichert/zsh-edit
 
-  autoload -Uz compinit
-  compinit
-fi
+znap source marlonrichert/zsh-hist
+bindkey '^[q' push-line-or-edit
+bindkey -r '^Q' '^[Q'
 
-# Configure ZSH autosuggest strategy
+znap source trapd00r/LS_COLORS
+znap eval trapd00r/LS_COLORS "$( whence -a dircolors gdircolors ) -b LS_COLORS"
+
+# The cache gets regenerated, too, when the eval command has changed. For
+# example, here we include a variable. So, the cache gets invalidated whenever
+# this variable has changed.
+znap source marlonrichert/zcolors
+znap eval   marlonrichert/zcolors "zcolors ${(q)LS_COLORS}"
+
+znap eval omz-git 'curl -fsSL \
+    https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/git/git.plugin.zsh'
+
+
+
+znap function _pyenv pyenv              'eval "$( pyenv init - --no-rehash )"'
+compctl -K    _pyenv pyenv
+
+znap function _pip_completion pip       'eval "$( pip completion --zsh )"'
+compctl -K    _pip_completion pip
+
+znap function _python_argcomplete pipx  'eval "$( register-python-argcomplete pipx  )"'
+complete -o nospace -o default -o bashdefault \
+           -F _python_argcomplete pipx
+
+znap function _pipenv pipenv            'eval "$( pipenv --completion )"'
+compdef       _pipenv pipenv
+
 ZSH_AUTOSUGGEST_STRATEGY=( history )
+znap source zsh-users/zsh-autosuggestions
 
-# Source ZSH plugins
-declare -a zsh_plugins=("zsh-users/zsh-autosuggestions" "zsh-users/zsh-syntax-highlighting" "marlonrichert/zsh-edit" "marlonrichert/zsh-autocomplete" "marlonrichert/zcolors")
+ZSH_HIGHLIGHT_HIGHLIGHTERS=( main brackets )
+znap source zsh-users/zsh-syntax-highlighting
 
-for plugin in "${zsh_plugins[@]}"; do
-    znap source "$plugin"
-done
 
-znap eval zcolors "zcolors ${(q)LS_COLORS}"
-
-eval "$(starship init zsh)"
+znap eval starship 'starship init zsh' 
 
 fastfetch
+

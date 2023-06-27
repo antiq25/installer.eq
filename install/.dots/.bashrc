@@ -1,4 +1,5 @@
-[ -n "$PS1" ] && source ~/.bash_profile;
+#!/usr/bin/env bash
+
+source "$HOME/.pathenvs"
 
 fastfetch
-. "$HOME/.cargo/env"
