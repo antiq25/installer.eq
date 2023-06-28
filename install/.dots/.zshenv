@@ -15,7 +15,7 @@ export PATH="/opt/X11/bin:$PATH"
 export PATH="/Library/Frameworks/Mono.framework/Versions/Current/Commands:$PATH"
 export PATH="/Applications/kitty.app/Contents/MacOS:$PATH"
 export PATH="/Users/anti/kitty/kitty.app/Contents/MacOS:$PATH"
-
+source "$HOME/.vulkanpaths"
 
 # XDG settings
 export XDG_CACHE_HOME="$HOME/.cache"
@@ -38,8 +38,5 @@ if [[ -f "$CARGO_ENV_PATH" ]]; then
   source "$CARGO_ENV_PATH"
 fi
 
-# Source the Vulkan paths if the file exists
-if [[ -f "$VULKAN_PATHS_PATH" ]]; then
-  source "$VULKAN_PATHS_PATH"
-fi
+
 

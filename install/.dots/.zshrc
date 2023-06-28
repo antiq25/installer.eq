@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+
 
 if [ ! -r $HOME/.config/zsh-snap/znap/znap.zsh ]; then           
     git clone --depth 1 -- https://github.com/marlonrichert/zsh-snap.git $HOME/.config/zsh-snap/znap 
