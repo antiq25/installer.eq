@@ -72,7 +72,6 @@ return {
 	-- Discord status
 	{ import = "astrocommunity.media.presence-nvim" },
 	-- Development time analytics
-	{ import = "astrocommunity.media.vim-wakatime" },
 	-- Quick surround text
 	{ import = "astrocommunity.motion.mini-surround" },
 	{

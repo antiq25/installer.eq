@@ -18,7 +18,6 @@ return {
 				"marksman",
 				"neocmake",
 				"pyright",
-				"nil_ls",
 				"sqlls",
 				"tsserver",
 				"yamlls",

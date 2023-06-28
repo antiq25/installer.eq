@@ -1,34 +1,23 @@
-
-
-# Local config
-
-
-# Locale settings
-export LANG="en_US.UTF-8"
-export LC_ALL="en_US.UTF-8"
+#!/usr/bin/env zsh
 
 
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/opt/homebrew/sbin:$PATH"
-export PATH="/Users/anti/miniforge3/bin:$PATH"
 export PATH="/usr/local/bin:$PATH"
-export PATH="/Users/anti/.nix-profile/bin:$PATH"
-export PATH="/nix/var/nix/profiles/default/bin:$PATH"
-export PATH="/System/Cryptexes/App/usr/bin:$PATH"
 export PATH="/usr/bin:$PATH"
 export PATH="/bin:$PATH"
-export PATH="/usr/sbin:$PATH"
-export PATH="/sbin:$PATH"
-export PATH="/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:$PATH"
-export PATH="/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:$PATH"
-export PATH="/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:$PATH"
-export PATH="/opt/X11/bin:$PATH"
-export PATH="/Library/Apple/usr/bin:$PATH"
-export PATH="/Library/Frameworks/Mono.framework/Versions/Current/Commands:$PATH"
 export PATH="/Users/anti/.cargo/bin:$PATH"
+export PATH="/Users/anti/miniforge3/bin:$PATH"
+export PATH="/Users/anti/VulkanSDK/macOS/bin:$PATH"
+export PATH="/Users/anti/.nix-profile/bin:$PATH"
+export PATH="/nix/var/nix/profiles/default/bin:$PATH"
+export PATH="/opt/X11/bin:$PATH"
+export PATH="/Library/Frameworks/Mono.framework/Versions/Current/Commands:$PATH"
+export PATH="/Applications/kitty.app/Contents/MacOS:$PATH"
 export PATH="/Users/anti/kitty/kitty.app/Contents/MacOS:$PATH"
 
 
+# XDG settings
 export XDG_CACHE_HOME="$HOME/.cache"
 export XDG_CONFIG_HOME="$HOME/.config"
 export XDG_DATA_HOME="$HOME/.local/share"
@@ -38,20 +27,19 @@ export XDG_STATE_HOME="$HOME/.local/state"
 export NNN_TMPFILE="$HOME/.config/nnn/.lastd"
 
 # Editor settings
-export EDITOR="$(which nvim)"
-export VISUAL="$(which nvim)"
+export EDITOR="$NVIM_PATH"
+export VISUAL="$NVIM_PATH"
 
 # micro settings
 export MICRO_TRUECOLOR="1"
 
 # Source the cargo environment
-if [[ -f "$HOME/.cargo/env" ]]; then
-    . "$HOME/.cargo/env"
+if [[ -f "$CARGO_ENV_PATH" ]]; then
+  source "$CARGO_ENV_PATH"
 fi
 
 # Source the Vulkan paths if the file exists
-if [[ -f "$HOME/.vulkanpaths" ]]; then
-    . "$HOME/.vulkanpaths"
+if [[ -f "$VULKAN_PATHS_PATH" ]]; then
+  source "$VULKAN_PATHS_PATH"
 fi
-
 

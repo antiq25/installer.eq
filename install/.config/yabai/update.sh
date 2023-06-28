@@ -1,13 +1,27 @@
-#! /usr/bin/env bash
+# set codesigning certificate name here (default: yabai-cert)
+YABAI_CERT='yabai-cert'
+
+function main() {
+	if check_for_updates; then
+		install_updates ${YABAI_CERT}
+	fi
+}
+
+# WARNING
+# -------
+# Please do not touch the code below unless you absolutely know what you are
+# doing. It's the result of multiple long evenings trying to get this to work
+# and relies on terrible hacks to work around limitations of launchd.
+# For questions please reach out to @dominiklohmann via GitHub.
 
 LOCKFILE="${TMPDIR}/yabai_update.lock"
-if [ -e "$LOCKFILE" ] && kill -0 "$(cat "$LOCKFILE")"; then
+if [ -e "${LOCKFILE}" ] && kill -0 $(cat "${LOCKFILE}"); then
 	echo "Update already in progress"
 	exit
 fi
 
-trap 'rm -f ${LOCKFILE}; exit' INT TERM EXIT
-echo "$$" >"$LOCKFILE"
+trap "rm -f ${LOCKFILE}; exit" INT TERM EXIT
+echo "$$" >${LOCKFILE}
 
 function check_for_updates() {
 	set -o pipefail
@@ -26,7 +40,7 @@ function check_for_updates() {
 			awk '{print substr($1,1,7)}')"
 	fi
 
-	[ "${?}" -eq 0 ] && [[ "$installed" != "$remote" ]]
+	[ ${?} -eq 0 ] && [[ "${installed}" != "${remote}" ]]
 }
 
 function install_updates() {
@@ -37,8 +51,6 @@ function install_updates() {
 	echo "[yabai-update] codesigning yabai"
 	codesign -fs "${1:-yabai-sign}" "$(brew --prefix yabai)/bin/yabai" >/dev/null
 
-	new_sha="$(shasum -a 256 "$(which yabai)" | grep -E -o '[A-Fa-f0-9]{64}')"
-
 	echo "[yabai-update] checking installed scripting addition"
 	if yabai --check-sa; then
 		osascript >/dev/null <<-EOM
@@ -47,29 +59,24 @@ function install_updates() {
 	else
 		echo "[yabai-update] prompting to reinstall scripting addition"
 		script="$(mktemp)"
-		cat >"$script" <<-EOF
+		cat >${script} <<-EOF
 			#! /usr/bin/env sh
 			sudo yabai --uninstall-sa
 			sudo yabai --install-sa
-			sudo gsed -i "s/sha256:[A-Fa-f0-9]\{64\} \/opt\/homebrew\/bin\/yabai --load-sa/sha256:${new_sha} \/opt\/homebrew\/bin\/yabai --load-sa/"  /private/etc/sudoers.d/yabai
 			pkill -x Dock
 		EOF
-		chmod +x "$script"
+		chmod +x "${script}"
 		osascript >/dev/null <<-EOM
 			display dialog "A new version of yabai was just installed and yabai will restart shortly.\n\nDo you want to reinstall the scripting addition (osascript will prompt for elevated privileges)?" with title "$(yabai --version)" buttons {"Install", "Cancel"} default button 2
 			if button returned of result = "Install" then
 				do shell script "${script}" with administrator privileges
 			end if
 		EOM
-		rm -f "$script"
+		rm -f "${script}"
 	fi
 
 	echo "[yabai-update] restarting yabai"
 	yabai --restart-service
 }
 
-if check_for_updates; then
-	install_updates "$YABAI_CERT"
-fi
-
-rm -f "$LOCKFILE"
+(main && rm -f "${LOCKFILE}") &

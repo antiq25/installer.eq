@@ -1,7 +1,9 @@
-#!/bin/sh
+#!/usr/bin/env zsh
 
 echo "Running Refresh Script.. please wait.."
 sleep 1
+
+source "$HOME/.local/bin/helper"
 
 echo "Restarting Brew Files"
 
@@ -14,7 +16,6 @@ sudo nvram boot-args=-arm64e_preview_abi
 sleep 1
 
 defaults write com.apple.finder DisableAllAnimations -bool true
-
 
 sleep 1
 # Run yabairc script

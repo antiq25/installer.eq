@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 
 source "$HOME/.config/sketchybar/colors.sh"     # Loads all defined colors
 source "$HOME/.config/sketchybar/icons.sh"      # Loads all defined icons
@@ -14,7 +14,7 @@ launchctl unload -F /System/Library/LaunchAgents/com.apple.OSDUIHelper.plist >/d
 
 bar_config=(
 	blur_radius=30
-	color="$BASE"
+	color="0xff20202A"
 	corner_radius=9
 	height=40
 	margin=10
