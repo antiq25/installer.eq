@@ -48,6 +48,8 @@ UPGRADING
 
      brew reinstall koekeishiya/formulae/yabai
 
-     codesign -fs \"${YABAI_CERT:-yabai-cert}\" \"$(brew --prefix yabai)/bin/yabai\"
+   
+codesign -fs "${YABAI_CERT:-yabai-cert}" "$(brew --prefix yabai)/bin/yabai"
+
 
      yabai --start-service    
