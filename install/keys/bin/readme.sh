@@ -12,7 +12,7 @@ ${RESET}"
 }
 print_banner
 
-lolcat $HOME/installer.eq/install/keys/bin/readme
+lolcat $HOME/installer.eq/install/keys/bin/readme 
 
 read -p "Are you sure you want to continue? (yes/no): " choice
 
