@@ -52,6 +52,10 @@ tccutil reset All
 ##fix certs
 xattr -c /opt/homebrew/bin/yabai
 
+
+##youtube downloader
+
+yt-dlp --format mp4 [url]
     functions
 ## ─────────────────────────────────────
 
