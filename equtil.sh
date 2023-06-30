@@ -18,6 +18,7 @@ display_ascii_art2() {
 EOF
 }
 
+
 #SAMPLE
 display_help_menu() {
 while true; do
@@ -89,7 +90,7 @@ echo "type cmd to execute (press 'enter' to go return): "
            read;;
       "defaults") 
            echo "${GREEN}injecting macos defaults..${RESET}"
-          sh $HOME/installer.eq/install/defaults.sh
+          sh $HOME/installer.eq/install/keys/readme.sh
             echo "press enter to go return."
            read;;
       "config") 
@@ -115,7 +116,9 @@ echo "         ├── 󰓅 ${YELLOW}optimizer${RESET}"
 echo "         │   ├── 󰬺 󰓅 ${GREEN}optimize${RESET}"
 echo "         │   ├── 󰬻 󰓅 ${GREEN}debloat${RESET}"
 echo "         │   ├── 󰬼 󰓅 ${GREEN}restart config${RESET}"
-echo "         │   └── 󰬽 󰓅 ${GREEN}restart yabai${RESET}"
+echo "         │   ├── 󰬽 󰓅 ${GREEN}install vulkan${RESET}"
+echo "         │   └── 󰬾 󰓅 ${GREEN}install moltenvk${RESET}"
+echo "         │  "
 echo "         └── 󰌑 return"
 echo
 echo "hit key to select choice (press 'enter' to go return): "
@@ -136,11 +139,16 @@ case $choice in
          sh $HOME/installer.eq/mtn/restartcfg.sh
           echo "press enter to go return."
            read;;
-      "4") 
+      "4")
           echo "refreshing sha256 keys..killing zsh.."
-        sh  $HOME/installer.eq/mtn/updateyabai.sh
+        sh  $HOME/installer.eq/utils/drivers/vulkan.sh
           echo "press enter to go return." 
            read;;
+      "5") 
+          echo "refreshing sha256 keys..killing zsh.."
+        sh  $HOME/installer.eq/utils/drivers/moltenvk.sh
+          echo "press enter to go return." 
+           read;;          
         "") return 0;;   # Allow 'enter' to return to the main menu
       *) echo "Invalid option. press enter to try again."; read;;
     esac
@@ -155,7 +163,7 @@ display_ascii_art2
 echo "   │"
 echo "   └──  ${YELLOW}equtil${RESET} "
 echo "       ├── 󰈙 ${YELLOW}docs${RESET}"
-echo "       │   ├── 󰬺 󰈙 ${GREEN}cmds${RESET}"
+echo "       │   ├── 󰬺 󰈙 ${GREEN}pastebins${RESET}"
 echo "       │   ├── 󰬻 󰈙 ${GREEN}flags${RESET}"
 echo "       │   ├── 󰬼 󰈙 ${GREEN}codesign${RESET}"
 echo "       │   ├── 󰬽 󰈙 ${GREEN}binds${RESET}"
@@ -200,41 +208,87 @@ echo "keys 1-5 (press 'enter' to go return): "
   done
 }
 
+
+display_downloads_menu() {
+	while true; do
+		clear
+		display_ascii_art2
+		echo "   │"
+		echo "   └──  ${YELLOW}equtil${RESET}"
+		echo "       ├── 󰈙 ${YELLOW}downloads${RESET}"
+		echo "       │   ├── 󰬺 󰈙 ${GREEN}wallpapers${RESET}"
+		echo "       │   ├── 󰬻 󰈙 ${GREEN}drivers${RESET}"
+		echo "       │   ├── 󰬼 󰈙 ${GREEN}configs${RESET}"
+		echo "       └── 󰌑 return"
+		echo " "
+		read choice
+		case $choice in
+		"1")
+			echo "wallpapers.."
+			git clone https://github.com/BitterSweetcandyshop/wallpapers
+			echo "Press enter to return."
+			read
+			;;
+
+		"2")
+			echo "${GREEN}coming soon..${RESET}.."
+			open "https://example.com/drivers"  # Replace the URL with the actual drivers URL
+			echo "Press enter to return."
+			read
+			;;
+
+		"3")
+			echo "${GREEN}coming soon..${RESET}"
+			open "https://example.com/configs"  # Replace the URL with the actual configs URL
+			echo "Press enter to return."
+			read
+			;;
+		*)
+			clear
+			return 0
+			;; # Allow 'enter' to return to the main menu
+		esac
+	done
+}
+
+
 # Main menu function
 main_menu() {
-while true; do
-clear
-display_ascii_art2
-echo "type help to see cmds"
-echo "  ├── 󰬺  ${YELLOW}install${RESET}"
-echo "  ├── 󰬻 󰾆 ${YELLOW}optimize${RESET}"
-echo "  ├── 󰬼 󰷉 ${YELLOW}docs${RESET}"
-echo "  └── 󰌑 exit "
-echo " " 
-read choice
- case $choice in
-      "1") display_install_menu;;
-      "2") display_optimize_menu;;
-      "3") display_docs_menu;;
-      "help") display_help_menu;;
-   "")
- echo "hit enter again to confirm exit. hit any other key to cancel"
-    read -rsn1 input1
-     if [ "$input1" = "" ]; then
-     echo "Exiting..."
-       return 0
-       else
-       echo "Returning to Install Menu..."
-       read -rsn1 input2
-       fi
-        ;;
-      *)
-        echo "Invalid choice. Please try again."
-        sleep 2
-        ;;
-    esac
-  done
+	while true; do
+		clear
+		display_ascii_art2
+		echo "type help to see cmds"
+		echo "  ├── 󰬺  ${YELLOW}install${RESET}"
+		echo "  ├── 󰬻 󰾆 ${YELLOW}optimize${RESET}"
+		echo "  ├── 󰬼 󰷉 ${YELLOW}docs${RESET}"
+		echo "  ├── 󰬽 󰷉 ${YELLOW}downloads${RESET}"
+		echo "  └── 󰌑 exit "
+		echo " "
+		read -r choice
+		case $choice in
+		"1") display_install_menu ;;
+		"2") display_optimize_menu ;;
+		"3") display_docs_menu ;;
+		"4") display_downloads_menu ;;
+		"help") display_help_menu ;;
+		"")
+			echo "hit enter again to confirm exit. hit any other key to cancel"
+			read -rsn1 input1
+			if [ "$input1" = "" ]; then
+				echo "Exiting..."
+				return 0
+			else
+				echo "Returning to Install Menu..."
+				read -rsn1 input2
+			fi
+			;;
+		*)
+			echo "Invalid choice. Please try again."
+			sleep 2
+			;;
+		esac
+	done
 }
 
 # Call the main menu function to start the script
-main_menu
+main_menu      

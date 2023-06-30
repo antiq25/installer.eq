@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/bash 
 
 message() {
 	printf "[>>] %s\n" "$*" >&2
@@ -28,7 +28,7 @@ cecho() {
 }
 
 # @descri
-source ~/installer.eq/install/keys/change_defaults.sh
+source ~/installer.eq/install/keys/bin/change_defaults.sh
 
 echo "Changing MACOS DEFAULTS!"
 
@@ -38,7 +38,7 @@ wait
 
 echo "MACOS DEFAULTS CHANGED!"
 
-source ~/installer.eq/install/keys/change_symbolickeys.sh
+source ~/installer.eq/install/keys/bin/change_symbolickeys.sh
 
 echo "Changing MACOS SYMBOLIC KEYS!"
 

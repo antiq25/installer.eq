@@ -3,8 +3,6 @@
 echo "Running Refresh Script.. please wait.."
 sleep 1
 
-source "$HOME/.local/bin/helper"
-
 echo "Restarting Brew Files"
 
 brew services restart --all
@@ -45,6 +43,8 @@ make ~/.config/sketchybar/helper/helper
 echo "helper initialized.."
 
 sleep 2
+
+source "$HOME/.local/bin/helper"
 
 ioreg -l -w 0 | grep SecureInput
 

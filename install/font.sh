@@ -1,3 +1,6 @@
+#!/bin/bash
+
+# Define Global Functions for use
 copy_directory_contents() {
   source_directory="$1"
   destination_directory="$2"
@@ -36,14 +39,67 @@ copy_fonts() {
   done
 }
 
-# Copy the contents of .config directory
-copy_directory_contents "$HOME/installer.eq/install/.config" "$HOME/.config"
+# Ask to install config instead of just doing it.
+read -p "Install Config? (yes/no) " response
 
-# Copy the contents of .dots directory
-copy_directory_contents "$HOME/installer.eq/install/.dots" "$HOME"
+if [[ "$response" == "yes" ]]; then
+  echo "Installing Wallpapers...."
+  copy_directory_contents "$HOME/installer.eq/install/.config" "$HOME/.config"
+elif [[ "$response" == "no" ]]; then
+  echo "You chose 'no'."
 
-# Copy the fonts to ~/Library/Fonts
-copy_fonts "$HOME/installer.eq/fonts" "$HOME/Library/Fonts"
+else
+  echo "Invalid response. Please enter 'yes' or 'no'"
+fi
+
+# Install Dotfiles
+read -p "Install dotfiles? (yes/no) " response
+
+if [[ "$response" == "yes" ]]; then
+  echo "Installing Wallpapers...."
+  copy_directory_contents "$HOME/installer.eq/install/.dots" "$HOME"
+elif [[ "$response" == "no" ]]; then
+  echo "You chose 'no'."
+
+else
+  echo "Invalid response. Please enter 'yes' or 'no'"
+fi
+
+# Install helper for yabai + other configs from .local
+read -p "Install local? (yes/no) " response
+
+if [[ "$response" == "yes" ]]; then
+  echo "Moving ~/.local files...."
+  copy_directory_contents "$HOME/installer.eq/install/.local" "$HOME/.local"
+elif [[ "$response" == "no" ]]; then
+  echo "You chose 'no'."
+
+else
+  echo "Invalid response. Please enter 'yes' or 'no'"
+fi
+
+# SYMLINKS
+read -p "Symlink ~/.local/bin --> /usr/local/bin? (yes/no) " response
+
+if [[ "$response" == "yes" ]]; then
+  echo "Symlinking ~/.local/bin to /usr/local/bin...."
+  sudo ln -s "$HOME/.local/bin" /usr/local/bin
+elif [[ "$response" == "no" ]]; then
+  echo "You chose 'no'."
+
+else
+  echo "Invalid response. Please enter 'yes' or 'no'"
+fi
+
+# Fonts
+read -p "Install fonts? (yes/no) " response
+
+if [[ "$response" == "yes" ]]; then
+  # Copy the fonts to ~/Library/Fonts
+  copy_fonts "$HOME/installer.eq/fonts" "$HOME/Library/Fonts"
+else
+  echo "Skipping font installation."
+fi
 
 # Download sketchybar font if it doesn't exist
 sketchybar_font_file="$HOME/Library/Fonts/sketchybar-app-font.ttf"
@@ -56,23 +112,20 @@ fi
 
 echo "Done"
 
-
 read -p "Do you want to download wallpapers? (yes/no) " response
 
 if [[ "$response" == "yes" ]]; then
-    echo "Downloading Wallpapers...."
-    git clone https://github.com/BitterSweetcandyshop/wallpapers
+  echo "Downloading Wallpapers...."
+  git clone https://github.com/BitterSweetcandyshop/wallpapers
 elif [[ "$response" == "no" ]]; then
-    echo "You chose 'no'."
-    echo "INSTALLATION COMPLETE!!"
-    # Perform the desired action when the user chooses 'no'
+  echo "You chose 'no'."
+
 else
-    echo "Invalid response. Please enter 'yes' or 'no'"
+  echo "Invalid response. Please enter 'yes' or 'no'"
 fi
 
-echo "installing AstroNvim"
+echo "Installing AstroNvim"
 git clone --depth 1 https://github.com/AstroNvim/AstroNvim "$HOME/.config/nvim"
 
+echo "Configuration Complete."
 
-
-echo "Configuration Complete." 

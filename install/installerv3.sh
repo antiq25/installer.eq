@@ -286,7 +286,6 @@ code --install-extension "whizkydee.material-palenight-theme"
 code --install-extension "xabikos.JavaScriptSnippets"
 code --install-extension "yuritoledo.outrun-space"
 
-echo "Installing Python files.."
 sleep 1
   
 sudo -k # Invalidate previous sudo timestamp
@@ -298,7 +297,7 @@ if [[ $? -eq 0 ]]; then
     read -p "Installer complete. Change Apple config? (Yes/No): " choice
 
     if [[ $choice == "Yes" || $choice == "yes" ]]; then
-        sudo sh $HOME/installer.eq/install/keys/execdefaults.sh
+        sudo sh $HOME/installer.eq/install/keys/readme.sh 
     elif [[ $choice == "No" || $choice == "no" ]]; then
         echo "Closing window"
     else
