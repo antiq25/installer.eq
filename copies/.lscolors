@@ -1,2 +1,1 @@
-
-alias ls='LS_COLORS="di=1;92:ex=31;100:*.zip=31;41:ow=34;100:" gls -a --color=auto'
+.lscolors

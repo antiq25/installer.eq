@@ -41,7 +41,6 @@ return {
 				"markdownlint",
 				"rust-analyzer",
 				"rustfmt",
-				"shfmt",
 				"stylua",
 				"sql_formatter",
 			}

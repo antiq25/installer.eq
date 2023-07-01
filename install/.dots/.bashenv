@@ -1,8 +1,9 @@
 # #
 # Exports
 # #
-export PATH="$PATH:/opt/local/bin:/opt/local/sbin:$HOME/.local/share/pnpm:~/.spicetify"
-PATH="$(perl -e 'print join(":", grep { not $seen{$_}++ } split(/:/, $ENV{PATH}))')"
+
+
+
 
 # oh my bash
 export OSH="$HOME"/.oh-my-bash
@@ -32,8 +33,4 @@ if [[ -f /opt/homebrew/bin/brew ]]; then
 	eval "$("/opt/homebrew/bin/brew" shellenv)"
 fi
 
-# Nix
-if [ -e '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh' ]; then
- . '/nix/var/nix/profiles/default/etc/profile.d/nix-daemon.sh'
-fi
-# End Nix
+

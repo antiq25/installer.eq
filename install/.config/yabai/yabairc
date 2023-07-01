@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 launchctl unload -F /System/Library/LaunchAgents/com.apple.WindowManager.plist >/dev/null 2>&1 &
 
@@ -93,8 +93,8 @@ for ((i = 1; i <= "${#LABELS[@]}"; i++)); do
 done
 
 # SPACE LAYOUTS
-yabai -m config --space comms layout stack window_opacity off
-yabai -m config --space media layout stack window_opacity off
+yabai -m config --space comms layout stack window_opacity on
+yabai -m config --space media layout stack window_opacity on
 yabai -m config --space 4 layout float
 
 # RULES
@@ -127,6 +127,7 @@ UNMANAGED=(
 	Vimac
 	iStat Menus
 	zoom.us
+	CleanShot X
 )
 
 for ((i = 1; i <= "${#UNMANAGED[@]}"; i++)); do

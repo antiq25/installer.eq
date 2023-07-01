@@ -1,5 +1,7 @@
 #!/usr/bin/env zsh
 
+export LANG="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
 
 export PATH="/opt/homebrew/bin:$PATH"
 export PATH="/opt/homebrew/sbin:$PATH"
@@ -37,6 +39,3 @@ export MICRO_TRUECOLOR="1"
 if [[ -f "$CARGO_ENV_PATH" ]]; then
   source "$CARGO_ENV_PATH"
 fi
-
-
-

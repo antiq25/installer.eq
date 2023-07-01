@@ -81,8 +81,8 @@ AntiAlias:	1
 DefaultFVShowHmetrics:	0
 DefaultFVShowVmetrics:	0
 DefaultFVSize:	48
-DefaultFVRowCount:	14
-DefaultFVColCount:	34
+DefaultFVRowCount:	12
+DefaultFVColCount:	29
 DefaultFVGlyphLabel:	0
 SaveToDir:	0
 OnlyCopyDisplayed:	0
@@ -156,10 +156,13 @@ CV_CB2Tool:	5
 XUID-Base:	1021 459 -85268075
 ShowKerningPane:	1
 PluginStartupMode:	Ask
+Recent:	/Users/anti/Elkab/Elkab.ttf
+Recent:	/Users/anti/installer.eq/fonts/ELkabbanyEQNerdFontNerdFont-Regular.ttf
+Recent:	/Users/anti/Library/Fonts/elkab.ttf
+Recent:	/Volumes/macOS Font Tools/Documentation/Examples/ATIF for 'kerx'/AppleSimple.ttf
+Recent:	/Users/anti/installer.eq/fonts/ElkabbanyFont/ElkabbanyEQNerdFont.ttf
+Recent:	/Users/anti/Elkab.sfdw.sfd
+Recent:	/Users/anti/Elkab.ttf
 Recent:	/Users/anti/ELkabbanyEQNerdFont-Regular.ttf
 Recent:	/Users/anti/ElkabbaniEq.ttf
 Recent:	/Users/anti/ElkabbanyEQ.ttf
-Recent:	/Users/anti/Library/Fonts/elkab.ttf
-Recent:	/Users/anti/Library/Fonts/Elkabbani.ttf
-Recent:	/Users/anti/Library/Fonts/ElkabNerdFontMono-Regular.otf
-Recent:	/Users/anti/installer.eq/fonts/elkab.ttf

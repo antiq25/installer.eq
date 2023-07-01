@@ -1,10 +1,13 @@
+#!/bin/bash
+
 function cls() {
 	printf "\033c"
 	fastfetch
 }
 
-function pzkill() {
+function kill() {
 	command pkill -9 "$@"
+	exit 0
 }
 
 function suyabai() {
@@ -27,7 +30,9 @@ function brew() {
 
 function purge_and_kill() {
 	sudo purge
-	sudo pkill Dock
-	sudo pkill WindowServer
-	sudo pkill yabai
+	kill yabai
+	kill zsh
+	kill Dock
+	kill Finder
+	kill SystemUIServer
 }
