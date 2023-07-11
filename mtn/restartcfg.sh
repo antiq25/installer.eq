@@ -1,51 +1,32 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env bash
 
-echo "Running Refresh Script.. please wait.."
-sleep 1
+sudo -v 
 
-echo "Restarting Brew Files"
+function purge_and_kill() {
+  kill yabai
+  kill zsh
+  kill Dock
+  kill Finder
+	kill WindowServer
+	purge 
+}
 
-brew services restart --all
 
-sleep 2
-
-sudo nvram boot-args=-arm64e_preview_abi
-
-sleep 1
-
-defaults write com.apple.finder DisableAllAnimations -bool true
-
-sleep 1
 # Run yabairc script
-sh ~/.config/yabai/yabairc
+source "$HOME/.config/yabai/yabairc"
 echo "yabairc CONFIG LOADED COMPLETE"
-
-# Wait for 1 second
-sleep 1
-
-# Run sketchybarrc script
-sh ~/.config/sketchybar/sketchybarrc
-echo "sketchybarrc CONFIG LOADED COMPLETE"
-
-# Wait for 1 second
-sleep 1
+wait
 
 # Run skhdrc script
 sh ~/.config/skhd/skhdrc
 echo "skhdrc CONFIG LOADED COMPLETE"
-
 sleep 1
 
-#Run Helper
-
-make ~/.config/sketchybar/helper/helper
-
-echo "helper initialized.."
-
-sleep 2
-
-source "$HOME/.local/bin/helper"
-
 ioreg -l -w 0 | grep SecureInput
+wait
+
+sudo nvram boot-args=-arm64e_preview_abi
+
 
 echo "Complete!"
+
