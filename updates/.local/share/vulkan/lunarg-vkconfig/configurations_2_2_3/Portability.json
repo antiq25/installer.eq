@@ -1,0 +1,549 @@
+{
+    "configuration": {
+        "description": "Check the Vulkan application is portable to Apple platforms",
+        "layers": [
+            {
+                "name": "VK_LAYER_LUNARG_gfxreconstruct",
+                "platforms": [
+                    "WINDOWS",
+                    "LINUX"
+                ],
+                "rank": -1,
+                "settings": [
+                ],
+                "state": "EXCLUDED"
+            },
+            {
+                "name": "VK_LAYER_LUNARG_monitor",
+                "platforms": [
+                    "WINDOWS",
+                    "LINUX"
+                ],
+                "rank": -1,
+                "settings": [
+                ],
+                "state": "EXCLUDED"
+            },
+            {
+                "name": "VK_LAYER_LUNARG_screenshot",
+                "platforms": [
+                    "WINDOWS",
+                    "LINUX"
+                ],
+                "rank": -1,
+                "settings": [
+                ],
+                "state": "EXCLUDED"
+            },
+            {
+                "name": "VK_LAYER_KHRONOS_synchronization2",
+                "platforms": [
+                    "WINDOWS",
+                    "LINUX",
+                    "MACOS"
+                ],
+                "rank": -1,
+                "settings": [
+                    {
+                        "key": "force_enable",
+                        "type": "BOOL",
+                        "value": false
+                    }
+                ],
+                "state": "EXCLUDED"
+            },
+            {
+                "name": "VK_LAYER_LUNARG_api_dump",
+                "platforms": [
+                    "WINDOWS",
+                    "LINUX",
+                    "MACOS"
+                ],
+                "rank": -1,
+                "settings": [
+                    {
+                        "key": "output_range",
+                        "type": "STRING",
+                        "value": "0-0"
+                    },
+                    {
+                        "key": "output_format",
+                        "type": "ENUM",
+                        "value": "text"
+                    },
+                    {
+                        "key": "file",
+                        "type": "BOOL",
+                        "value": false
+                    },
+                    {
+                        "key": "log_filename",
+                        "type": "SAVE_FILE",
+                        "value": "stdout"
+                    },
+                    {
+                        "key": "flush",
+                        "type": "BOOL",
+                        "value": true
+                    },
+                    {
+                        "key": "name_size",
+                        "type": "INT",
+                        "value": 32
+                    },
+                    {
+                        "key": "show_types",
+                        "type": "BOOL",
+                        "value": true
+                    },
+                    {
+                        "key": "type_size",
+                        "type": "INT",
+                        "value": 0
+                    },
+                    {
+                        "key": "show_timestamp",
+                        "type": "BOOL",
+                        "value": false
+                    },
+                    {
+                        "key": "show_shader",
+                        "type": "BOOL",
+                        "value": false
+                    },
+                    {
+                        "key": "detailed",
+                        "type": "BOOL",
+                        "value": true
+                    },
+                    {
+                        "key": "no_addr",
+                        "type": "BOOL",
+                        "value": false
+                    },
+                    {
+                        "key": "use_spaces",
+                        "type": "BOOL",
+                        "value": true
+                    },
+                    {
+                        "key": "indent_size",
+                        "type": "INT",
+                        "value": 4
+                    },
+                    {
+                        "key": "show_thread_and_frame",
+                        "type": "BOOL",
+                        "value": true
+                    }
+                ],
+                "state": "EXCLUDED"
+            },
+            {
+                "name": "VK_LAYER_KHRONOS_validation",
+                "platforms": [
+                    "WINDOWS",
+                    "LINUX",
+                    "MACOS"
+                ],
+                "rank": 5,
+                "settings": [
+                    {
+                        "key": "fine_grained_locking",
+                        "type": "BOOL",
+                        "value": true
+                    },
+                    {
+                        "key": "validate_core",
+                        "type": "BOOL",
+                        "value": true
+                    },
+                    {
+                        "key": "check_image_layout",
+                        "type": "BOOL",
+                        "value": true
+                    },
+                    {
+                        "key": "check_command_buffer",
+                        "type": "BOOL",
+                        "value": true
+                    },
+                    {
+                        "key": "check_object_in_use",
+                        "type": "BOOL",
+                        "value": true
+                    },
+                    {
+                        "key": "check_query",
+                        "type": "BOOL",
+                        "value": true
+                    },
+                    {
+                        "key": "check_shaders",
+                        "type": "BOOL",
+                        "value": true
+                    },
+                    {
+                        "key": "check_shaders_caching",
+                        "type": "BOOL",
+                        "value": true
+                    },
+                    {
+                        "key": "unique_handles",
+                        "type": "BOOL",
+                        "value": true
+                    },
+                    {
+                        "key": "object_lifetime",
+                        "type": "BOOL",
+                        "value": true
+                    },
+                    {
+                        "key": "stateless_param",
+                        "type": "BOOL",
+                        "value": true
+                    },
+                    {
+                        "key": "thread_safety",
+                        "type": "BOOL",
+                        "value": true
+                    },
+                    {
+                        "key": "validate_sync",
+                        "type": "BOOL",
+                        "value": false
+                    },
+                    {
+                        "key": "sync_queue_submit",
+                        "type": "BOOL",
+                        "value": false
+                    },
+                    {
+                        "key": "validate_gpu_based",
+                        "type": "ENUM",
+                        "value": "GPU_BASED_NONE"
+                    },
+                    {
+                        "key": "printf_to_stdout",
+                        "type": "BOOL",
+                        "value": true
+                    },
+                    {
+                        "key": "printf_verbose",
+                        "type": "BOOL",
+                        "value": false
+                    },
+                    {
+                        "key": "printf_buffer_size",
+                        "type": "INT",
+                        "value": 1024
+                    },
+                    {
+                        "key": "reserve_binding_slot",
+                        "type": "BOOL",
+                        "value": true
+                    },
+                    {
+                        "key": "vma_linear_output",
+                        "type": "BOOL",
+                        "value": true
+                    },
+                    {
+                        "key": "gpuav_descriptor_indexing",
+                        "type": "BOOL",
+                        "value": true
+                    },
+                    {
+                        "key": "gpuav_buffer_oob",
+                        "type": "BOOL",
+                        "value": true
+                    },
+                    {
+                        "key": "warn_on_robust_oob",
+                        "type": "BOOL",
+                        "value": true
+                    },
+                    {
+                        "key": "validate_draw_indirect",
+                        "type": "BOOL",
+                        "value": true
+                    },
+                    {
+                        "key": "validate_dispatch_indirect",
+                        "type": "BOOL",
+                        "value": true
+                    },
+                    {
+                        "key": "validate_best_practices",
+                        "type": "BOOL",
+                        "value": false
+                    },
+                    {
+                        "key": "validate_best_practices_arm",
+                        "type": "BOOL",
+                        "value": false
+                    },
+                    {
+                        "key": "validate_best_practices_amd",
+                        "type": "BOOL",
+                        "value": false
+                    },
+                    {
+                        "key": "validate_best_practices_img",
+                        "type": "BOOL",
+                        "value": false
+                    },
+                    {
+                        "key": "validate_best_practices_nvidia",
+                        "type": "BOOL",
+                        "value": false
+                    },
+                    {
+                        "key": "debug_action",
+                        "type": "FLAGS",
+                        "value": [
+                            "VK_DBG_LAYER_ACTION_LOG_MSG"
+                        ]
+                    },
+                    {
+                        "key": "log_filename",
+                        "type": "SAVE_FILE",
+                        "value": "stdout"
+                    },
+                    {
+                        "key": "report_flags",
+                        "type": "FLAGS",
+                        "value": [
+                            "error",
+                            "perf",
+                            "info",
+                            "warn"
+                        ]
+                    },
+                    {
+                        "key": "enable_message_limit",
+                        "type": "BOOL",
+                        "value": true
+                    },
+                    {
+                        "key": "duplicate_message_limit",
+                        "type": "INT",
+                        "value": 10
+                    },
+                    {
+                        "key": "message_id_filter",
+                        "type": "LIST",
+                        "value": [
+                        ]
+                    },
+                    {
+                        "key": "disables",
+                        "type": "FLAGS",
+                        "value": [
+                            "VK_VALIDATION_FEATURE_DISABLE_THREAD_SAFETY_EXT",
+                            "VK_VALIDATION_FEATURE_DISABLE_UNIQUE_HANDLES_EXT",
+                            "VK_VALIDATION_FEATURE_DISABLE_OBJECT_LIFETIMES_EXT",
+                            "VALIDATION_CHECK_DISABLE_IMAGE_LAYOUT_VALIDATION",
+                            "VALIDATION_CHECK_DISABLE_COMMAND_BUFFER_STATE"
+                        ]
+                    },
+                    {
+                        "key": "enables",
+                        "type": "FLAGS",
+                        "value": [
+                        ]
+                    }
+                ],
+                "state": "OVERRIDDEN"
+            },
+            {
+                "name": "VK_LAYER_KHRONOS_profiles",
+                "platforms": [
+                    "WINDOWS",
+                    "LINUX",
+                    "MACOS"
+                ],
+                "rank": 6,
+                "settings": [
+                    {
+                        "key": "force_device",
+                        "type": "ENUM",
+                        "value": "FORCE_DEVICE_OFF"
+                    },
+                    {
+                        "key": "force_device_uuid",
+                        "type": "STRING",
+                        "value": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+                    },
+                    {
+                        "key": "force_device_name",
+                        "type": "ENUM",
+                        "value": "${VP_PHYSICAL_DEVICES}"
+                    },
+                    {
+                        "key": "profile_file",
+                        "type": "LOAD_FILE",
+                        "value": "${VULKAN_CONTENT}/VK_LAYER_KHRONOS_profiles/VP_LUNARG_desktop_portability_2022.json"
+                    },
+                    {
+                        "key": "profile_name",
+                        "type": "ENUM",
+                        "value": "VP_LUNARG_desktop_portability_2022"
+                    },
+                    {
+                        "key": "profile_validation",
+                        "type": "BOOL",
+                        "value": false
+                    },
+                    {
+                        "key": "simulate_capabilities",
+                        "type": "FLAGS",
+                        "value": [
+                            "SIMULATE_API_VERSION_BIT",
+                            "SIMULATE_FEATURES_BIT",
+                            "SIMULATE_PROPERTIES_BIT"
+                        ]
+                    },
+                    {
+                        "key": "default_feature_values",
+                        "type": "ENUM",
+                        "value": "DEFAULT_FEATURE_VALUES_DEVICE"
+                    },
+                    {
+                        "key": "emulate_portability",
+                        "type": "BOOL",
+                        "value": true
+                    },
+                    {
+                        "key": "constantAlphaColorBlendFactors",
+                        "type": "BOOL",
+                        "value": false
+                    },
+                    {
+                        "key": "events",
+                        "type": "BOOL",
+                        "value": false
+                    },
+                    {
+                        "key": "imageViewFormatReinterpretation",
+                        "type": "BOOL",
+                        "value": false
+                    },
+                    {
+                        "key": "imageViewFormatSwizzle",
+                        "type": "BOOL",
+                        "value": false
+                    },
+                    {
+                        "key": "imageView2DOn3DImage",
+                        "type": "BOOL",
+                        "value": false
+                    },
+                    {
+                        "key": "multisampleArrayImage",
+                        "type": "BOOL",
+                        "value": false
+                    },
+                    {
+                        "key": "mutableComparisonSamplers",
+                        "type": "BOOL",
+                        "value": false
+                    },
+                    {
+                        "key": "pointPolygons",
+                        "type": "BOOL",
+                        "value": false
+                    },
+                    {
+                        "key": "samplerMipLodBias",
+                        "type": "BOOL",
+                        "value": false
+                    },
+                    {
+                        "key": "separateStencilMaskRef",
+                        "type": "BOOL",
+                        "value": false
+                    },
+                    {
+                        "key": "shaderSampleRateInterpolationFunctions",
+                        "type": "BOOL",
+                        "value": false
+                    },
+                    {
+                        "key": "tessellationIsolines",
+                        "type": "BOOL",
+                        "value": false
+                    },
+                    {
+                        "key": "triangleFans",
+                        "type": "BOOL",
+                        "value": false
+                    },
+                    {
+                        "key": "vertexAttributeAccessBeyondStride",
+                        "type": "BOOL",
+                        "value": false
+                    },
+                    {
+                        "key": "minVertexInputBindingStrideAlignment",
+                        "type": "INT",
+                        "value": 4
+                    },
+                    {
+                        "key": "exclude_device_extensions",
+                        "type": "LIST",
+                        "value": [
+                        ]
+                    },
+                    {
+                        "key": "exclude_formats",
+                        "type": "LIST",
+                        "value": [
+                        ]
+                    },
+                    {
+                        "key": "debug_actions",
+                        "type": "FLAGS",
+                        "value": [
+                            "DEBUG_ACTION_STDOUT_BIT"
+                        ]
+                    },
+                    {
+                        "key": "debug_filename",
+                        "type": "SAVE_FILE",
+                        "value": "profiles_layer_log.txt"
+                    },
+                    {
+                        "key": "debug_file_clear",
+                        "type": "BOOL",
+                        "value": true
+                    },
+                    {
+                        "key": "debug_fail_on_error",
+                        "type": "BOOL",
+                        "value": false
+                    },
+                    {
+                        "key": "debug_reports",
+                        "type": "FLAGS",
+                        "value": [
+                            "DEBUG_REPORT_WARNING_BIT",
+                            "DEBUG_REPORT_ERROR_BIT"
+                        ]
+                    }
+                ],
+                "state": "OVERRIDDEN"
+            }
+        ],
+        "layers_paths": [
+        ],
+        "name": "Portability",
+        "platforms": [
+            "WINDOWS",
+            "LINUX",
+            "MACOS"
+        ],
+        "view_advanced_settings": false
+    },
+    "file_format_version": "2.2.3"
+}

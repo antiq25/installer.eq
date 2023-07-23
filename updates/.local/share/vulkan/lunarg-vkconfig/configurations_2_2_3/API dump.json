@@ -1,0 +1,104 @@
+{
+    "configuration": {
+        "description": "A Simple API dump configuration",
+        "layers": [
+            {
+                "name": "VK_LAYER_LUNARG_api_dump",
+                "platforms": [
+                    "WINDOWS",
+                    "LINUX",
+                    "MACOS"
+                ],
+                "rank": 0,
+                "settings": [
+                    {
+                        "key": "output_range",
+                        "type": "STRING",
+                        "value": "0-0"
+                    },
+                    {
+                        "key": "output_format",
+                        "type": "ENUM",
+                        "value": "text"
+                    },
+                    {
+                        "key": "file",
+                        "type": "BOOL",
+                        "value": false
+                    },
+                    {
+                        "key": "log_filename",
+                        "type": "SAVE_FILE",
+                        "value": "stdout"
+                    },
+                    {
+                        "key": "flush",
+                        "type": "BOOL",
+                        "value": true
+                    },
+                    {
+                        "key": "name_size",
+                        "type": "INT",
+                        "value": 32
+                    },
+                    {
+                        "key": "show_types",
+                        "type": "BOOL",
+                        "value": true
+                    },
+                    {
+                        "key": "type_size",
+                        "type": "INT",
+                        "value": 0
+                    },
+                    {
+                        "key": "show_timestamp",
+                        "type": "BOOL",
+                        "value": true
+                    },
+                    {
+                        "key": "show_shader",
+                        "type": "BOOL",
+                        "value": true
+                    },
+                    {
+                        "key": "detailed",
+                        "type": "BOOL",
+                        "value": true
+                    },
+                    {
+                        "key": "no_addr",
+                        "type": "BOOL",
+                        "value": false
+                    },
+                    {
+                        "key": "use_spaces",
+                        "type": "BOOL",
+                        "value": true
+                    },
+                    {
+                        "key": "indent_size",
+                        "type": "INT",
+                        "value": 4
+                    },
+                    {
+                        "key": "show_thread_and_frame",
+                        "type": "BOOL",
+                        "value": true
+                    }
+                ],
+                "state": "OVERRIDDEN"
+            }
+        ],
+        "layers_paths": [
+        ],
+        "name": "API dump",
+        "platforms": [
+            "WINDOWS",
+            "LINUX",
+            "MACOS"
+        ],
+        "view_advanced_settings": false
+    },
+    "file_format_version": "2.2.3"
+}

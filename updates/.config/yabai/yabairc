@@ -1,13 +1,17 @@
 #!/usr/bin/env bash
+#
+launchctl unload -F /System/Library/LaunchAgents/com.apple.WindowManager.plist > /dev/null 2>&1 &
 
-launchctl unload -F /System/Library/LaunchAgents/com.apple.WindowManager.plist >/dev/null 2>&1 &
+source "${HOME}/bin/yabai-helper"
+
+# Unload the macOS WindowManager process
 
 sudo yabai --load-sa
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
-yabai -m signal --add event=display_added action="sleep 1 && source $HOME/.local/bin/helper && create_spaces 7"
-yabai -m signal --add event=display_removed action="sleep 1 && source $HOME/.local/bin/helper && create_spaces 7"
+yabai -m signal --add event=display_added action="sleep 1 && source ${HOME}/bin/yabai-helper && create_spaces 7"
+yabai -m signal --add event=display_removed action="sleep 1 && source ${HOME}/bin/yabai-helper && create_spaces 7"
 
-source "${HOME}"/.local/bin/yabai-helper
+
 
 # BAR HEIGHT
 BAR_HEIGHT=20
@@ -38,14 +42,14 @@ BORDERS=(
 	window_border_hidpi on
 	window_border_width 2
 	window_border_radius 12
-	active_window_border_color 0xff7793d1
+	active_window_border_color 0xffffffff
 	normal_window_border_color 0xff5e6798
 )
 # window_border_radius 11 \
 
 LAYOUT=(
 	layout bsp
-	top_padding 15
+	top_padding 10
 	bottom_padding 60
 	left_padding 10
 	right_padding 10
@@ -66,74 +70,3 @@ yabai -m config "${WINDOWS[@]}"
 yabai -m config "${BORDERS[@]}"
 yabai -m config "${LAYOUT[@]}"
 yabai -m config "${MOUSE[@]}"
-
-# SPACE LABELS
-LABELS=(
-	1
-	2
-	3
-	4
-	5
-	6
-	7
-)
-
-
-
-for ((i = 1; i <= "${#LABELS[@]}"; i++)); do
-	yabai -m space "${i}" --label "${LABELS[(($i - 1))]}"
-done
-
-# SPACE LAYOUTS
-yabai -m config --space 1 layout bsd window_opacity off
-yabai -m config --space 2 layout stack window_opacity off
-yabai -m config --space scratch layout float
-
-# RULES
-
-UNMANAGED=(
-	"Activity Monitor"
-	"Alfred"
-	"App Store"
-	"Archive Utility"
-	"Authy"
-	"Bitwarden"
-	"Calculator"
-	"Dictionary"
-	"FaceTime"
-	# "Finder"
-	"LibreOffice"
-	"LuLu"
-	"Microsoft Remote Desktop"
-	"Photo Booth"
-	"Python"
-	"ScanSnap"
-	"Screen Sharing"
-	"Screens"
-	"Software Update"
-	"Stats"
-	"Steam"
-	"System Information"
-	"System Preferences"
-	"System Settings"
-	"VLC"
-	"Vimac"
-	"iStat Menus"
-	"zoom.us"
-	"CleanShot X"
-)
-
-
-for ((i = 1; i <= "${#UNMANAGED[@]}"; i++)); do
- yabai -m rule --add "label=unmanage_${UNMANAGED}[(($i - 1))]}" "app=^${UNMANAGED}[(($i - 1))]}.*$" "manage=off" "border=off"
-done
-
-
-#Exclude problematic apps from being managed
-yabai -m rule --add "label=Finder" "app=^Finder$" "title=(Co(py|nnect)|Move|Info|Pref)" "manage=off"
-yabai -m rule --add "label=Safari" "app=^Safari$" "title=^(General|(Tab|Password|Website|Extension)s|AutoFill|Se(arch|curity)|Privacy|Advance)$" "manage=off"
-yabai -m rule --add "label=About This Mac" "app=System Information" "title=About This Mac" "manage=off"
-yabai -m rule --add "label=Select file to save to" "app=^Inkscape$" "title=Select file to save to" "manage=off"
-
-
-

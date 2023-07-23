@@ -53,6 +53,8 @@ Clone the following repositories using the provided commands:
 
   git clone https://github.com/khaneliman/dotfiles
 
+  git clone  https://github.com/mathiasbynens/dotfiles
+
 - installer.eq 
   git clone https://github.com/antiq25/installer.eq
 

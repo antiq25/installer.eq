@@ -1,0 +1,22 @@
+{
+    "vkcube": {
+        "app_folder": "/Applications/vkcube.app/Contents/MacOS",
+        "app_name": "vkcube",
+        "app_path": "/Applications/vkcube.app/Contents/MacOS/vkcube",
+        "command_lines": [
+            "--suppress_popups"
+        ],
+        "exclude_override": false,
+        "log_file": "${VK_LOCAL}/vkcube.txt"
+    },
+    "vkcubepp": {
+        "app_folder": "/Applications/vkcubepp.app/Contents/MacOS",
+        "app_name": "vkcubepp",
+        "app_path": "/Applications/vkcubepp.app/Contents/MacOS/vkcubepp",
+        "command_lines": [
+            "--suppress_popups"
+        ],
+        "exclude_override": false,
+        "log_file": "${VK_LOCAL}/vkcubepp.txt"
+    }
+}

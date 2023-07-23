@@ -1,32 +1,34 @@
 #!/usr/bin/env bash
 
-sudo -v 
+sudo -v
 
-function purge_and_kill() {
-  kill yabai
-  kill zsh
-  kill Dock
-  kill Finder
-	kill WindowServer
-	purge 
-}
+source ~/.functions 
+
+sudo yabai --load-sa
 
 
 # Run yabairc script
-source "$HOME/.config/yabai/yabairc"
-echo "yabairc CONFIG LOADED COMPLETE"
-wait
+cd ~/.config/yabai
 
-# Run skhdrc script
-sh ~/.config/skhd/skhdrc
-echo "skhdrc CONFIG LOADED COMPLETE"
-sleep 1
+./yabairc 
+
+
+cd ~/.config/skhd
+./skhdrc
+
 
 ioreg -l -w 0 | grep SecureInput
 wait
+
 
 sudo nvram boot-args=-arm64e_preview_abi
 
 
 echo "Complete!"
+
+
+
+yabai --restart-service
+
+skhd --restart-service
 
