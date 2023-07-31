@@ -49,6 +49,6 @@ bindkey -r '^Q' '^[Q'
 znap eval omz-git 'curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/git/git.plugin.zsh'
 
 # Source prompt
-source "$HOME/.prompt"
+source "$HOME/prompt34"
 znap prompt
 

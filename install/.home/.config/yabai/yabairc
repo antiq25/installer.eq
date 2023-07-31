@@ -48,7 +48,7 @@ BORDERS=(
 # window_border_radius 11 \
 
 LAYOUT=(
-	layout bsp
+	layout float
 	top_padding 10
 	bottom_padding 60
 	left_padding 10
