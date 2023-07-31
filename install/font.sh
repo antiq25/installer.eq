@@ -44,7 +44,7 @@ read -p "Install Config? (yes/no) " response
 
 if [[ "$response" == "yes" ]]; then
   echo "Installing Wallpapers...."
-  copy_directory_contents "$HOME/installer.eq/install/.config" "$HOME/.config"
+  copy_directory_contents "$HOME/installer.eq/install/.home" "$HOME/"
 elif [[ "$response" == "no" ]]; then
   echo "You chose 'no'."
 
@@ -53,17 +53,17 @@ else
 fi
 
 # Install Dotfiles
-read -p "Install dotfiles? (yes/no) " response
+#read -p "Install dotfiles? (yes/no) " response
 
-if [[ "$response" == "yes" ]]; then
-  echo "Installing Wallpapers...."
-  copy_directory_contents "$HOME/installer.eq/install/.dots" "$HOME"
-elif [[ "$response" == "no" ]]; then
-  echo "You chose 'no'."
+#if [[ "$response" == "yes" ]]; then
+ # echo "Installing Wallpapers...."
+  #copy_directory_contents "$HOME/installer.eq/install/.dots" "$HOME"
+#elif [[ "$response" == "no" ]]; then
+ # echo "You chose 'no'."
 
-else
-  echo "Invalid response. Please enter 'yes' or 'no'"
-fi
+#else
+ # echo "Invalid response. Please enter 'yes' or 'no'"
+#fi
 
 # Install helper for yabai + other configs from .local
 read -p "Install local? (yes/no) " response

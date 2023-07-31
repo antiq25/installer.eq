@@ -1,7 +1,0 @@
-my_dir=%~
-
-PS1="${TITLEBAR}%F{blue}┌─[%F{cyan}antiq@eqhost.net%F{blue}][%F{yellow}${my_dir}%F{blue}]
-└─⚙ %f"
-PS2="%F{blue}└─⚙ %f"
-
-fastfetch
