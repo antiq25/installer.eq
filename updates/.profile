@@ -6,7 +6,7 @@ export PATH="/opt/homebrew/sbin:$PATH"
 export PATH="/Users/anti/.cargo/bin:$PATH"
 export PATH="${HOME}/miniforge3/bin:/opt/homebrew/anaconda3/bin:$PATH"
 export PATH="${HOME}/bin:$PATH"
-
+export PATH="${HOME}/.local/bin:$PATH"
 
 # XDG settings
 export XDG_CACHE_HOME="${HOME}/.cache"

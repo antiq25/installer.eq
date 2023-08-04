@@ -1,7 +1,7 @@
 #!/usr/bin/env zsh
 
 # Define the prompt format
-PROMPT='%F{white}anti %F{blue}󰅬 %f%F{blue}%D{%I:%M %P}%f%F{white}
+PROMPT='%F{white}anti %F{blue}󰅬 %f%F{blue}%D{%I:%M }%f%F{white}
 %F{green}%~%f
 > '
 

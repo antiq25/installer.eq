@@ -417,21 +417,7 @@ ls
 vi .exports
 zsh
 ls
-lsvfs
-cd
+vi .zshenv
+rm -rf .zshenv
 ls
-cls
-cd Desktop/
-ls
-cd py
-cd python
-ls
-cd elafon
-ls
-cd 'elafon job'/
-ls
-cd elafon
-python3 app.py 
-ls
-source env/bin/activate
 zsh
