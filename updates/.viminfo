@@ -72,6 +72,12 @@
 # Jumplist (newest first):
 -'  1  0  /private/etc/sudoers.d/skhd.tmp
 |4,39,1,0,1689655489,"/private/etc/sudoers.d/skhd.tmp"
+-'  1  0  /private/etc/sudoers.d/skhd.tmp
+|4,39,1,0,1689655489,"/private/etc/sudoers.d/skhd.tmp"
+-'  1  0  ~/.config/kitty/kitty.conf
+|4,39,1,0,1689655406,"~/.config/kitty/kitty.conf"
+-'  1  0  ~/.config/kitty/kitty.conf
+|4,39,1,0,1689655406,"~/.config/kitty/kitty.conf"
 -'  1  0  ~/.config/kitty/kitty.conf
 |4,39,1,0,1689655406,"~/.config/kitty/kitty.conf"
 -'  1  0  ~/.config/kitty/kitty.conf
@@ -84,6 +90,30 @@
 |4,39,1,0,1689583731,"/private/etc/sudoers.d/yabai.tmp"
 -'  1  0  /private/etc/sudoers.d/yabai.tmp
 |4,39,1,0,1689583731,"/private/etc/sudoers.d/yabai.tmp"
+-'  1  0  /private/etc/sudoers.d/yabai.tmp
+|4,39,1,0,1689583731,"/private/etc/sudoers.d/yabai.tmp"
+-'  1  0  /private/etc/sudoers.d/yabai.tmp
+|4,39,1,0,1689583731,"/private/etc/sudoers.d/yabai.tmp"
+-'  1  0  /private/etc/sudoers.d/yabai.tmp
+|4,39,1,0,1689583731,"/private/etc/sudoers.d/yabai.tmp"
+-'  1  0  /private/etc/sudoers.d/yabai.tmp
+|4,39,1,0,1689583731,"/private/etc/sudoers.d/yabai.tmp"
+-'  1  125  /private/etc/sudoers.d/yabai-helper.tmp
+|4,39,1,125,1689566568,"/private/etc/sudoers.d/yabai-helper.tmp"
+-'  1  125  /private/etc/sudoers.d/yabai-helper.tmp
+|4,39,1,125,1689566568,"/private/etc/sudoers.d/yabai-helper.tmp"
+-'  1  125  /private/etc/sudoers.d/yabai-helper.tmp
+|4,39,1,125,1689566568,"/private/etc/sudoers.d/yabai-helper.tmp"
+-'  1  125  /private/etc/sudoers.d/yabai-helper.tmp
+|4,39,1,125,1689566568,"/private/etc/sudoers.d/yabai-helper.tmp"
+-'  1  125  /private/etc/sudoers.d/yabai-helper.tmp
+|4,39,1,125,1689566568,"/private/etc/sudoers.d/yabai-helper.tmp"
+-'  1  125  /private/etc/sudoers.d/yabai-helper.tmp
+|4,39,1,125,1689566568,"/private/etc/sudoers.d/yabai-helper.tmp"
+-'  1  125  /private/etc/sudoers.d/yabai-helper.tmp
+|4,39,1,125,1689566568,"/private/etc/sudoers.d/yabai-helper.tmp"
+-'  1  125  /private/etc/sudoers.d/yabai-helper.tmp
+|4,39,1,125,1689566568,"/private/etc/sudoers.d/yabai-helper.tmp"
 -'  1  125  /private/etc/sudoers.d/yabai-helper.tmp
 |4,39,1,125,1689566568,"/private/etc/sudoers.d/yabai-helper.tmp"
 -'  1  125  /private/etc/sudoers.d/yabai-helper.tmp
@@ -116,6 +146,38 @@
 |4,39,1,128,1689565012,"/private/etc/sudoers.d/yabai.tmp"
 -'  1  128  /private/etc/sudoers.d/yabai.tmp
 |4,39,1,128,1689565012,"/private/etc/sudoers.d/yabai.tmp"
+-'  1  128  /private/etc/sudoers.d/yabai.tmp
+|4,39,1,128,1689565012,"/private/etc/sudoers.d/yabai.tmp"
+-'  1  128  /private/etc/sudoers.d/yabai.tmp
+|4,39,1,128,1689565012,"/private/etc/sudoers.d/yabai.tmp"
+-'  1  128  /private/etc/sudoers.d/yabai.tmp
+|4,39,1,128,1689565012,"/private/etc/sudoers.d/yabai.tmp"
+-'  1  128  /private/etc/sudoers.d/yabai.tmp
+|4,39,1,128,1689565012,"/private/etc/sudoers.d/yabai.tmp"
+-'  1  128  /private/etc/sudoers.d/yabai.tmp
+|4,39,1,128,1689565012,"/private/etc/sudoers.d/yabai.tmp"
+-'  1  128  /private/etc/sudoers.d/yabai.tmp
+|4,39,1,128,1689565012,"/private/etc/sudoers.d/yabai.tmp"
+-'  1  128  /private/etc/sudoers.d/yabai.tmp
+|4,39,1,128,1689565012,"/private/etc/sudoers.d/yabai.tmp"
+-'  1  128  /private/etc/sudoers.d/yabai.tmp
+|4,39,1,128,1689565012,"/private/etc/sudoers.d/yabai.tmp"
+-'  1  0  /private/etc/sudoers.d/yabai.tmp
+|4,39,1,0,1689564450,"/private/etc/sudoers.d/yabai.tmp"
+-'  1  0  /private/etc/sudoers.d/yabai.tmp
+|4,39,1,0,1689564450,"/private/etc/sudoers.d/yabai.tmp"
+-'  1  0  /private/etc/sudoers.d/yabai.tmp
+|4,39,1,0,1689564450,"/private/etc/sudoers.d/yabai.tmp"
+-'  1  0  /private/etc/sudoers.d/yabai.tmp
+|4,39,1,0,1689564450,"/private/etc/sudoers.d/yabai.tmp"
+-'  1  0  /private/etc/sudoers.d/yabai.tmp
+|4,39,1,0,1689564450,"/private/etc/sudoers.d/yabai.tmp"
+-'  1  0  /private/etc/sudoers.d/yabai.tmp
+|4,39,1,0,1689564450,"/private/etc/sudoers.d/yabai.tmp"
+-'  1  0  /private/etc/sudoers.d/yabai.tmp
+|4,39,1,0,1689564450,"/private/etc/sudoers.d/yabai.tmp"
+-'  1  0  /private/etc/sudoers.d/yabai.tmp
+|4,39,1,0,1689564450,"/private/etc/sudoers.d/yabai.tmp"
 -'  1  0  /private/etc/sudoers.d/yabai.tmp
 |4,39,1,0,1689564450,"/private/etc/sudoers.d/yabai.tmp"
 -'  1  0  /private/etc/sudoers.d/yabai.tmp
@@ -196,80 +258,16 @@
 |4,39,1,12,1689563777,"/private/etc/sudoers.d/skhd.tmp"
 -'  1  12  /private/etc/sudoers.d/skhd.tmp
 |4,39,1,12,1689563777,"/private/etc/sudoers.d/skhd.tmp"
--'  1  128  /private/etc/sudoers.d/yabai.tmp
-|4,39,1,128,1689563551,"/private/etc/sudoers.d/yabai.tmp"
--'  1  128  /private/etc/sudoers.d/yabai.tmp
-|4,39,1,128,1689563551,"/private/etc/sudoers.d/yabai.tmp"
--'  1  128  /private/etc/sudoers.d/yabai.tmp
-|4,39,1,128,1689563551,"/private/etc/sudoers.d/yabai.tmp"
--'  1  128  /private/etc/sudoers.d/yabai.tmp
-|4,39,1,128,1689563551,"/private/etc/sudoers.d/yabai.tmp"
--'  1  128  /private/etc/sudoers.d/yabai.tmp
-|4,39,1,128,1689563551,"/private/etc/sudoers.d/yabai.tmp"
--'  1  128  /private/etc/sudoers.d/yabai.tmp
-|4,39,1,128,1689563551,"/private/etc/sudoers.d/yabai.tmp"
--'  1  128  /private/etc/sudoers.d/yabai.tmp
-|4,39,1,128,1689563551,"/private/etc/sudoers.d/yabai.tmp"
--'  1  128  /private/etc/sudoers.d/yabai.tmp
-|4,39,1,128,1689563551,"/private/etc/sudoers.d/yabai.tmp"
--'  1  128  /private/etc/sudoers.d/yabai.tmp
-|4,39,1,128,1689563551,"/private/etc/sudoers.d/yabai.tmp"
--'  1  128  /private/etc/sudoers.d/yabai.tmp
-|4,39,1,128,1689563551,"/private/etc/sudoers.d/yabai.tmp"
--'  1  128  /private/etc/sudoers.d/yabai.tmp
-|4,39,1,128,1689563551,"/private/etc/sudoers.d/yabai.tmp"
--'  1  128  /private/etc/sudoers.d/yabai.tmp
-|4,39,1,128,1689563551,"/private/etc/sudoers.d/yabai.tmp"
--'  1  128  /private/etc/sudoers.d/yabai.tmp
-|4,39,1,128,1689563551,"/private/etc/sudoers.d/yabai.tmp"
--'  1  128  /private/etc/sudoers.d/yabai.tmp
-|4,39,1,128,1689563551,"/private/etc/sudoers.d/yabai.tmp"
--'  1  128  /private/etc/sudoers.d/yabai.tmp
-|4,39,1,128,1689563551,"/private/etc/sudoers.d/yabai.tmp"
--'  1  128  /private/etc/sudoers.d/yabai.tmp
-|4,39,1,128,1689563551,"/private/etc/sudoers.d/yabai.tmp"
--'  10  19  ~/.zshrc
-|4,39,10,19,1689555156,"~/.zshrc"
--'  10  19  ~/.zshrc
-|4,39,10,19,1689555156,"~/.zshrc"
--'  10  19  ~/.zshrc
-|4,39,10,19,1689555156,"~/.zshrc"
--'  10  19  ~/.zshrc
-|4,39,10,19,1689555156,"~/.zshrc"
--'  10  19  ~/.zshrc
-|4,39,10,19,1689555156,"~/.zshrc"
--'  10  19  ~/.zshrc
-|4,39,10,19,1689555156,"~/.zshrc"
--'  10  19  ~/.zshrc
-|4,39,10,19,1689555156,"~/.zshrc"
--'  10  19  ~/.zshrc
-|4,39,10,19,1689555156,"~/.zshrc"
--'  10  19  ~/.zshrc
-|4,39,10,19,1689555156,"~/.zshrc"
--'  10  19  ~/.zshrc
-|4,39,10,19,1689555156,"~/.zshrc"
--'  10  19  ~/.zshrc
-|4,39,10,19,1689555156,"~/.zshrc"
--'  10  19  ~/.zshrc
-|4,39,10,19,1689555156,"~/.zshrc"
--'  10  19  ~/.zshrc
-|4,39,10,19,1689555156,"~/.zshrc"
--'  10  19  ~/.zshrc
-|4,39,10,19,1689555156,"~/.zshrc"
--'  10  19  ~/.zshrc
-|4,39,10,19,1689555156,"~/.zshrc"
--'  10  19  ~/.zshrc
-|4,39,10,19,1689555156,"~/.zshrc"
--'  10  19  ~/.zshrc
-|4,39,10,19,1689555156,"~/.zshrc"
--'  10  19  ~/.zshrc
-|4,39,10,19,1689555156,"~/.zshrc"
--'  10  19  ~/.zshrc
-|4,39,10,19,1689555156,"~/.zshrc"
--'  10  19  ~/.zshrc
-|4,39,10,19,1689555156,"~/.zshrc"
--'  10  19  ~/.zshrc
-|4,39,10,19,1689555156,"~/.zshrc"
+-'  1  12  /private/etc/sudoers.d/skhd.tmp
+|4,39,1,12,1689563777,"/private/etc/sudoers.d/skhd.tmp"
+-'  1  12  /private/etc/sudoers.d/skhd.tmp
+|4,39,1,12,1689563777,"/private/etc/sudoers.d/skhd.tmp"
+-'  1  12  /private/etc/sudoers.d/skhd.tmp
+|4,39,1,12,1689563777,"/private/etc/sudoers.d/skhd.tmp"
+-'  1  12  /private/etc/sudoers.d/skhd.tmp
+|4,39,1,12,1689563777,"/private/etc/sudoers.d/skhd.tmp"
+-'  1  12  /private/etc/sudoers.d/skhd.tmp
+|4,39,1,12,1689563777,"/private/etc/sudoers.d/skhd.tmp"
 
 # History of marks within files (newest to oldest):
 

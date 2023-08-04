@@ -1,0 +1,16 @@
+#!/usr/bin/env zsh
+
+# Define the prompt format
+PROMPT='%F{white}anti %F{blue}󰅬 %f%F{blue}%D{%I:%M %P}%f%F{white}
+%F{green}%~%f
+> '
+
+# Explanation of prompt elements:
+# %F{color} - Start using specified foreground color
+# %f - Stop using the current foreground color
+# %D{%I:%M %P} - Time in 12-hour format with AM/PM
+# %> - Add the '>' symbol
+# %~ - Current working directory (tilde for home directory)
+
+# Save the changes to your .zshrc file and then open a new terminal window or restart your terminal to apply the changes.
+

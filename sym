@@ -1,0 +1,36 @@
+#!/bin/bash
+
+# Define the source directory (your dotfiles repository)
+src="$HOME/installer.eq"
+
+# Define the target directory (your home directory)
+target="$HOME"
+
+# Define the array of files that you want to backup
+files=(
+  ".config" ".hammerspoon" ".local" ".terminfo" "Elkab" ".aliases"
+  ".bash_history" ".bash_profile" ".bash_prompt" ".bashenv" ".bashprompt.sh"
+  ".bashrc" ".Brewfile" ".CFUserTextEncoding" ".curlrc" ".editorconfig"
+  ".exports" ".functions" ".functions.zwc" ".gdbinit" ".gvimrc" ".hgignore"
+  ".hushlogin" ".inputrc" ".install.sh" ".lesshst" ".lscolors" ".macos"
+  ".netrc" ".osh-update" ".pathenvs" ".profile" ".prompt" ".screenrc" ".sdirs"
+  ".tmux.conf" ".viminfo" ".vimrc" ".vulkanpaths" "wget-hsts" "wgetrc"
+  ".yabaihash" ".zprofile" ".zsh_history" ".zsh_profile" ".zshenv" ".zshrc"
+  "Brewfile" "destroyheroku" "Elkab.ttf" "letterhead.ps1" "prompt34" "yabaihash"
+)
+
+# Loop over all files
+for file in "${files[@]}"; do
+    # If the file exists in the source directory
+    if [ -e "${src}/${file}" ]; then
+        # If a link or a file with the same name exists in the target directory, remove it
+        if [ -e "${target}/${file}" ] || [ -h "${target}/${file}" ]; then
+            rm -r "${target}/${file}"
+        fi
+        # Create a new symlink in the target directory
+        ln -s "${src}/${file}" "${target}/${file}"
+    fi
+done
+
+
+

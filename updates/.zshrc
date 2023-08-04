@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+
 #
 if [[ -e "${HOME}/.profile" ]]; then
   source "${HOME}/.profile"
@@ -15,7 +15,7 @@ GIT_REPO="https://github.com/marlonrichert/zsh-snap.git"
 source $ZSH_SNAP_PATH/znap.zsh
 
 # Define and source file array
-files=(.vulkanpaths .functions .fzf.zsh .lscolors .aliases)
+files=(.vulkanpaths .functions .fzf.zsh .lscolors .aliases .zprofile)
 for file in "${files[@]}"; do
     file="$HOME/$file"
     [[ -f $file ]] && source $file
@@ -49,6 +49,6 @@ bindkey -r '^Q' '^[Q'
 znap eval omz-git 'curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/git/git.plugin.zsh'
 
 # Source prompt
-source "$HOME/.prompt"
+source "$HOME/prompt34"
 znap prompt
 
