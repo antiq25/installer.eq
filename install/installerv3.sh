@@ -10,7 +10,7 @@ ${CYAN}
 ░█▀▀░▄▀▄░░░▀█▀░█▀█░█▀▀░▀█▀░█▀█░█░░░█░░░█▀▀░█▀▄
 ░█▀▀░█\█░░░░█░░█░█░▀▀█░░█░░█▀█░█░░░█░░░█▀▀░█▀▄
 ░▀▀▀░░▀\░░░▀▀▀░▀░▀░▀▀▀░░▀░░▀░▀░▀▀▀░▀▀▀░▀▀▀░▀░▀
-  
+
 ${RESET}
 EOF
 }
@@ -20,7 +20,7 @@ print_banner
 read -p "INSTALLERv4 (2023) Would you like to begin? (Yes/No): " choice
 
 if [[ "$choice" =~ ^yes$ ]]; then
-  cd "$HOME/installer.eq/updates" && brew bundle
+  cd "$HOME/installer.eq/install" && brew bundle
 elif [[ "$choice" =~ ^no$ ]]; then
   echo "Closing window"
 else

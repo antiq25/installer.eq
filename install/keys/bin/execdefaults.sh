@@ -1,4 +1,4 @@
-#!/usr/bin/bash 
+#!/usr/bin/bash
 
 message() {
 	printf "[>>] %s\n" "$*" >&2
@@ -36,12 +36,6 @@ change_defaults
 
 wait
 
-echo "MACOS DEFAULTS CHANGED!"
+echo "MACOS DEFAULTS CHANGED"
 
-source ~/installer.eq/install/keys/bin/change_symbolickeys.sh
 
-echo "Changing MACOS SYMBOLIC KEYS!"
-
-mac_change_symbolickeys
-
-echo "MACOS SYMBOLIC KEYS CHANGED!"
