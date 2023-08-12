@@ -1,7 +1,5 @@
 #!/bin/bash
 
-#!/bin/bash
-
 function print_banner() {
   local CYAN=$(tput setaf 6)
   local RESET=$(tput sgr0)
