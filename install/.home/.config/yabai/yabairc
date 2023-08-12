@@ -2,14 +2,14 @@
 #
 launchctl unload -F /System/Library/LaunchAgents/com.apple.WindowManager.plist > /dev/null 2>&1 &
 
-source "${HOME}/bin/yabai-helper"
+source "${HOME}/.local/bin/helper"
 
 # Unload the macOS WindowManager process
 
 sudo yabai --load-sa
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
-yabai -m signal --add event=display_added action="sleep 1 && source ${HOME}/bin/yabai-helper && create_spaces 7"
-yabai -m signal --add event=display_removed action="sleep 1 && source ${HOME}/bin/yabai-helper && create_spaces 7"
+yabai -m signal --add event=display_added action="sleep 1 && source ${HOME}/.local/bin/helper && create_spaces 7"
+yabai -m signal --add event=display_removed action="sleep 1 && source ${HOME}/.local/bin/helper && create_spaces 7"
 
 
 
@@ -42,7 +42,7 @@ BORDERS=(
 	window_border_hidpi on
 	window_border_width 2
 	window_border_radius 12
-	active_window_border_color 0xffffffff
+	active_window_border_color 0xff3f64a3
 	normal_window_border_color 0xff5e6798
 )
 # window_border_radius 11 \
@@ -53,7 +53,7 @@ LAYOUT=(
 	bottom_padding 60
 	left_padding 10
 	right_padding 10
-	window_gap 10
+	window_gap 8
 )
 
 MOUSE=(
@@ -61,7 +61,7 @@ MOUSE=(
 	mouse_action1 move
 	mouse_action2 resize
 	mouse_drop_action swap
-	focus_follows_mouse autoraise
+	focus_follows_mouse off
 	mouse_follows_focus off
 )
 

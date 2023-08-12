@@ -16,14 +16,14 @@ if [[ $choice == "YES" ]]; then
         cd MoltenVK
 
         # Second command
-       bash fetchDependencies --macos 
+       bash fetchDependencies --macos
 
         # Check if the second command was successful
         if [ $? -eq 0 ]; then
             echo "fetchdependancies command was successful. Starting 'make macos'."
 
             # Third command
-            make macos MVK_CONFIG_LOG_LEVEL=1 MVK_CONFIG_USE_METAL_ARGUMENT_BUFFERS=2 
+            make macos MVK_CONFIG_LOG_LEVEL=1 MVK_CONFIG_USE_METAL_ARGUMENT_BUFFERS=1
             wait
 
             sudo rm /usr/local/lib/libMoltenVK.dylib

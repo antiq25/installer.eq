@@ -8,6 +8,9 @@
 ehthumbs.db
 Thumbs.db
 zsh-snap
-zsh 
-nvim 
+zsh
+nvim
+.local/share
+.local/state
+
 

@@ -26,7 +26,7 @@ fi
 
 
 # Replace some more things with better alternatives
-[ $(command -v bat) ] && alias cat='bat'
+#[ $(command -v bat) ] && alias cat='bat'
 [ $(command -v nvim) ] && alias vim='nvim'
 
 alias usage='du -ah -d1 | sort -rn 2>/dev/null'
@@ -158,3 +158,8 @@ alias winunload="launchctl unload -F /System/Library/LaunchAgents/com.apple.Wind
 
 
 alias flak="cd ~/Documents/TOOL_NET/toolnet"
+
+alias lsperms='stat -f "%A %a %N" *'
+
+alias htrack='echo "httrack "http://example.com" -O "my_website" -%v --robots=0 -r10 -A0 -%k"'
+

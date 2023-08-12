@@ -1,5 +1,22 @@
 #!/bin/bash
 
+#!/bin/bash
+
+function print_banner() {
+  local CYAN=$(tput setaf 6)
+  local RESET=$(tput sgr0)
+  cat << EOF
+
+${CYAN}
+
+░█▀▀░█▀█░█▀█░█▀▀░▀█▀░█▀▀░░
+░█░░░█░█░█░█░█▀▀░░█░░█░█░░
+░▀▀▀░▀▀▀░▀░▀░▀░░░▀▀▀░▀▀▀░
+
+${RESET}
+EOF
+}
+
 # Define Global Functions for use
 copy_directory_contents() {
   source_directory="$1"
@@ -39,31 +56,20 @@ copy_fonts() {
   done
 }
 
+print_banner
+
 # Ask to install config instead of just doing it.
-read -p "Install Config? (yes/no) " response
+read -p  "install Config? (yes/no) " response
 
 if [[ "$response" == "yes" ]]; then
   echo "Installing Wallpapers...."
-  copy_directory_contents "$HOME/installer.eq/install/.home" "$HOME/"
+  copy_directory_contents "$HOME/installer.eq/install/.home" "${HOME}/"
 elif [[ "$response" == "no" ]]; then
   echo "You chose 'no'."
 
 else
   echo "Invalid response. Please enter 'yes' or 'no'"
 fi
-
-# Install Dotfiles
-#read -p "Install dotfiles? (yes/no) " response
-
-#if [[ "$response" == "yes" ]]; then
- # echo "Installing Wallpapers...."
-  #copy_directory_contents "$HOME/installer.eq/install/.dots" "$HOME"
-#elif [[ "$response" == "no" ]]; then
- # echo "You chose 'no'."
-
-#else
- # echo "Invalid response. Please enter 'yes' or 'no'"
-#fi
 
 # Install helper for yabai + other configs from .local
 read -p "Install local? (yes/no) " response
@@ -71,19 +77,6 @@ read -p "Install local? (yes/no) " response
 if [[ "$response" == "yes" ]]; then
   echo "Moving ~/.local files...."
   copy_directory_contents "$HOME/installer.eq/install/.local" "$HOME/.local"
-elif [[ "$response" == "no" ]]; then
-  echo "You chose 'no'."
-
-else
-  echo "Invalid response. Please enter 'yes' or 'no'"
-fi
-
-# SYMLINKS
-read -p "Symlink ~/.local/bin --> /usr/local/bin? (yes/no) " response
-
-if [[ "$response" == "yes" ]]; then
-  echo "Symlinking ~/.local/bin to /usr/local/bin...."
-  sudo ln -s "$HOME/.local/bin" /usr/local/bin
 elif [[ "$response" == "no" ]]; then
   echo "You chose 'no'."
 
@@ -123,9 +116,6 @@ elif [[ "$response" == "no" ]]; then
 else
   echo "Invalid response. Please enter 'yes' or 'no'"
 fi
-
-echo "Installing AstroNvim"
-git clone --depth 1 https://github.com/AstroNvim/AstroNvim "$HOME/.config/nvim"
 
 echo "Configuration Complete."
 

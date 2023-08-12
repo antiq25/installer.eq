@@ -416,3 +416,73 @@ which $zshrc
 ls
 vi .exports
 zsh
+ls
+vi .zshenv
+rm -rf .zshenv
+ls
+zsh
+pipes.sh
+pipes.sh
+ifstat
+cls
+zsh
+zsh
+ls
+cls
+vkvia
+vulkanconfig
+./bash
+bash bash
+ls
+open bash
+cls
+cls
+ls
+ls
+cd ..
+ls
+ls
+cd ..
+ls
+vi .bashrc
+source .bash_profile 
+ls
+vi .bash_profile
+vi .bashrc
+bash
+ls
+path
+ls
+path
+cls
+zsh
+cat │ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCxJnW9m9u/7gCrpIEms5N/8VmZy6CmjEcVfv0QujV2uMVXFQdE8/Y8Icb1n0CjkOEiedAwHn9GCC19cLqokCyinRa+0bMDy1secP21eqrMa+PWYXzcsjX5deEZW+fDWqW6E0egon8JPZJV62Cq2/8QtjrAhsmdZ8IBpC1vtnhc9osx
+       │ PYlk+cbL/sOgyrwNJvYG/Ag4h4HC/BY5iQyBlaF04WsS5Rwix9zH1XIPaYxA7koYbKRhdg00yelF2q+BNMF5sRRGEbg4eCXHh1dPU9THeER1Jo7kDOCP9xM2HKXdaHsQBPq/tR8phlEPSH+e+ZHTs+TuwrVPz4Sx27xJUDixZ/Oi9Doe0c7gikGAONf+3AyVx+Mm4EvoOlUoo34Sv8LI
+       │ cZ8fd7fwA/lBJ4h2Hn9holPdOm3rbw0ZEguQuGGaZO0ED1yI3mZOcoHQUJngXwE5Addx9AsLGqyA3PCSh3sqTBYHuBWZ/wmqjDqaGaAvFGr9z8CuxzYxlXsWjGIW928= anti@antcls
+cls
+cat
+zsh
+./lollipop /path/to/dir/withOrWithoutIndexHtml portNum -p passwordHere
+sl
+ls
+source .prompt
+ls
+source prompt
+ls
+ls
+source .bash_prompt
+ls
+ls
+ls
+vi .bash_rc
+vi .bashrc
+ls
+cls
+ls
+vi .inputrc
+source .inputrc
+ls
+zsh
+ls
+cls
+zsh
