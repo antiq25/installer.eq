@@ -15,10 +15,10 @@ def fix_errors(font):
                 glyph.validate()  # Will just check for errors, but won't necessarily fix them
 
     # Save the corrected font
-    font.generate("corrected_font_name.otf")
+    font.generate("ElkabCorrect.otf")
 
 # Load the font
-font_path = "test.otf"
+font_path = "Elkab.otf"
 font = fontforge.open(font_path)
 fix_errors(font)
 print("Finished processing and saved corrected font.")
