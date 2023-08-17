@@ -1,4 +1,5 @@
 import fontforge
+import os
 
 def fix_errors(font):
     for glyph in font.glyphs():
@@ -18,7 +19,7 @@ def fix_errors(font):
     font.generate("ElkabCorrect.otf")
 
 # Load the font
-font_path = "Elkab.otf"
+font_path = "Monoregular.ttf"
 font = fontforge.open(font_path)
 fix_errors(font)
 print("Finished processing and saved corrected font.")
