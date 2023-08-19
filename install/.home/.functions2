@@ -25,3 +25,22 @@ ch() {
   awk -F $sep '{printf "%-'$cols's  \x1b[36m%s\x1b[m\n", $1, $2}' |
   fzf --ansi --multi | sed 's#.*\(https*://\)#\1#' | xargs open
 }
+
+htrackg() {
+    if [ -z "$1" ]; then
+        echo "Please provide a website."
+        return
+    fi
+
+    # Prompt the user for the folder name
+    echo -n "Enter the folder name: "
+    read folder_name
+
+    if [ -z "$folder_name" ]; then
+        echo "Folder name is empty. Aborting."
+        return
+    fi
+
+    httrack "$1" -O "$folder_name" -%v --robots=0 -r10 -A0 -%k
+}
+
