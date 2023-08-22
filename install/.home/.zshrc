@@ -1,6 +1,8 @@
-if [[ -e "${HOME}/.profile" ]]; then
-  source "${HOME}/.profile"
+
+if [[ -e "${HOME}/.zshenv" ]]; then
+  source "${HOME}/.zshenv"
 fi
+
 
 
 if [[ -e "${HOME}/.zprofile" ]]; then
@@ -14,13 +16,13 @@ source $ZSH_SNAP_PATH/znap.zsh
 
 
 files=(
-  .functions
+    .functions
   .fzf.zsh
   .lscolors
   .aliases
   .functions2
-  )
- for file in "${files[@]}"; do
+)
+for file in "${files[@]}"; do
     file="$HOME/$file"
     [[ -f $file ]] && source $file
 done
@@ -62,5 +64,4 @@ znap eval omz-git 'curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/
 # Source prompt
 source "$HOME/prompt34"
 znap prompt
-
 

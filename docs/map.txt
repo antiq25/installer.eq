@@ -16,14 +16,14 @@ To generate a key for a specific binary follow these steps:
 2. To write the key into the source, execute the following command with administrative privileges:
    sudo visudo -f /private/etc/sudoers.d/(binary name goes here)
 
-3. Write this into the prompt that gets displayed when running the previous command ^ 
+3. Write this into the prompt that gets displayed when running the previous command ^
 
    anti ALL = (root) NOPASSWD: sha256:entersha256keyhere put/binary/bath/here --load-sa
 
-    ^--- yopu put the name of your $HOME here 
+    ^--- yopu put the name of your $HOME here
 
 
-   
+
     random pastes and cmds
 ## ─────────────────────────────────────
 
@@ -35,7 +35,7 @@ ioreg -l -w 0 | grep SecureInput
 tccutil reset All
 
 ##fix certs
-xattr -c /path/of/binary 
+xattr -c /path/of/binary
 
 ##youtube downloader
 
@@ -48,6 +48,11 @@ yt-dlp --format mp4 [url]
 
 Clone the following repositories using the provided commands:
 
+
+BOOTSTRAP 5
+https://github.com/twbs/bootstrap
+
+
 - Dotfiles:
   git clone https://github.com/FelixKratz/dotfiles
 
@@ -55,13 +60,13 @@ Clone the following repositories using the provided commands:
 
   git clone  https://github.com/mathiasbynens/dotfiles
 
-- installer.eq 
+- installer.eq
   git clone https://github.com/antiq25/installer.eq
 
 - Fastfetch:
-  git clone https://github.com/LinusDierheimer/fastfetch 
+  git clone https://github.com/LinusDierheimer/fastfetch
 
-- Kitty 
+- Kitty
 git clone https://github.com/kovidgoyal/kitty
 
 - Starship
@@ -97,7 +102,7 @@ Here are some keys for specific applications:
 ─────────────────────────────────────
 ln -s directory/file --- > directory/file
 
-example : ln -s ~/kitty/kitty/launcher/kitty /opt/homebrew/bin/kitty 
+example : ln -s ~/kitty/kitty/launcher/kitty /opt/homebrew/bin/kitty
 
 
 
