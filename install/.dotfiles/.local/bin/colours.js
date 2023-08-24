@@ -1,0 +1,1 @@
+/Users/anti/installer.eq/install/.dotfiles/.local/bin/colours.js
