@@ -115,19 +115,5 @@ else
   echo "Invalid response. Please enter 'yes' or 'no'"
 fi
 
-echo "Complete."
-
-read -p "Would you like to sym link all your files? (yes/no) " response
-
-if [[ "$response" == "yes" ]]; then
-  echo "Downloading Wallpapers...."
-  sh $HOME/installer.eq/dotfiles.sh
-elif [[ "$response" == "no" ]]; then
-  echo "You chose 'no'."
-
-else
-  echo "Invalid response. Please enter 'yes' or 'no'"
-fi
-
 echo "Configuration Complete."
 
