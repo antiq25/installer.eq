@@ -19,7 +19,7 @@ def fix_errors(font):
     font.generate("ElkabSansCorrect.ttf")
 
 # Load the font
-font_path = "BCSansNerdFont-Regular.otf"
+font_path = "NewElkab.otf"
 font = fontforge.open(font_path)
 fix_errors(font)
 print("Finished processing and saved corrected font.")

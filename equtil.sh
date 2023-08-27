@@ -3,18 +3,18 @@ CYAN="\033[0;96m"
 YELLOW="\033[0;33m"
 RED="\033[0;31m"
 RESET="\033[0m"
-GREEN="\033[0;32m" 
+GREEN="\033[0;32m"
 
 
 display_ascii_art2() {
  cat << "EOF"
-       
- ═══════════════════════════════════════      
-   ___  __ _ _   _| |_(_) |  ___| |__    
-  / _ \/ _` | | | | __| | | / __| '_ \   
- |  __/ (_| | |_| | |_| | |_\__ \ | | |  
-  \___|\__, |\__,_|\__|_|_(_)___/_| |_|  
-══════════|_|══════════════════════════                                                      
+
+ ═══════════════════════════════════════
+   ___  __ _ _   _| |_(_) |  ___| |__
+  / _ \/ _` | | | | __| | | / __| '_ \
+ |  __/ (_| | |_| | |_| | |_\__ \ | | |
+  \___|\__, |\__,_|\__|_|_(_)___/_| |_|
+══════════|_|══════════════════════════
 EOF
 }
 
@@ -24,7 +24,7 @@ display_help_menu() {
 while true; do
 clear
  printf "
-EQUTIL 2023 - 
+EQUTIL 2023 -
 created by eq team
 antiq - github.com/antiq25
 dycl0n -  github.com/dycl0n
@@ -34,28 +34,28 @@ you will see boxes instead of icons before you run the installer
 󰧹  = key to activate
   = cmd to activate
 
-main menu                     
+main menu 
 ──────────────────
- install -   install 
- optimize -   opt   
+ install -   install
+ optimize -   opt
  docs -   docs
- exit - 󰧹  4 
+ exit - 󰧹  4
 
-sub menus 󰧹 
+sub menus 󰧹
 ─────────────────────
-1. first item  󰧹 1 
+1. first item  󰧹 1
 2. second item 󰧹 2
-3. third item  󰧹 3 
-4. fourth item 󰧹 4 
-󰌑  - enter 
+3. third item  󰧹 3
+4. fourth item 󰧹 4
+󰌑  - enter
 
 this was created so that anyone could build ontop if it, jsut edit the equtil.sh file to inject your scripts or remove the ones in here
 we will be adding a os detector and have scripts for linux , windows soon..
 "
-echo 
+echo
 read choice
     case $choice in
-  "") 
+  "")
      clear
      return 0;;   # Allow 'enter' to return to the main menu
       *) echo "Invalid option. press enter to try again."; read;;
@@ -78,7 +78,7 @@ echo "        └── 󰌑 ${CYAN}return${RESET}"
 echo "type cmd to execute (press 'enter' to go return): "
     read choice
     case $choice in
-      "preinstall") 
+      "preinstall")
            echo "${GREEN}preparing installer..${RESET}"
            sh $HOME/installer.eq/install/installbrew.sh
            echo "press enter to go return."
@@ -88,17 +88,17 @@ echo "type cmd to execute (press 'enter' to go return): "
          sh $HOME/installer.eq/install/installerv3.sh
            echo "press Enter to go return."
            read;;
-      "defaults") 
+      "defaults")
            echo "${GREEN}injecting macos defaults..${RESET}"
           sh $HOME/installer.eq/install/keys/readme.sh
             echo "press enter to go return."
            read;;
-      "config") 
+      "config")
            echo "${GREEN}injecting config...${RESET}"
           sh $HOME/installer.eq/install/font.sh
             echo "press enter to go return."
            read;;
-        "") 
+        "")
      clear
      return 0;;   # Allow 'enter' to return to the main menu
       *) echo "Invalid option. press enter to try again."; read;;
@@ -124,31 +124,31 @@ echo
 echo "hit key to select choice (press 'enter' to go return): "
 read choice
 case $choice in
-      "1") 
+      "1")
            echo "optimizing..."
           sh $HOME/installer.eq/mtn/cleanv1.sh
            echo "press enter to go return."
            read;;
-      "2") 
+      "2")
            echo "debloating..."
          sh $HOME/installer.eq/utils/macos.sh
            echo "press enter to go return."
            read;;
-      "3") 
+      "3")
            echo "restarting config.."
-         sh $HOME/installer.eq/mtn/restartcfg.sh
+         killall -u anti && open "/Applications/Alfred\ 5.app/"
           echo "press enter to go return."
            read;;
       "4")
           echo "refreshing sha256 keys..killing zsh.."
         sh  $HOME/installer.eq/utils/drivers/vulkan.sh
-          echo "press enter to go return." 
+          echo "press enter to go return."
            read;;
-      "5") 
+      "5")
           echo "refreshing sha256 keys..killing zsh.."
         sh  $HOME/installer.eq/utils/drivers/moltenvk.sh
-          echo "press enter to go return." 
-           read;;          
+          echo "press enter to go return."
+           read;;
         "") return 0;;   # Allow 'enter' to return to the main menu
       *) echo "Invalid option. press enter to try again."; read;;
     esac
@@ -173,7 +173,7 @@ echo " "
 echo "keys 1-5 (press 'enter' to go return): "
      read choice
     case $choice in
-      "1") 
+      "1")
            echo "cmds.."
            cat $HOME/installer.eq/docs/map.txt
            echo "press enter to go return."
@@ -185,7 +185,7 @@ echo "keys 1-5 (press 'enter' to go return): "
            echo "press enter to go return."
            read;;
 
-      "3") 
+      "3")
            echo "${GREEN}codesign..${RESET}"
            cat $HOME/installer.eq/docs/codesign.txt
            echo "press enter to go return."
@@ -200,7 +200,7 @@ echo "keys 1-5 (press 'enter' to go return): "
           cat $HOME/installer.eq/docs/yabai.txt
           echo "press enter to go return."
           read;;
-  "") 
+  "")
      clear
      return 0;;   # Allow 'enter' to return to the main menu
       *) echo "invalid choice.. hit enter to try again"; read;;
@@ -291,4 +291,4 @@ main_menu() {
 }
 
 # Call the main menu function to start the script
-main_menu      
+main_menu
