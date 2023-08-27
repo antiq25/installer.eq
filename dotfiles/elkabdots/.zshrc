@@ -35,6 +35,8 @@ for plugin in "${plugins[@]}"; do
     znap source $plugin
 done
 
+#zle -N reverse-pop-yank
+
 # Source zsh-autosuggestions and set strategy to 'history'
 ZSH_AUTOSUGGEST_STRATEGY=( history )
 znap source zsh-users/zsh-autosuggestions
@@ -57,7 +59,6 @@ bindkey -r '^Q' '^[Q'
 # Load git plugin
 znap eval omz-git 'curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/git/git.plugin.zsh'
 
-#zle -N reverse-pop-yank
 
 # Source prompt
 source "$HOME/prompt34"

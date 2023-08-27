@@ -486,3 +486,12 @@ zsh
 ls
 cls
 zsh
+cd
+ls
+.bashrc
+vi .bash_profile
+ls
+sudo lsof -i :5000
+zsh
+cls
+zsh
