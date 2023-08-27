@@ -1,0 +1,19 @@
+# Export PATHS
+export PATH="/opt/homebrew/bin:$PATH"
+export PATH="/opt/homebrew/sbin:$PATH"
+export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/bin:$PATH"
+export PATH="/bin:$PATH"
+export PATH="/usr/sbin:$PATH"
+export PATH="/sbin:$PATH"
+export PATH="/Users/anti/.cargo/bin:$PATH"
+export PATH="/Users/anti/miniforge3/bin:$PATH"
+export PATH="/Users/anti/VulkanSDK/macOS/bin:$PATH"
+export PATH="/Users/anti/.nix-profile/bin:$PATH"
+export PATH="/nix/var/nix/profiles/default/bin:$PATH"
+export PATH="/opt/X11/bin:$PATH"
+export PATH="/Library/Frameworks/Mono.framework/Versions/Current/Commands:$PATH"
+export PATH="/Applications/kitty.app/Contents/MacOS:$PATH"
+export PATH="/Users/anti/kitty/kitty.app/Contents/MacOS:$PATH"
+
+
