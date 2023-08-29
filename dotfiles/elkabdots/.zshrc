@@ -14,11 +14,11 @@ source $ZSH_SNAP_PATH/znap.zsh
 
 
 files=(
-    .functions
+  .functions
   .fzf.zsh
   .lscolors
   .aliases
-  .functions2
+  .funcs
 )
 for file in "${files[@]}"; do
     file="$HOME/$file"

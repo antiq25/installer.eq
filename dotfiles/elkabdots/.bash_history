@@ -1,40 +1,3 @@
-/opt/homebrew/lib
-ls
-zsh
-npx npm-check-updates
-cd
- zsh
-cls
-cls
-zsh
-s
-zsh
-zsh
-npx uninstall 
-npx uninstall alacritty-themes
-locate alacritty-themes
-ls
-alacritty
-npx ncu -u
-ls
-npm run start
-npx
-cd 
-ls
-vi .bashrc
-vi .bashenv
-zsh
-ls -a 
-cls
-bash
-ssh
-zsh
-zsh
-cd 
-zsh
-exec 
-ls
-exec libmoltenvk.dylib
 run .
 rub
 man
@@ -495,3 +458,77 @@ sudo lsof -i :5000
 zsh
 cls
 zsh
+cls
+cls
+bash
+ls
+cls
+zsh
+ls
+cls
+ls
+cls
+ls
+vi .bashrc
+vi .bashenv
+vi .profile
+bash
+source .bash_prompt
+ls
+cls
+cls
+ls
+cd
+vi .bashrc
+vi .bash_profile
+cls
+ls
+vi .zsh_profile
+vi .zprofile
+vi .bash_prompt
+vi .bash_profile
+vi .bashrc
+bash
+cls
+ls
+ls
+cd desktop
+ls
+kitten themes
+cls
+cls
+vi .bash_prompt
+cls
+cd
+vi .bash_prompt
+cls
+bash
+bash
+bash
+cls
+vi .bashrc
+vi .bash_prompt
+bash
+vi .bash_prompt
+bash
+cls
+bash
+kitty
+cls
+ls
+ls
+vi .bash_prompt
+kitty
+ls
+ls
+clear
+cls
+cls
+cls
+cls
+cls
+cls
+zsh
+cls
+bash
+fish
