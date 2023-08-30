@@ -1,32 +1,3 @@
-run .
-rub
-man
-zsh
-exec libmoltenvk.dylib
-zsh
-nix build
-ls
-cd lib
-ls
-nnix-shell -p mesa
-nix-shell -p mesa
-ls
-make
-cmake build
-ls
-./liblto.dylib
-sh LLVMHello.dylib
-open libLTO.dylib
-exec libLTO.dylib
-ls
-cd ..
-ls
-cd bin
-ls
-kitty
-ls
-cd ..
-ls
 cd zsh-users/
 ls
 cd ..
@@ -532,3 +503,32 @@ zsh
 cls
 bash
 fish
+./hollywood -s       17 -d 10
+ls
+cd bin
+ls
+./wallstreet 
+toggle_layout
+yabai --toggle-layout
+helper toggle_layout
+ls
+helper 
+set -ex
+c
+sourdehelp
+sourcehelp
+source .funcs
+sourcehelp
+new_window 
+bash
+get_pixel_color
+sourcehelp
+sourcehelp
+source ~/.local/bin/helper
+create_spaces
+auto_stack() l
+aut_stack
+auto_stack
+zsh
+sourcehelp
+zsh

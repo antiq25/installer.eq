@@ -5,10 +5,36 @@ RED="\033[0;31m"
 RESET="\033[0m"
 GREEN="\033[0;32m"
 
+display_help_menu_text() {
+  cat << "EOF" 
+░░░░░█▀▀░▄▀▄░█░█░▀█▀░▀█▀░█░░░░░░█▀▀░█░█
+░░░░░█▀▀░█\█░█░█░░█░░░█░░█░░░░░░▀▀█░█▀█
+░░░░░▀▀▀░░▀\░▀▀▀░░▀░░▀▀▀░▀▀▀░▀░░▀▀▀░▀░▀
+
+  Welcome to EQ UTILITIES 
+  developed by + anti / dyclon from eclectiq development team 
+
+equtil is
+  - a tool to help you install and optimize your macos / unix system, as well as manage your scripts, flags and other things via cli.
+  - open source, we welcome the community to help build this project!
+
+equtil currenty features
+  - vulkan sdk compiler/installer
+  - moltenvk sdk compiler/installer
+
+for macos 
+  - macos defaults injector
+  - macos debloat script
+
+ if you have any questions please reach out to us on discord!
+
+https://discord.gg/eq 
+EOF
+}                                                                      
+
 
 display_ascii_art2() {
- cat << "EOF"
-
+cat << "EOF" 
  ═══════════════════════════════════════
    ___  __ _ _   _| |_(_) |  ___| |__
   / _ \/ _` | | | | __| | | / __| '_ \
@@ -19,44 +45,31 @@ EOF
 }
 
 
-#SAMPLE
+display_log_output() {
+  local message
+  message=$(display_ascii_art2)
+  
+  if [ -f "$HOME/.equtil" ]; then
+    echo "Welcome Back, $USER."
+  else
+    echo "Welcome, $USER."
+    touch "$HOME/.equtil"
+  fi
+
+  if command -v lolcat &>/dev/null; then
+    echo "$message" | lolcat -a -d 1 -s 100
+  else
+    echo "$message"
+  fi
+}
+
 display_help_menu() {
 while true; do
 clear
- printf "
-EQUTIL 2023 -
-created by eq team
-antiq - github.com/antiq25
-dycl0n -  github.com/dycl0n
-
-you will see boxes instead of icons before you run the installer
-
-󰧹  = key to activate
-  = cmd to activate
-
-main menu 
-──────────────────
- install -   install
- optimize -   opt
- docs -   docs
- exit - 󰧹  4
-
-sub menus 󰧹
-─────────────────────
-1. first item  󰧹 1
-2. second item 󰧹 2
-3. third item  󰧹 3
-4. fourth item 󰧹 4
-󰌑  - enter
-
-this was created so that anyone could build ontop if it, jsut edit the equtil.sh file to inject your scripts or remove the ones in here
-we will be adding a os detector and have scripts for linux , windows soon..
-"
-echo
+display_help_menu_text
 read choice
     case $choice in
   "")
-     clear
      return 0;;   # Allow 'enter' to return to the main menu
       *) echo "Invalid option. press enter to try again."; read;;
     esac
@@ -69,7 +82,7 @@ printf "\033c"
 display_ascii_art2
 echo "    │"
 echo "    └──  ${YELLOW}equtil${RESET}"
-echo "        ├──  ${YELLOW}install${RESET}"
+echo "        ├──  ${GREEN}install${RESET}"
 echo "        │   ├───   ${GREEN}preinstall${RESET}"
 echo "        │   ├───   ${GREEN}install${RESET}"
 echo "        │   ├───   ${GREEN}defaults${RESET}"
@@ -113,38 +126,38 @@ display_ascii_art2
 echo "     │"
 echo "     └──  ${YELLOW}equtil${RESET}"
 echo "         ├── 󰓅 ${YELLOW}optimizer${RESET}"
-echo "         │   ├── 󰬺 󰓅 ${GREEN}optimize${RESET}"
-echo "         │   ├── 󰬻 󰓅 ${GREEN}debloat${RESET}"
-echo "         │   ├── 󰬼 󰓅 ${GREEN}restart config${RESET}"
-echo "         │   ├── 󰬽 󰓅 ${GREEN}install vulkan${RESET}"
-echo "         │   └── 󰬾 󰓅 ${GREEN}install moltenvk${RESET}"
+echo "         │   ├── 󰓅 ${GREEN}optimize${RESET}"
+echo "         │   ├── 󰓅 ${GREEN}debloat${RESET}"
+echo "         │   ├── 󰓅 ${GREEN}restart config${RESET}"
+echo "         │   ├── 󰓅 ${GREEN}install vulkan${RESET}"
+echo "         │   └── 󰓅 ${GREEN}install moltenvk${RESET}"
 echo "         │  "
 echo "         └── 󰌑 return"
 echo
 echo "hit key to select choice (press 'enter' to go return): "
 read choice
 case $choice in
-      "1")
+      "speed")
            echo "optimizing..."
           sh $HOME/installer.eq/mtn/cleanv1.sh
            echo "press enter to go return."
            read;;
-      "2")
+      "debloat")
            echo "debloating..."
          sh $HOME/installer.eq/utils/macos.sh
            echo "press enter to go return."
            read;;
-      "3")
+      "restart")
            echo "restarting config.."
          killall -u anti && open "/Applications/Alfred\ 5.app/"
           echo "press enter to go return."
            read;;
-      "4")
+      "vulkan")
           echo "refreshing sha256 keys..killing zsh.."
         sh  $HOME/installer.eq/utils/drivers/vulkan.sh
           echo "press enter to go return."
            read;;
-      "5")
+      "moltenvk")
           echo "refreshing sha256 keys..killing zsh.."
         sh  $HOME/installer.eq/utils/drivers/moltenvk.sh
           echo "press enter to go return."
@@ -163,40 +176,40 @@ display_ascii_art2
 echo "   │"
 echo "   └──  ${YELLOW}equtil${RESET} "
 echo "       ├── 󰈙 ${YELLOW}docs${RESET}"
-echo "       │   ├── 󰬺 󰈙 ${GREEN}pastebins${RESET}"
-echo "       │   ├── 󰬻 󰈙 ${GREEN}flags${RESET}"
-echo "       │   ├── 󰬼 󰈙 ${GREEN}codesign${RESET}"
-echo "       │   ├── 󰬽 󰈙 ${GREEN}binds${RESET}"
-echo "       │   └── 󰬾 󰈙 ${GREEN}yabai${RESET}"
+echo "       │   ├──  󰈙 ${GREEN}pastebins${RESET}"
+echo "       │   ├──  󰈙 ${GREEN}flags${RESET}"
+echo "       │   ├──  󰈙 ${GREEN}codesign${RESET}"
+echo "       │   ├──  󰈙 ${GREEN}binds${RESET}"
+echo "       │   └──  󰈙 ${GREEN}yabai${RESET}"
 echo "       └── 󰌑 return"
 echo " "
-echo "keys 1-5 (press 'enter' to go return): "
+echo "type cmd to execute (press 'enter' to go return): "
      read choice
     case $choice in
-      "1")
+      "map")
            echo "cmds.."
            cat $HOME/installer.eq/docs/map.txt
            echo "press enter to go return."
            read;;
 
-      "2")
+      "flags")
            echo "${GREEN}flags${RESET}.."
            cat $HOME/installer.eq/docs/flags.txt
            echo "press enter to go return."
            read;;
 
-      "3")
+      "codesign")
            echo "${GREEN}codesign..${RESET}"
            cat $HOME/installer.eq/docs/codesign.txt
            echo "press enter to go return."
            read;;
 
-      "4") echo "binds"
+      "binds") echo "binds"
           cat $HOME/installer.eq/docs/binds.txt
           echo "press enter to go return."
           read;;
 
-      "5") echo "yabai"
+      "yabai") echo "yabai"
           cat $HOME/installer.eq/docs/yabai.txt
           echo "press enter to go return."
           read;;
@@ -208,7 +221,6 @@ echo "keys 1-5 (press 'enter' to go return): "
   done
 }
 
-
 display_downloads_menu() {
 	while true; do
 		clear
@@ -216,30 +228,30 @@ display_downloads_menu() {
 		echo "   │"
 		echo "   └──  ${YELLOW}equtil${RESET}"
 		echo "       ├── 󰈙 ${YELLOW}downloads${RESET}"
-		echo "       │   ├── 󰬺 󰈙 ${GREEN}wallpapers${RESET}"
-		echo "       │   ├── 󰬻 󰈙 ${GREEN}drivers${RESET}"
-		echo "       │   ├── 󰬼 󰈙 ${GREEN}configs${RESET}"
+		echo "       │   ├──  󰈙 ${GREEN}wallpapers${RESET}"
+		echo "       │   ├──  󰈙 ${GREEN}drivers${RESET}"
+		echo "       │   ├──  󰈙 ${GREEN}configs${RESET}"
 		echo "       └── 󰌑 return"
 		echo " "
 		read choice
 		case $choice in
-		"1")
+		"wallpapers")
 			echo "wallpapers.."
 			git clone https://github.com/BitterSweetcandyshop/wallpapers
 			echo "Press enter to return."
 			read
 			;;
 
-		"2")
-			echo "${GREEN}coming soon..${RESET}.."
-			open "https://example.com/drivers"  # Replace the URL with the actual drivers URL
+		"templates")
+			lolcat "coming soon"
+			curl -O "https://downloads.aliveai.net/hud.tar.gz"   # Replace the URL with the actual drivers URL
 			echo "Press enter to return."
 			read
 			;;
 
-		"3")
+		"macgpt")
 			echo "${GREEN}coming soon..${RESET}"
-			open "https://example.com/configs"  # Replace the URL with the actual configs URL
+			curl -O "https://downloads.aliveai.net"   # Replace the URL with the actual configs URL
 			echo "Press enter to return."
 			read
 			;;
@@ -256,20 +268,21 @@ display_downloads_menu() {
 main_menu() {
 	while true; do
 		clear
-		display_ascii_art2
+		display_log_output
 		echo "type help to see cmds"
-		echo "  ├── 󰬺  ${YELLOW}install${RESET}"
-		echo "  ├── 󰬻 󰾆 ${YELLOW}optimize${RESET}"
-		echo "  ├── 󰬼 󰷉 ${YELLOW}docs${RESET}"
-		echo "  ├── 󰬽 󰷉 ${YELLOW}downloads${RESET}"
+		echo "  ├──  ${YELLOW}install${RESET}"
+		echo "  ├── 󰾆 ${YELLOW}optimize${RESET}"
+		echo "  ├── 󰷉 ${YELLOW}docs${RESET}"
+		echo "  ├── 󰷉 ${YELLOW}downloads${RESET}"
+    echo "  ├── 󰷉 ${YELLOW}help${RESET}"
 		echo "  └── 󰌑 exit "
 		echo " "
 		read -r choice
 		case $choice in
-		"1") display_install_menu ;;
-		"2") display_optimize_menu ;;
-		"3") display_docs_menu ;;
-		"4") display_downloads_menu ;;
+		"install") display_install_menu ;;
+		"speed") display_optimize_menu ;;
+		"docs") display_docs_menu ;;
+		"download") display_downloads_menu ;;
 		"help") display_help_menu ;;
 		"")
 			echo "hit enter again to confirm exit. hit any other key to cancel"
