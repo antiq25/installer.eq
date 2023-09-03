@@ -1,88 +1,3 @@
-cd zsh-users/
-ls
-cd ..
-..
-ls
-cd zsh-snap
-ls
-cd znap
-ls
-cd functions/
-ls
-zsh znap
-ls
-vi znap
-;s
-cd ..
-ls
-vi README.md 
-cd
-ls
-cd ..
-ls
-zsh
-sh run.sh
-zsh
-sh
-ls
-bash run.zsh
-./run.sh
-vi run.sh
-vi readme.md
-zsh
-meson ~/mesa/build -Dgallium-drivers=swrast -Ddri-drivers= -Dvulkan-drivers= -Dprefix=~/mesa/build/install -Dlibunwind=disabled -Dosmesa=true -Degl=disabled -Dgles1=disabled -Dgles2=disabled -Dglx=disabled -Dvalgrind=disabled -Dc_std=c11 -Dshared-llvm=false -Dshared-glapi=enabled
-export PKG_CONFIG_PATH="/opt/homebrew/opt/opencl-clhpp-headers/share/pkgconfig"
-export CPPFLAGS="-I/opt/homebrew/opt/opencl-clhpp-headers/include"
-export PKG_CONFIG_PATH="/opt/homebrew/opt/opencl-clhpp-headers/share/pkgconfig"
-export CPPFLAGS="-I/opt/homebrew/opt/opencl-clhpp-headers/include"
-meson ~/mesa/build -Dgallium-drivers=swrast -Ddri-drivers= -Dvulkan-drivers= -Dprefix=~/mesa/build/install -Dlibunwind=disabled -Dosmesa=true -Degl=disabled -Dgles1=disabled -Dgles2=disabled -Dglx=disabled -Dvalgrind=disabled -Dc_std=c11 -Dshared-llvm=false -Dshared-glapi=enabled
-meson
-sh
-help
-cd ..
-vi .bashrc
- 
-ff 
-fastfetch
-cls
-zsh
-./test12.sh
-zsh
-equtils
-s
-sh
-zsh
-pkill zsh
-pkill WIndowServer
-n
-npm install next.js
-ls
-zsh
-cls
-cls
-cls
-bash
-cd
-l
-cls
-cd
-cd 
-ls
-cd 
-vi .bashrc
-ls
-ls
-which env
-ls
-cd .config
-ls
-cd .local
-cd bin
-vi helper 
-bash
-vi .bashrc
-which zsh
-which bash
 brew install bash
 a
 ls
@@ -532,3 +447,88 @@ auto_stack
 zsh
 sourcehelp
 zsh
+/opt/homebrew/Cellar/hollywood/1.0.4/libexec/hollywood 
+toggle_layout
+cls
+zsh
+set_layer
+source helper
+set_layer
+auto_stack
+float_sginal 2
+float_signal
+float_signal 1
+float_reset
+cycle_windows
+get_pixel_colour
+get_pixel_color
+create_spaces
+cdi 
+sftp 137.184.126.173 
+ls
+sftp 137.184.126.173 
+ssh
+ssh
+lsl
+ls
+zsh
+bash
+cls
+cls
+ls
+bash
+cls
+vi .bash_rc
+ls
+vi .bashrc
+vi .bash
+vi .bash_profile
+ls
+vi .bash_env
+ls
+vi .bashrc
+cd
+ls
+vi .bashrc
+cls
+zsh
+cls
+ls
+cls
+source .bash_profile
+ls
+vi .bash_profile
+vi .bash_prompt
+source .bash_prompt
+cls
+vi .bashenv
+vi .bash_profile
+vi .bashrc
+ls
+gls
+ls -al
+vi .bashrc
+zsh
+cls
+cls
+cdcls
+cd installer.eq
+ls
+cls
+ls
+cd ..
+cd 
+ls
+vi .zshrc
+cls
+vi .bashrc
+vi .bashrc
+cls
+cls
+fd
+cls
+vi .bash_profile
+ls
+vi .bashenv
+vi .screenrc
+vi .bash_prompt

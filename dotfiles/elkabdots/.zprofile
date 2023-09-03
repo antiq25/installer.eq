@@ -32,3 +32,5 @@ setopt PRINT_EIGHT_BIT
 bindkey "\e[3;3~" backward-kill-word
 
 
+
+

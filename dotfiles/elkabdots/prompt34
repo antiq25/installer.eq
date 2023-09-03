@@ -13,4 +13,10 @@ PROMPT='%F{white}anti %F{blue}󰅬 %f%F{magenta}%D{%I:%M }%f%F{white}
 # %~ - Current working directory (tilde for home directory)
 
 # Save the changes to your .zshrc file and then open a new terminal window or restart your terminal to apply the changes.
-
+#
+#
+if [[ $COLORTERM = gnome-* && $TERM = xterm ]] && infocmp gnome-256color >/dev/null 2>&1; then
+	export TERM='gnome-256color';
+elif infocmp xterm-256color >/dev/null 2>&1; then
+	export TERM='xterm-256color';
+fi;

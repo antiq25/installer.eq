@@ -1,3 +1,4 @@
+#!/usr/bin/env zsh
 
 if [[ -e "${HOME}/.zshenv" ]]; then
   source "${HOME}/.zshenv"
@@ -59,6 +60,7 @@ bindkey -r '^Q' '^[Q'
 # Load git plugin
 znap eval omz-git 'curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/git/git.plugin.zsh'
 
+HELPERDIR="$HOME/.local/bin/helper"
 
 # Source prompt
 source "$HOME/prompt34"
