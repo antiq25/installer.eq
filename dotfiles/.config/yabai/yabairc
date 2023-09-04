@@ -1,16 +1,15 @@
 #!/usr/bin/env bash
 #
-launchctl unload -F /System/Library/LaunchAgents/com.apple.WindowManager.plist > /dev/null 2>&1 &
 
-source $HOME/.local/bin/helper
+source ${HOME}/.local/bin/helper
+
+launchctl unload -F /System/Library/LaunchAgents/com.apple.WindowManager.plist > /dev/null 2>&1 &
 
 # Unload the macOS WindowManager process
 
 sudo yabai --load-sa
 yabai -m signal --add event=dock_did_restart action="sudo yabai --load-sa"
 yabai -m signal --add event=display_added action="sleep 1 && source ${HOME}/.local/bin/helper && create_spaces 7"
-
-
 
 
 # BAR HEIGHT
@@ -39,10 +38,10 @@ WINDOWS=(
 BORDERS=(
 	window_border on
 	window_border_blur off
-	window_border_hidpi off
+	window_border_hidpi on
 	window_border_width 2
 	window_border_radius 12
-	active_window_border_color 0xff3f64a3
+	active_window_border_color 0xffced5de
 	normal_window_border_color 0xff5e6798
 )
 # window_border_radius 11 \

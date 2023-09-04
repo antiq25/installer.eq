@@ -1,45 +1,3 @@
-brew install bash
-a
-ls
-ls
-cd
-ls
-cls
-bash
-bash
-ls
-vi .bashrc
-ls
-vi .bashrc
-vi .bashrc
-pkill
-pkill uberstitch
-vi .bashrc
-ls
-cd bito
-ls
-cd .bito
-ls
-ls
-bashish --enable-terminal
-bash
-ls
-bashish
-bashish list
-mashish elite2
-mashish -h
-bashish
-bashish THEMENAME ubuntu
-bsahish
-bashish
-bashish THEMENAME ubuntu
-bashish save
-vi .bashrc
-#1689507682
-cd oh-my-bash
-#1689507701
-vi .bashrc
-#1689507760
 cd
 #1689507762
 vi .bashrc
@@ -532,3 +490,42 @@ ls
 vi .bashenv
 vi .screenrc
 vi .bash_prompt
+cls
+cd installer.eq
+ls
+cls
+git init 
+git add . 
+git commit -m new
+git push
+cls
+..
+ls
+ohmybash
+bash
+cls
+posh
+p10k
+zsh
+cls
+cd insta
+cd installer.eq
+ls
+cd scripts
+ls
+open .
+cls
+ls
+vi create_variations.py 
+ls
+ls
+cd fontscripts/
+ls
+vi condenser.py 
+source ${HOME}/.local/bin/helper
+cls
+cd .local
+cd
+cd .local/bin
+ls
+vi helper 
