@@ -83,8 +83,8 @@ AntiAlias:	1
 DefaultFVShowHmetrics:	0
 DefaultFVShowVmetrics:	0
 DefaultFVSize:	48
-DefaultFVRowCount:	12
-DefaultFVColCount:	29
+DefaultFVRowCount:	1
+DefaultFVColCount:	11
 DefaultFVGlyphLabel:	0
 SaveToDir:	0
 OnlyCopyDisplayed:	0
@@ -158,6 +158,7 @@ CV_CB2Tool:	5
 XUID-Base:	1021 459 -85268075
 ShowKerningPane:	1
 PluginStartupMode:	Ask
+Recent:	/Users/anti/installer.eq/fonts/Elkab_Font/Elkab.ttf
 Recent:	/Users/anti/my_website/poseidon.invisiblerobot.io/static/client-portal/icomoon.woff
 Recent:	/Users/anti/Elkab.sfd
 Recent:	/Users/anti/Desktop/Elkab.otf
@@ -167,4 +168,3 @@ Recent:	/Users/anti/installer.eq/fonts/Elkab.ttf
 Recent:	/Users/anti/Elkab/Elkab.ttf
 Recent:	/Users/anti/Untitled2.sfd
 Recent:	/Users/anti/installer.eq/fonts/ELkabbanyEQNerdFontNerdFont-Regular.ttf
-Recent:	/Users/anti/Library/Fonts/elkab.ttf

@@ -1,10 +1,8 @@
 #!/usr/bin/env bash
 #
-
-source ${HOME}/.local/bin/helper
-
 launchctl unload -F /System/Library/LaunchAgents/com.apple.WindowManager.plist > /dev/null 2>&1 &
 
+source $HOME/.local/bin/helper
 # Unload the macOS WindowManager process
 
 sudo yabai --load-sa
