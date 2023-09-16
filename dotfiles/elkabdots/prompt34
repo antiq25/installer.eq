@@ -3,7 +3,7 @@
 # Define the prompt format
 PROMPT='%F{white}anti %F{blue}󰅬 %f%F{magenta}%D{%I:%M }%f%F{white}
 %F{green}%~%f
-> '
+$ '
 
 # Explanation of prompt elements:
 # %F{color} - Start using specified foreground color

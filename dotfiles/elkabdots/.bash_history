@@ -1,70 +1,3 @@
-cd
-#1689507762
-vi .bashrc
-#1689507808
-basdh
-#1689507824
-b sadh
-#1689507809
-bash
-#1689507807
-bash
-#1689507806
-bash
-#1689507805
-bash
-#1689507804
-bash
-#1689507803
-bash
-#1689507802
-bash
-#1689507801
-bash
-#1689507800
-bash
-#1689507799
-bash
-#1689507799
-bash
-#1689507798
-bash
-#1689507843
-ls -a
-#1689507853
-vi .bashrc.omb-backup-20230716044058 
-#1689507827
-bash
-#1689507826
-bash
-#1689507825
-bash
-#1689507823
-bash
-#1689507822
-bash
-#1689507821
-bash
-#1689507820
-bash
-#1689507818
-bash
-#1689507815
-bash
-#1689507814
-bash
-#1689507814
-bash
-#1689507813
-bash
-#1689508017
-cd 
-#1689508019
-vi .profile
-ls
-which bash
-which zshenv
-which 
 ls
 ls
 bash
@@ -529,3 +462,39 @@ cd
 cd .local/bin
 ls
 vi helper 
+cls
+ls
+cd .config
+ls
+cls
+ls
+zsh
+cls
+which $PATH
+ls
+path
+vi .bashrc
+vi .bashrc
+vi .bash_profile
+vi .bashenv
+ls
+vi .sdirs
+vi .sdirs
+vi tldrc
+vi .tldrc
+vi .inputrc
+cls
+cd .local/bin
+ls
+cd color-tests/q
+cd color-tests
+ls
+./colortest..sh
+./colortest.sh
+ls
+python3 colortest.py
+ls
+sh print-named-colors.sh 
+sh show-ansi-colors.sh 
+sh colortest.sh 
+cls

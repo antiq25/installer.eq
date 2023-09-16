@@ -9,6 +9,7 @@ export XDG_CONFIG_HOME="${HOME}/.config"
 export XDG_DATA_HOME="${HOME}/.local/share"
 export XDG_STATE_HOME="${HOME}/.local/state"
 
+export TERM="xterm-kitty"
 
 # Define NVIM PATH
 export NVIM_PATH="/opt/homebrew/bin/nvim"
