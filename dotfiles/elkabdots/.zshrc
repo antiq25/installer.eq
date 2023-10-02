@@ -1,12 +1,16 @@
-#!/usr/bin/env zsh
+
 
 if [[ -e "${HOME}/.zshenv" ]]; then
   source "${HOME}/.zshenv"
 fi
 
+
+
 if [[ -e "${HOME}/.zprofile" ]]; then
   source "${HOME}/.zprofile"
 fi
+
+
 
 ZSH_SNAP_PATH="$HOME/.config/zsh-snap/znap"
 GIT_REPO="https://github.com/marlonrichert/zsh-snap.git"
@@ -51,18 +55,17 @@ znap source trapd00r/LS_COLORS
 znap eval trapd00r/LS_COLORS "$(whence -a dircolors gdircolors) -b LS_COLORS"
 
 znap source marlonrichert/zcolors
-znap eval marlonrichert/zcolors "zcolors ${(q)LS_COLORS}"
+
 
 # Bind keys
 bindkey '^[q' push-line-or-edit
 bindkey -r '^Q' '^[Q'
 
-# Load git plugin
-znap eval omz-git 'curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/git/git.plugin.zsh'
 
-HELPERDIR="$HOME/.local/bin/helper"
+znap eval omz-git 'curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/git/git.plugin.zsh'
 
 # Source prompt
 source "$HOME/prompt34"
-znap prompt
+
+
 

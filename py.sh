@@ -1,8 +1,10 @@
- #!/bin/sh
-brew install anaconda
-#Install Miniforge
+#!/usr/bin/env bash
+echo "Installing Python Packages..."
 
-cd "${HOME}"/installer.eq/pkgs && sh Miniforge3-MacOSX-arm64.sh
+
+
+curl https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-MacOSX-arm64.sh
+
 conda install -c apple tensorflow-deps
 conda install -c conda-forge pybind11
 conda install matplotlib

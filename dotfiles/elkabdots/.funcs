@@ -49,3 +49,8 @@ htrackg() {
 sourcehelp() {
 	source "$HOME/.local/bin/helper"
 }
+
+
+function kill () {
+  command kill -KILL $(pidof "$@")
+}

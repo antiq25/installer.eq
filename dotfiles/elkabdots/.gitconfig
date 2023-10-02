@@ -73,3 +73,4 @@
 	repo = /Users/anti/installer.eq/dotfiles/.config/zsh-snap/trapd00r/LS_COLORS
 	repo = /Users/anti/installer.eq/dotfiles/.config/zsh-snap/zsh-users/zsh-autosuggestions
 	repo = /Users/anti/installer.eq/dotfiles/.config/zsh-snap/zsh-users/zsh-syntax-highlighting
+	repo = /Users/anti/.config/zsh-snap/olivierverdier/zsh-git-prompt

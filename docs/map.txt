@@ -5,7 +5,7 @@
 ────────────────────
 
 
- ```sudo nvram boot-args=-arm64e_preview_abi```
+ sudo nvram boot-args=-arm64e_preview_abi
 
 
 To generate a key for a specific binary follow these steps:
@@ -18,9 +18,9 @@ To generate a key for a specific binary follow these steps:
 
 3. Write this into the prompt that gets displayed when running the previous command ^
 
-   anti ALL = (root) NOPASSWD: sha256:entersha256keyhere put/binary/bath/here --load-sa
+   *$HOMENAMEGOESHERE* ALL = (root) NOPASSWD: sha256:entersha256keyhere put/binary/bath/here --load-sa
 
-    ^--- yopu put the name of your $HOME here
+
 
 
 
@@ -53,7 +53,7 @@ BOOTSTRAP 5
 https://github.com/twbs/bootstrap
 
 
-- Dotfiles:
+- Dotfiles: ( AND THANKS TO )
   git clone https://github.com/FelixKratz/dotfiles
 
   git clone https://github.com/khaneliman/dotfiles

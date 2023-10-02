@@ -1,66 +1,4 @@
 ls
-ls
-bash
-ls
-ls- a
- vi .bashrc
-ls
-ls -a
--help
-hepl
-help
-vi .shrc
-brew search shellrc
-ls
-the fuck
-brew install thefuck
-vi .bash_profile
-bash
-sh
-ls
-zsh
-sh
-sh
-vi .profile
-ls
-vi .profile
-ls
-ls
-ls
-bash
-ls
-ls
-cls
-cls
-pkill 
-pkill 
-ls
-rm -rf .bashrc.omb-backup-20230716044058
-rm -rf .bashrc.omb-backup-20230716044058.swp 
-kill
-ls
-bashish
-bashish list
-bashish pet
-ls
-cd ?
-vi .bashrc
-vi .bash_profile
-vi .bashprofile
-vi .bash_profile
-bash
-cd 
-vi .bashrc
-bash
-sh
-ls
-vi .bashrc
-bash
-vi .bash_profile
-vash
-vi .bashrc
-vi .bashrc
-ls
 znap compile
 ls
 ls
@@ -498,3 +436,65 @@ sh print-named-colors.sh
 sh show-ansi-colors.sh 
 sh colortest.sh 
 cls
+cls
+bash
+fish
+equtils 
+code installer.eq/
+ls
+brew install nordvpn
+source env/bin/activate
+ls
+python3 app.py 
+cd .,
+cd ..
+cd anti/
+cd testnet
+ls
+code project-chat/
+cls
+vi .bash_prompt
+ls
+cd installer.eq/
+ls
+cd dotfiles/
+ls
+cd elkabdots/
+ls
+cd ..
+rm -rf ~/prompt34
+cp prompt34 ~/
+zsh
+ls
+cls
+ls
+cd
+ls
+cls
+btop
+ls
+speed
+$PATH
+cls
+cls
+ls
+vi py.sh
+ls
+cd
+ cd dotfiles/
+l
+ls
+vi .zshrc
+source /Users/anti/Elafon/env/bin/activate
+console
+ls
+cls
+ls
+equtils 
+cls
+cd 
+zsh
+cls
+cls
+cls
+kitty
