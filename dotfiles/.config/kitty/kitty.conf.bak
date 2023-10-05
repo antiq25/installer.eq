@@ -1,5 +1,5 @@
 # Fonts
-font_family									    AntiqFont
+font_family									    AntiqVGA
 italic_font      								auto
 bold_font        								auto
 bold_italic_font 								auto
@@ -125,7 +125,7 @@ map ctrl+shift+f6     					set_font_size 16.0
 map ctrl+f launch --type=overlay --stdin-source=@screen_scrollback /opt/homebrew/bin/fzf  --no-sort --no-mouse --exact -i
 
 # BEGIN_KITTY_THEME
-# Dark Pastel
+# Bluloco Light
 include current-theme.conf
 # END_KITTY_THEME
 

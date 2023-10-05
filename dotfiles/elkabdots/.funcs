@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 
 fd() {
   local dir
@@ -45,7 +45,6 @@ htrackg() {
 }
 
 
-
 sourcehelp() {
 	source "$HOME/.local/bin/helper"
 }
@@ -54,3 +53,26 @@ sourcehelp() {
 function kill () {
   command kill -KILL $(pidof "$@")
 }
+
+unpkg () {
+  # Check for the correct number of arguments
+  if [ "$#" -ne 1 ]; then
+    echo "Usage: unpack_file <filename>"
+    return 1
+  fi
+
+  # Get the filename from the command line argument
+  local filename="$1"
+
+  # Check the file extension and extract accordingly
+  case "$filename" in
+    *.tar) tar -xvf "$filename" ;;
+    *.tar.gz | *.tgz) tar -xzvf "$filename" ;;
+    *.tar.bz2) tar -xjvf "$filename" ;;
+    *.tar.xz) tar -xJvf "$filename" ;;
+    *) echo "Unsupported file extension: $filename"; return 1 ;;
+  esac
+
+  return 0
+}
+

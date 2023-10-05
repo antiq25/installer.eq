@@ -114,7 +114,7 @@ AlmostHVBound:	3
 CheckSelfIntersects:	1
 ShowDebugChanges:	1
 DefaultScreenDpiSystem:	0
-DefaultOutputFormat:	18
+DefaultOutputFormat:	13
 DefaultBitmapFormat:	10
 SaveValidate:	0
 SaveFontLogAsk:	0
@@ -158,6 +158,8 @@ CV_CB2Tool:	5
 XUID-Base:	1021 459 -85268075
 ShowKerningPane:	1
 PluginStartupMode:	Ask
+Recent:	/Users/anti/ANTIQVGA.ttf
+Recent:	/Users/anti/Px437IBMVGA9x8NerdFont-Regular.ttf
 Recent:	/Users/anti/installer.eq/fonts/AntiqFont.ttf
 Recent:	/Users/anti/Library/Fonts/Px437_DOS-V_TWN16.ttf
 Recent:	/Users/anti/ElabNew.ttf
@@ -166,5 +168,3 @@ Recent:	/Users/anti/2.ttf
 Recent:	/Users/anti/Untitled1.sfd
 Recent:	/Users/anti/Library/Fonts/AntiqFont.ttf
 Recent:	/Users/anti/Library/Fonts/Px437_Acer710_Mono.ttf
-Recent:	/Users/anti/antiqmono.ttf
-Recent:	/Users/anti/Px437IBMBIOSNF.otf

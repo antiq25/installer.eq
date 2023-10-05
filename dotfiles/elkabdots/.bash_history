@@ -1,21 +1,4 @@
 ls
-znap compile
-ls
-ls
-cd yabai
-make icon
-yabai --uninstall-service
-yabai --stop-service
-pkill yabai
-sudo yabai --uninstall-sa
-make all
-ls
-cd bin
-ls
-make icon
-cd ..
-make icon
-ls
 make sign
 xattr -c yabai
 make sign
@@ -498,3 +481,20 @@ cls
 cls
 cls
 kitty
+cls
+ls
+cls
+kitten themes
+targz colorzilla
+ls
+sftp 
+sftp
+ssh root@137.184.126.173 
+zsh
+cls
+targz dist
+ls
+zsh
+cls
+cls
+zsh
