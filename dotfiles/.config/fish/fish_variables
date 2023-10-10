@@ -22,7 +22,7 @@ SETUVAR _fisher_patrickf1_2F_fzf_2E_fish_files:\x7e/\x2econfig/fish/functions/_f
 SETUVAR _fisher_plugins:franciscolourenco/done\x1egazorby/fish\x2dabbreviation\x2dtips\x1eilancosman/tide\x40v5\x1eivakyb/fish_ssh_agent\x1ejorgebucaran/autopair\x2efish\x1ejorgebucaran/fisher\x1ejorgebucaran/nvm\x2efish\x1ejorgebucaran/spark\x2efish\x1ejoseluisq/gitnow\x1ejunegunn/fzf\x1emeaningful\x2dooo/sponge\x1enickeb96/puffer\x2dfish\x1epatrickf1/fzf\x2efish\x1elilyball/nix\x2denv\x2efish
 SETUVAR _fisher_upgraded_to_4_4:\x1d
 SETUVAR _tide_left_items:vi_mode\x1eos\x1epwd\x1egit\x1enewline
-SETUVAR _tide_right_items:status\x1ecmd_duration\x1econtext\x1ejobs\x1enode\x1evirtual_env\x1erustc\x1ejava\x1ephp\x1ego\x1ekubectl\x1eaws\x1etime
+SETUVAR _tide_right_items:status\x1ecmd_duration\x1econtext\x1ejobs\x1enode\x1evirtual_env\x1erustc\x1ejava\x1ephp\x1ego\x1ekubectl\x1eaws\x1enix_shell\x1etime
 SETUVAR fish_color_autosuggestion:555\x1ebrblack
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_comment:red

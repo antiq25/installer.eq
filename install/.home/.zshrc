@@ -4,7 +4,6 @@ if [[ -e "${HOME}/.zshenv" ]]; then
 fi
 
 
-
 if [[ -e "${HOME}/.zprofile" ]]; then
   source "${HOME}/.zprofile"
 fi

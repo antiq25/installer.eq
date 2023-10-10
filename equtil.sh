@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env bash 
+
 CYAN="\033[0;96m"
 YELLOW="\033[0;33m"
 RED="\033[0;31m"
@@ -169,57 +170,35 @@ case $choice in
   }
 
 # Function to display the Docs sub-menu
-display_docs_menu() {
-while true; do
-clear
-display_ascii_art2
-echo "   │"
-echo "   └──  ${YELLOW}equtil${RESET} "
-echo "       ├── 󰈙 ${YELLOW}docs${RESET}"
-echo "       │   ├──  󰈙 ${GREEN}pastebins${RESET}"
-echo "       │   ├──  󰈙 ${GREEN}flags${RESET}"
-echo "       │   ├──  󰈙 ${GREEN}codesign${RESET}"
-echo "       │   ├──  󰈙 ${GREEN}binds${RESET}"
-echo "       │   └──  󰈙 ${GREEN}yabai${RESET}"
-echo "       └── 󰌑 return"
-echo " "
-echo "type cmd to execute (press 'enter' to go return): "
-     read choice
-    case $choice in
-      "map")
-           echo "cmds.."
-           cat $HOME/installer.eq/docs/map.txt
-           echo "press enter to go return."
-           read;;
-
-      "flags")
-           echo "${GREEN}flags${RESET}.."
-           cat $HOME/installer.eq/docs/flags.txt
-           echo "press enter to go return."
-           read;;
-
-      "codesign")
-           echo "${GREEN}codesign..${RESET}"
-           cat $HOME/installer.eq/docs/codesign.txt
-           echo "press enter to go return."
-           read;;
-
-      "binds") echo "binds"
-          cat $HOME/installer.eq/docs/binds.txt
-          echo "press enter to go return."
-          read;;
-
-      "yabai") echo "yabai"
-          cat $HOME/installer.eq/docs/yabai.txt
-          echo "press enter to go return."
-          read;;
-  "")
-     clear
-     return 0;;   # Allow 'enter' to return to the main menu
-      *) echo "invalid choice.. hit enter to try again"; read;;
-    esac
-  done
-}
+# display_docs_menu() {
+# while true; do
+# clear
+# display_ascii_art2
+# echo "   │"
+# echo "   └──  ${YELLOW}equtil${RESET} "
+# echo "       ├── 󰈙 ${YELLOW}docs${RESET}"
+# echo "       │   ├──  󰈙 ${GREEN}pastebins${RESET}"
+# echo "       │   ├──  󰈙 ${GREEN}flags${RESET}"
+# echo "       │   ├──  󰈙 ${GREEN}codesign${RESET}"
+# echo "       │   ├──  󰈙 ${GREEN}binds${RESET}"
+# echo "       │   └──  󰈙 ${GREEN}yabai${RESET}"
+# echo "       └── 󰌑 return"
+# echo " "
+# echo "type cmd to execute (press 'enter' to go return): "
+#      read choice
+#     case $choice in
+#       "map")
+#            echo "list."
+#           sh $HOME/installer.eq/docs/k.sh
+#            echo "press enter to go return."
+#            read;;
+#   "")
+#      clear
+#      return 0;;   # Allow 'enter' to return to the main menu
+#       *) echo "invalid choice.. hit enter to try again"; read;;
+#     esac
+#   done
+# }
 
 display_downloads_menu() {
 	while true; do
@@ -281,7 +260,7 @@ main_menu() {
 		case $choice in
 		"install") display_install_menu ;;
 		"speed") display_optimize_menu ;;
-		"docs") display_docs_menu ;;
+		"docs")  sh "${HOME}/installer.eq/docs/k.sh" ;;
 		"download") display_downloads_menu ;;
 		"help") display_help_menu ;;
 		"")

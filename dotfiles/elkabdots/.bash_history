@@ -1,123 +1,3 @@
-ls
-make sign
-xattr -c yabai
-make sign
-cd /private 
-cd etc
-ls
-cd sudo
-zsh
-which bash
-which zsh
-cd
-equtils 
-ls
-ls -a 
-cd 
-ls -a
-vi .bashish
-rm -rf .bashish
-ls
-vi .lscolors
-vi .aliases
-ls
-vi .bashrc
-ls
-cd dotfiles
-ls
-sh brew.sh
-killallDock
-killall Dock
-zsh
-vi .bashrc
-vi .zshenv
-ls
-zsh
-killall SystemUIServer
-sl
-ls
-ls -al
-cd .config
-ls
-cd dotfiles
-ls
-cd
-cd dotfiles/
-ls
-cd bin
-ls
-cd ..
-ls -al
-vi .bashrc
-vi .bash_prompt
-ls
-vi .osx
-vi .inputrc
-source .inputrc
-source
-ls
-zsh
-bls
-cls
-vi .extra
-cd extra
-ls
-vi .bash_profile
-vi .bash_profile
-bash
-ls
-vi .bash_profile
-bash
-cls
-ls
-vi .bash_profile
-which extra
-which $ESTRA
-which $zshrc
-ls
-vi .exports
-zsh
-ls
-vi .zshenv
-rm -rf .zshenv
-ls
-zsh
-pipes.sh
-pipes.sh
-ifstat
-cls
-zsh
-zsh
-ls
-cls
-vkvia
-vulkanconfig
-./bash
-bash bash
-ls
-open bash
-cls
-cls
-ls
-ls
-cd ..
-ls
-ls
-cd ..
-ls
-vi .bashrc
-source .bash_profile 
-ls
-vi .bash_profile
-vi .bashrc
-bash
-ls
-path
-ls
-path
-cls
-zsh
-cat │ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCxJnW9m9u/7gCrpIEms5N/8VmZy6CmjEcVfv0QujV2uMVXFQdE8/Y8Icb1n0CjkOEiedAwHn9GCC19cLqokCyinRa+0bMDy1secP21eqrMa+PWYXzcsjX5deEZW+fDWqW6E0egon8JPZJV62Cq2/8QtjrAhsmdZ8IBpC1vtnhc9osx
        │ PYlk+cbL/sOgyrwNJvYG/Ag4h4HC/BY5iQyBlaF04WsS5Rwix9zH1XIPaYxA7koYbKRhdg00yelF2q+BNMF5sRRGEbg4eCXHh1dPU9THeER1Jo7kDOCP9xM2HKXdaHsQBPq/tR8phlEPSH+e+ZHTs+TuwrVPz4Sx27xJUDixZ/Oi9Doe0c7gikGAONf+3AyVx+Mm4EvoOlUoo34Sv8LI
        │ cZ8fd7fwA/lBJ4h2Hn9holPdOm3rbw0ZEguQuGGaZO0ED1yI3mZOcoHQUJngXwE5Addx9AsLGqyA3PCSh3sqTBYHuBWZ/wmqjDqaGaAvFGr9z8CuxzYxlXsWjGIW928= anti@antcls
 cls
@@ -497,4 +377,124 @@ ls
 zsh
 cls
 cls
+zsh
+targz font.py
+ls
+targz fonts.py
+ls
+zsh
+targz tree
+ls
+rm -rf tree.tar
+cd tree
+ls
+rm -rf node_modules/
+ls
+zsh
+targz helpQuif3/
+sftp root@137.184.126.173 
+ssh root@137.184.126.173 
+ls
+help
+cd 
+cd st
+ls
+cd st
+cls
+ls
+cd spa-backend-ts/
+ls
+npm install
+npm run dev
+ls
+cd dist
+ls
+cd ..
+cd src
+ls
+open .
+code .
+cls
+cd Nuke
+ls
+yarn run dev
+yarn run dev
+cls
+ccls
+ls
+cls
+cd Nuke
+ls
+npm run dev
+cls
+for bitclouds eyes
+cls
+cd nuke
+ls
+yarn run dev
+cls
+cd
+cd st
+zsh
+npm run client
+fsociety
+ls
+ls
+zsh
+equtils 
+proxy
+proxychains4 
+pro
+zsh
+ls
+sh lazyaircrack.sh 
+./lazyaircrack.sh 
+chmod +x lazyaircrack.sh 
+sudo lazy
+sudo sh lazyaircrack.sh 
+ls
+sh lazyaircrack.sh q
+zs
+hzsh
+zsh
+scraper
+./scraper
+cd Desktop/
+./scraper
+chmod +x scraper
+./scraper
+exit
+cd installer.eq
+ls
+sh dotfile.sh
+ls
+cd
+s
+ls
+vi .zshrc
+v
+cls
+alacritty
+cls
+bash
+cls
+cls
+which bash
+which sh
+zsh
+cls
+zsh
+cls
+zsh
+targz projects
+btop
+ls
+cd
+vi .bashrc
+vi .bash_profile
+vi .bashrc
+ls
+vi .bashprofile
+vi .bash_pro
+vi .bash_profile
 zsh

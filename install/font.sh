@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 function print_banner() {
   local CYAN=$(tput setaf 6)

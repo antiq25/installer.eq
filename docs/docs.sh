@@ -1,4 +1,5 @@
-#!/bin/bash
+#!/usr/bin/env  bash
+
 CYAN="\033[0;96m"
 YELLOW="\033[0;33m"
 RED="\033[0;31m"
@@ -12,8 +13,6 @@ display_ascii_art2() {
 DOCUMENTATION HOLDER                                                     
 EOF
 }
-
-
 
 # Function to display the Docs sub-menu
 display_docs_menu() {
