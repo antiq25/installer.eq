@@ -1,151 +1,3 @@
-       │ PYlk+cbL/sOgyrwNJvYG/Ag4h4HC/BY5iQyBlaF04WsS5Rwix9zH1XIPaYxA7koYbKRhdg00yelF2q+BNMF5sRRGEbg4eCXHh1dPU9THeER1Jo7kDOCP9xM2HKXdaHsQBPq/tR8phlEPSH+e+ZHTs+TuwrVPz4Sx27xJUDixZ/Oi9Doe0c7gikGAONf+3AyVx+Mm4EvoOlUoo34Sv8LI
-       │ cZ8fd7fwA/lBJ4h2Hn9holPdOm3rbw0ZEguQuGGaZO0ED1yI3mZOcoHQUJngXwE5Addx9AsLGqyA3PCSh3sqTBYHuBWZ/wmqjDqaGaAvFGr9z8CuxzYxlXsWjGIW928= anti@antcls
-cls
-cat
-zsh
-./lollipop /path/to/dir/withOrWithoutIndexHtml portNum -p passwordHere
-sl
-ls
-source .prompt
-ls
-source prompt
-ls
-ls
-source .bash_prompt
-ls
-ls
-ls
-vi .bash_rc
-vi .bashrc
-ls
-cls
-ls
-vi .inputrc
-source .inputrc
-ls
-zsh
-ls
-cls
-zsh
-cd
-ls
-.bashrc
-vi .bash_profile
-ls
-sudo lsof -i :5000
-zsh
-cls
-zsh
-cls
-cls
-bash
-ls
-cls
-zsh
-ls
-cls
-ls
-cls
-ls
-vi .bashrc
-vi .bashenv
-vi .profile
-bash
-source .bash_prompt
-ls
-cls
-cls
-ls
-cd
-vi .bashrc
-vi .bash_profile
-cls
-ls
-vi .zsh_profile
-vi .zprofile
-vi .bash_prompt
-vi .bash_profile
-vi .bashrc
-bash
-cls
-ls
-ls
-cd desktop
-ls
-kitten themes
-cls
-cls
-vi .bash_prompt
-cls
-cd
-vi .bash_prompt
-cls
-bash
-bash
-bash
-cls
-vi .bashrc
-vi .bash_prompt
-bash
-vi .bash_prompt
-bash
-cls
-bash
-kitty
-cls
-ls
-ls
-vi .bash_prompt
-kitty
-ls
-ls
-clear
-cls
-cls
-cls
-cls
-cls
-cls
-zsh
-cls
-bash
-fish
-./hollywood -s       17 -d 10
-ls
-cd bin
-ls
-./wallstreet 
-toggle_layout
-yabai --toggle-layout
-helper toggle_layout
-ls
-helper 
-set -ex
-c
-sourdehelp
-sourcehelp
-source .funcs
-sourcehelp
-new_window 
-bash
-get_pixel_color
-sourcehelp
-sourcehelp
-source ~/.local/bin/helper
-create_spaces
-auto_stack() l
-aut_stack
-auto_stack
-zsh
-sourcehelp
-zsh
-/opt/homebrew/Cellar/hollywood/1.0.4/libexec/hollywood 
-toggle_layout
-cls
-zsh
-set_layer
-source helper
-set_layer
 auto_stack
 float_sginal 2
 float_signal
@@ -498,3 +350,151 @@ vi .bashprofile
 vi .bash_pro
 vi .bash_profile
 zsh
+zsh
+ls
+cls
+cls
+zsh
+source .zshrc
+zsh
+ls
+zsh
+ls
+zsh
+ls
+git clone https://github.com/antiq25/installer.eq
+cls
+ls
+vi .zshenv
+ls
+ls -al
+rm -rf .local
+ls
+ls
+ls -al
+rm -rf installer.eq
+ls
+zsh
+cls
+ls
+znap
+zsh
+cls
+zs
+eq
+cd i
+cd 
+cd .local
+ls
+cd state
+ls
+rm -rf znap zsh-autocomplete/
+ls
+ls
+zsh
+chsh -s 
+chsh -l
+chsh -l shell
+chsh -s anti
+chsh -s antiq
+chsh -s zsh
+chsh -s /opt/homebrew/bin/zsh:w
+chsh -s /opt/homebrew/bin/zsh
+cd /private/
+ls
+cd etc
+ls
+vi shell
+vi shells
+which zsh
+brew
+brew doctor
+brew config
+ls
+chsh
+cd /etc
+ls
+vi shells
+cls
+zsh
+zsh
+cls
+ls
+eq
+ls
+echo $0
+echo $ZDOTDIR
+ps -p $$
+chsh -s /opt/homebrew/bin/zsh
+ps -p $$
+topgrade
+-p $
+-p
+ps -p $
+ps -p $$
+/opt/homebrew/bin/zsh
+softwareupdate --install-rosetta
+sudo softwareupdate --install--rosetta
+sudo softwareupdate  --install-rosetta	
+update
+zsh
+ls
+zsh
+ls
+cd .config/alacritty/
+vi alacritty.yml 
+cls
+cd .config
+vi alacritty/
+vi alacritty/alacritty.yml 
+zsh
+cls
+pwd
+ls
+gh repo clone components
+rm -rf components/*
+cd components/
+git initt
+git init 
+git add .
+git commit -m new
+git push
+pwd
+cd desktop
+ls
+gh repo clone client
+cd client/
+ls
+npm i
+ls -0al
+ls- al
+ls
+code api
+ls
+cd client
+ls
+code .
+cd
+cd api
+cd client
+ls
+rm -rf node_modules/ package-lock.json yarn.lock
+ls
+gh repo create
+ls
+mv api dist package.json  tsconfig.json  client
+ls
+cd client
+git init 
+git add .
+git commit -m new
+git push -u origin main
+ls
+vi README.md 
+ls
+cd
+server
+zsh
+ls
+cd vanilla/
+server 3001
