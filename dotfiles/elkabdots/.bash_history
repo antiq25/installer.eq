@@ -1,126 +1,3 @@
-auto_stack
-float_sginal 2
-float_signal
-float_signal 1
-float_reset
-cycle_windows
-get_pixel_colour
-get_pixel_color
-create_spaces
-cdi 
-sftp 137.184.126.173 
-ls
-sftp 137.184.126.173 
-ssh
-ssh
-lsl
-ls
-zsh
-bash
-cls
-cls
-ls
-bash
-cls
-vi .bash_rc
-ls
-vi .bashrc
-vi .bash
-vi .bash_profile
-ls
-vi .bash_env
-ls
-vi .bashrc
-cd
-ls
-vi .bashrc
-cls
-zsh
-cls
-ls
-cls
-source .bash_profile
-ls
-vi .bash_profile
-vi .bash_prompt
-source .bash_prompt
-cls
-vi .bashenv
-vi .bash_profile
-vi .bashrc
-ls
-gls
-ls -al
-vi .bashrc
-zsh
-cls
-cls
-cdcls
-cd installer.eq
-ls
-cls
-ls
-cd ..
-cd 
-ls
-vi .zshrc
-cls
-vi .bashrc
-vi .bashrc
-cls
-cls
-fd
-cls
-vi .bash_profile
-ls
-vi .bashenv
-vi .screenrc
-vi .bash_prompt
-cls
-cd installer.eq
-ls
-cls
-git init 
-git add . 
-git commit -m new
-git push
-cls
-..
-ls
-ohmybash
-bash
-cls
-posh
-p10k
-zsh
-cls
-cd insta
-cd installer.eq
-ls
-cd scripts
-ls
-open .
-cls
-ls
-vi create_variations.py 
-ls
-ls
-cd fontscripts/
-ls
-vi condenser.py 
-source ${HOME}/.local/bin/helper
-cls
-cd .local
-cd
-cd .local/bin
-ls
-vi helper 
-cls
-ls
-cd .config
-ls
-cls
-ls
 zsh
 cls
 which $PATH
@@ -498,3 +375,126 @@ zsh
 ls
 cd vanilla/
 server 3001
+ls
+cls
+ls
+bash
+cls
+zsh
+kill node
+pkill node
+targz The.Rocky.Horror.Picture.Show.1975.1080p.BluRay.H264.AAC-RARBG
+targz The.Rocky.Horror.Picture.Show.1975.1080p.BluRay.H264.AAC-RARBG.mp4
+ls
+pkgz
+pkg 
+tar
+tar -h
+tar -c The.Rocky.Horror.Picture.Show.1975.1080p.BluRay.H264.AAC-RARBG.mp4
+ls
+cls
+projects
+ls
+cd
+ls
+zsh
+ssh root@
+ssh root@137.184.126.173
+yt-dl https://youtu.be/fxJsL1RVrvE?si=hNA5IMnPip0A4rhx
+youtube-dl https://youtu.be/fxJsL1RVrvE?si=hNA5IMnPip0A4rhx
+ls
+open Quake\ 3\ Arena\ Excellent\ sound-fxJsL1RVrvE.mp4 
+ffmpeg Quake\ 3\ Arena\ Excellent\ sound-fxJsL1RVrvE.mp4 Excellent.wav
+ffmpeg Quake\ 3\ Arena\ Excellent\ sound-fxJsL1RVrvE.mp4 --format .wav
+ls
+ffmpeg Quake\ 3\ Arena\ Excellent\ sound-fxJsL1RVrvE.mp4 Excellent.mp4 -f .wav
+ffmpeg Quake\ 3\ Arena\ Excellent\ sound-fxJsL1RVrvE.mp4 Excellent.mp4 -f .wav -o quake.wav
+ls
+ls
+cd
+zsh
+cd sms
+cd sms-backen
+cd sms-backend
+ls
+cd ..
+cd sms-backend
+ls
+cd psyops/
+ls
+source env/bin/activate
+ls
+yarn run dev:db
+yarn run dev:db
+yarn run dev:db
+yarn run dev
+ls
+cd src
+ls
+vi scraper.py 
+sudo airport -c1
+ls
+sudo tcpdump "type mgt subtype beacon and ether src $BSSID" -I -c 1 -i en0 -w beacon.cap
+ls
+airport 
+airport scan
+airport scan
+mergecap -a -F pcap -w capture.cap beacon.cap handshake.cap
+ls
+airport
+airport -z
+sudo airport -0z
+sudo airport -z
+airport  -a
+airport -a 
+airport -a 
+airport -a -i
+airport -i
+sudo 
+ls
+cd
+zsh
+ls
+cd ..
+ls
+cd
+cd documents
+ls
+cd clientPackage/
+ls
+cd ..
+cd test
+ls
+cd ...
+ls
+cd ..
+ls
+cd Documents/
+sl
+ls
+cd push
+ls
+cd clientPackage/
+ls
+cd devias-template/
+ls
+npm install
+cd ..
+ls
+cd sms-backendTEST/
+ls
+cd client
+ls
+cd //
+ls
+cd ..
+ls
+cd
+sl
+ls
+cd sms-backend/
+ls
+yarn run dev
+ls
+zs
+zsh

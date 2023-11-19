@@ -1,0 +1,1 @@
+{"version":3,"file":"safeError.js","sourceRoot":"","sources":["../../../src/safeError.ts"],"names":[],"mappings":"AAAA,MAAM,SAAU,SAAQ,KAAK;IACpB,SAAS,CAAS;IACzB,YAAY,OAAY,EAAE,YAAqB,KAAK;QAClD,KAAK,CAAC,OAAO,CAAC,CAAA;QACd,IAAI,CAAC,IAAI,GAAG,WAAW,CAAA;QACvB,IAAI,CAAC,SAAS,GAAG,SAAS,CAAA;IAC5B,CAAC;CACF;AAED,eAAe,SAAS,CAAA"}

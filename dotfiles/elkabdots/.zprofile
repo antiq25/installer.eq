@@ -30,3 +30,8 @@ setopt MULTIBYTE
 
 # Use Alt/Meta + Delete to delete the preceding word
 bindkey "\e[3;3~" backward-kill-word
+
+# Setting PATH for Python 3.6
+# The original version is saved in .zprofile.pysave
+
+

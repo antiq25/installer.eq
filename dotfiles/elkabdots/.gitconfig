@@ -74,3 +74,15 @@
 	repo = /Users/anti/installer.eq/dotfiles/.config/zsh-snap/zsh-users/zsh-autosuggestions
 	repo = /Users/anti/installer.eq/dotfiles/.config/zsh-snap/zsh-users/zsh-syntax-highlighting
 	repo = /Users/anti/.config/zsh-snap/olivierverdier/zsh-git-prompt
+	repo = /Users/antiq/.config/zsh-snap/znap
+	repo = /Users/antiq/.config/zsh-snap/marlonrichert/zcolors
+	repo = /Users/antiq/.config/zsh-snap/marlonrichert/zsh-autocomplete
+	repo = /Users/antiq/.config/zsh-snap/marlonrichert/zsh-edit
+	repo = /Users/antiq/.config/zsh-snap/marlonrichert/zsh-hist
+	repo = /Users/antiq/.config/zsh-snap/trapd00r/LS_COLORS
+	repo = /Users/antiq/.config/zsh-snap/zsh-users/zsh-autosuggestions
+	repo = /Users/antiq/.config/zsh-snap/zsh-users/zsh-syntax-highlighting
+[safe]
+	directory = /Users/antiq/vde_vmnet
+[init]
+	defaultBranch = cool

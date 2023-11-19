@@ -5,6 +5,3 @@ for file in .vulkanpaths .functions .func  .lscolors .aliases .profile; do
     file="$HOME/$file"
     [[ -f $file ]] && source $file
 done
-
-
-

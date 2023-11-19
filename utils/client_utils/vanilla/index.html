@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup & Login</title>
+    <link rel="stylesheet" href="./dist/style.css">
+</head>
+
+<body>
+
+    <!-- Signup Form -->
+    <div>
+        <h2>Signup</h2>
+        <input type="text" id="signUpEmail" placeholder="Email">
+        <input type="password" id="signUpPassword" placeholder="Password">
+        <input type="text" id="signUpFirstName" placeholder="First Name">
+        <input type="text" id="signUpLastName" placeholder="Last Name">
+        <button id="signUpButton">Signup</button>
+        <p id="signupResponse"></p>
+    </div>
+
+    <!-- Login Form -->
+    <div>
+        <h2>Login</h2>
+        <input type="text" id="loginEmail" placeholder="Email">
+        <input type="password" id="loginPassword" placeholder="Password">
+        <button id="loginButton">Login</button>
+        <p id="loginResponse"></p>
+    </div>
+
+    <!-- ... (similar structures for other forms) -->
+
+    <!-- Response Display -->
+    <div id="responseElement"></div>
+
+    <!-- JS Modules -->
+    <script type="module" src="./dist/axios.min.js"></script>
+    <script type="module" src="./dist/apiConfig.js"></script>
+    <script type="module" src="./dist/apiCaller.js"></script>
+    <script type="module" src="./dist/apiExecute.js"></script>
+
+</body>
+
+</html>
