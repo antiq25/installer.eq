@@ -1,9 +1,3 @@
-zsh
-cls
-which $PATH
-ls
-path
-vi .bashrc
 vi .bashrc
 vi .bash_profile
 vi .bashenv
@@ -498,3 +492,9 @@ yarn run dev
 ls
 zs
 zsh
+ls
+cls
+ls
+zsh
+ls
+cls

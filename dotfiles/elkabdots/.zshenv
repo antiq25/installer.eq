@@ -5,7 +5,7 @@ export EDITOR="$VISUAL"
 export MICRO_TRUECOLOR="1"
 export GIT_EDITOR='nvim'
 
-export PATH="/usr/local/bin:/Users/anti/.local/bin:/Users/anti/bin:/Users/anti/miniforge3/bin:/opt/homebrew/anaconda3/bin:/opt/homebrew/bin:/Users/anti/.cargo/bin:/opt/homebrew/sbin:$PATH"
+export PATH="/usr/local/bin:/Users/a/.local/bin:/Users/a/bin:/Users/a/miniforge3/bin:/opt/homebrew/anaconda3/bin:/opt/homebrew/bin:/Users/a/.cargo/bin:/opt/homebrew/sbin:$PATH"
 
 
 if [[ -f /opt/homebrew/bin/brew ]]; then
