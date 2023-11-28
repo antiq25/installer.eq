@@ -34,31 +34,31 @@ async function updateDependenciesRecursively(packageJson, depType) {
 
   const updates = {};
 
-  for (const [packageName, currentVersion] of Object.entries(packageJson[depType])) {
+  for (const [packageName, currentVersionRange] of Object.entries(packageJson[depType])) {
     try {
       const packageData = await getPackageData(packageName);
       if (!packageData) continue;
 
       const latestVersion = await getLatestVersion(packageData);
-      if (!semver.valid(latestVersion)) {
-        throw new Error(`Invalid latest version: ${latestVersion}`);
-      }
-      if (!semver.validRange(currentVersion)) {
-        throw new Error(`Invalid current version range: ${currentVersion}`);
-      }
-      if (semver.gt(latestVersion, currentVersion) && !semver.satisfies(latestVersion, currentVersion)) {
-        updates[packageName] = `^${latestVersion}`;
-        logVerbose(`Updated ${packageName} to version ${latestVersion}`);
+      if (semver.validRange(currentVersionRange)) {
+        const currentVersion = semver.minVersion(currentVersionRange);
+        if (currentVersion && semver.lt(currentVersion.version, latestVersion)) {
+          updates[packageName] = `^${latestVersion}`;
+          logVerbose(`Updated ${packageName} to version ${latestVersion}`);
+        } else {
+          logVerbose(`Kept ${packageName} at version ${currentVersionRange}`);
+        }
       } else {
-        logVerbose(`Kept ${packageName} at version ${currentVersion}`);
+        throw new Error(`Invalid version range: ${currentVersionRange}`);
       }
     } catch (error) {
-      console.error(`Error processing ${packageName}@${currentVersion}: ${error.message}`);
+      console.error(`Error processing ${packageName}@${currentVersionRange}: ${error.message}`);
     }
   }
 
   return updates;
 }
+
 
 
 
