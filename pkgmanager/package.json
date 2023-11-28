@@ -1,0 +1,24 @@
+{
+  "name": "package-updater",
+  "version": "1.0.0",
+  "description": "A command-line tool to update package.json dependencies to their latest versions.",
+  "bin": {
+    "package-updater": "./index.js"
+  },
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "npm",
+    "package.json",
+    "update",
+    "dependencies"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "semver": "^7.3.7"
+  },
+  "type": "module"
+}
