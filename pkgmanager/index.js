@@ -40,7 +40,13 @@ async function updateDependenciesRecursively(packageJson, depType) {
       if (!packageData) continue;
 
       const latestVersion = await getLatestVersion(packageData);
-      if (latestVersion && semver.validRange(currentVersion) && !semver.satisfies(latestVersion, currentVersion)) {
+      if (!semver.valid(latestVersion)) {
+        throw new Error(`Invalid latest version: ${latestVersion}`);
+      }
+      if (!semver.validRange(currentVersion)) {
+        throw new Error(`Invalid current version range: ${currentVersion}`);
+      }
+      if (semver.gt(latestVersion, currentVersion) && !semver.satisfies(latestVersion, currentVersion)) {
         updates[packageName] = `^${latestVersion}`;
         logVerbose(`Updated ${packageName} to version ${latestVersion}`);
       } else {
@@ -53,6 +59,7 @@ async function updateDependenciesRecursively(packageJson, depType) {
 
   return updates;
 }
+
 
 
 
