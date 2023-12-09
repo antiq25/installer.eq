@@ -1,2 +1,2 @@
-alias ls='LS_COLORS="di=1;92:ex=33;100:*.zip=31;41:ow=34;100:" lsd -a --color=auto'
+alias ls="lsd -a --color=auto"
 

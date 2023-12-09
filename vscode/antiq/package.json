@@ -1,0 +1,24 @@
+{
+  "name": "antiq",
+  "displayName": "antiq_theme",
+  "description": "antiq",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Themes"
+  ],
+  "contributes": {
+    "themes": [
+      {
+        "label": "antiq",
+        "uiTheme": "vs-dark",
+        "path": "./themes/antiq-color-theme.json"
+      }
+    ]
+  },
+  "dependencies": {
+    "vsce": "^2.15.0"
+  }
+}

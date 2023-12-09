@@ -1,7 +1,7 @@
 # Fonts
-font_family									    FiraCode Nerd Font Mono
+font_family									   	BlexMono Nerd Font Mono
 italic_font      								auto
-bold_font        								FiraCode Nerd Font Mono
+bold_font        								auto
 bold_italic_font 								auto
 font_size        								14
 
@@ -127,7 +127,7 @@ map ctrl+shift+f6     					set_font_size 16.0
 map ctrl+f launch --type=overlay --stdin-source=@screen_scrollback /opt/homebrew/bin/fzf  --no-sort --no-mouse --exact -i
 
 # BEGIN_KITTY_THEME
-# VSCode_Dark
+# Tokyo Night Day
 include current-theme.conf
 # END_KITTY_THEME
 

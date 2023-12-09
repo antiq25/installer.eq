@@ -6,11 +6,13 @@ export MICRO_TRUECOLOR="1"
 export GIT_EDITOR='nvim'
 
 export PATH="/usr/local/bin:/Users/a/.local/bin:/Users/a/bin:/Users/a/miniforge3/bin:/opt/homebrew/anaconda3/bin:/opt/homebrew/bin:/Users/a/.cargo/bin:/opt/homebrew/sbin:$PATH"
+export PATH="/opt/homebrew/opt/binutils/bin:$PATH"
 
 
 if [[ -f /opt/homebrew/bin/brew ]]; then
 	eval "$("/opt/homebrew/bin/brew" shellenv)"
 fi
+
 
 
 export HELPERDIR="${HOME}/.local/bin/helper"

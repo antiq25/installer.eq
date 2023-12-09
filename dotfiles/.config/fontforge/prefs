@@ -114,7 +114,7 @@ AlmostHVBound:	3
 CheckSelfIntersects:	1
 ShowDebugChanges:	1
 DefaultScreenDpiSystem:	0
-DefaultOutputFormat:	13
+DefaultOutputFormat:	16
 DefaultBitmapFormat:	10
 SaveValidate:	0
 SaveFontLogAsk:	0
@@ -158,13 +158,13 @@ CV_CB2Tool:	5
 XUID-Base:	1021 459 -85268075
 ShowKerningPane:	1
 PluginStartupMode:	Ask
-Recent:	/Users/antiq/Downloads/e0cb4168e0fb6f6d002ca8f845508011.ttf
-Recent:	/Users/antiq/installer.eq/install/.home/Elkab/Elkab.ttf
-Recent:	/Users/antiq/Untitled1.sfd
-Recent:	/Users/antiq/Untitled2.sfd
-Recent:	/Users/antiq/Library/Fonts/LigaSFMonoNerdFont-Medium.otf
-Recent:	/Users/antiq/installer.eq/fonts/SanFransisco/SF-Mono/LigaSFMonoNerdFont-Bold.otf
-Recent:	/Users/antiq/installer.eq/fonts/SanFransisco/SF-Mono/LigaSFMonoNerdFont-BoldItalic.otf
-Recent:	/Users/antiq/installer.eq/fonts/SanFransisco/SF-Mono/LigaSFMonoNerdFont-Heavy.otf
-Recent:	/Users/antiq/installer.eq/fonts/SanFransisco/SF-Mono/LigaSFMonoNerdFont-HeavyItalic.otf
-Recent:	/Users/antiq/installer.eq/fonts/SanFransisco/SF-Mono/LigaSFMonoNerdFont-Light.otf
+Recent:	/Users/a/BlexMonoNerdFontNerdFont-Regular.ttf
+Recent:	/Users/a/Library/Fonts (Removed)/12-05-2023 01_27_38 GMT-8/IBMPlexMono-Bold.ttf
+Recent:	/Users/a/Library/Fonts (Removed)/12-05-2023 01_27_38 GMT-8/IBMPlexMono-BoldItalic.ttf
+Recent:	/Users/a/Library/Fonts (Removed)/12-05-2023 01_27_38 GMT-8/IBMPlexMono-ExtraLight.ttf
+Recent:	/Users/a/Library/Fonts (Removed)/12-05-2023 01_27_38 GMT-8/IBMPlexMono-ExtraLightItalic.ttf
+Recent:	/Users/a/Library/Fonts (Removed)/12-05-2023 01_27_38 GMT-8/IBMPlexMono-Italic.ttf
+Recent:	/Users/a/Library/Fonts (Removed)/12-05-2023 01_27_38 GMT-8/IBMPlexMono-Light.ttf
+Recent:	/Users/a/Library/Fonts (Removed)/12-05-2023 01_27_38 GMT-8/IBMPlexMono-LightItalic.ttf
+Recent:	/Users/a/Library/Fonts (Removed)/12-05-2023 01_27_38 GMT-8/IBMPlexMono-Medium.ttf
+Recent:	/Users/a/Library/Fonts (Removed)/12-05-2023 01_27_38 GMT-8/IBMPlexMono-MediumItalic.ttf

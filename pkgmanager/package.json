@@ -1,24 +1,26 @@
 {
-  "name": "package-updater",
+  "name": "pkgupdater",
   "version": "1.0.0",
-  "description": "A command-line tool to update package.json dependencies to their latest versions.",
+  "description": "A description for your package",
+  "main": "index.js",
   "bin": {
-    "package-updater": "./index.js"
+    "pkg-update": "./index.js"
   },
   "scripts": {
-    "start": "node index.js"
+    "test": "echo \"Running tests...\" && exit 0",
+    "build": "echo \"Building package...\" && exit 0"
   },
-  "keywords": [
-    "npm",
-    "package.json",
-    "update",
-    "dependencies"
-  ],
+  "keywords": [],
   "author": "Your Name",
-  "license": "MIT",
+  "license": "ISC",
   "dependencies": {
-    "axios": "^0.27.2",
-    "semver": "^7.3.7"
+    "axios": "^1.6.2",
+    "fs": "0.0.1",
+    "path": "^0.12.7",
+    "semver": "^7.5.4"
   },
-  "type": "module"
+  "type": "module",
+  "devDependencies": {
+    "axios": "^1.6.2"
+  }
 }

@@ -1,33 +1,28 @@
 #!/bin/bash
 
-# Check if the correct number of arguments is provided
+
 if [ "$#" -ne 3 ]; then
   echo "Usage: <username/repo> <branch> <file-or-directory-path>"
   exit 1
 fi
 
-# Assign arguments to variables
+
 REPO_SLUG="$1"
 BRANCH="$2"
 FILE_PATH="$3"
-
-# Construct the full repository URL
 REPO_URL="https://github.com/$REPO_SLUG.git"
-
-# Extract the repository name from the slug
 REPO_NAME=$(basename "$REPO_SLUG")
 
 # Clone the repository without checking out files (--no-checkout)
 git clone -n --depth=1 --filter=blob:none --branch "$BRANCH" "$REPO_URL" "$REPO_NAME"
 cd "$REPO_NAME"
 
-# Initialize sparse-checkout
+
 git sparse-checkout init --cone
 
-# Add the file or directory path to the sparse-checkout configuration
 git sparse-checkout set "$FILE_PATH"
 
-# Checkout the specified file or directory
+
 git checkout
 
 echo "The specified file or directory has been checked out."

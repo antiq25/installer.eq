@@ -1,120 +1,3 @@
-vi .bashrc
-vi .bash_profile
-vi .bashenv
-ls
-vi .sdirs
-vi .sdirs
-vi tldrc
-vi .tldrc
-vi .inputrc
-cls
-cd .local/bin
-ls
-cd color-tests/q
-cd color-tests
-ls
-./colortest..sh
-./colortest.sh
-ls
-python3 colortest.py
-ls
-sh print-named-colors.sh 
-sh show-ansi-colors.sh 
-sh colortest.sh 
-cls
-cls
-bash
-fish
-equtils 
-code installer.eq/
-ls
-brew install nordvpn
-source env/bin/activate
-ls
-python3 app.py 
-cd .,
-cd ..
-cd anti/
-cd testnet
-ls
-code project-chat/
-cls
-vi .bash_prompt
-ls
-cd installer.eq/
-ls
-cd dotfiles/
-ls
-cd elkabdots/
-ls
-cd ..
-rm -rf ~/prompt34
-cp prompt34 ~/
-zsh
-ls
-cls
-ls
-cd
-ls
-cls
-btop
-ls
-speed
-$PATH
-cls
-cls
-ls
-vi py.sh
-ls
-cd
- cd dotfiles/
-l
-ls
-vi .zshrc
-source /Users/anti/Elafon/env/bin/activate
-console
-ls
-cls
-ls
-equtils 
-cls
-cd 
-zsh
-cls
-cls
-cls
-kitty
-cls
-ls
-cls
-kitten themes
-targz colorzilla
-ls
-sftp 
-sftp
-ssh root@137.184.126.173 
-zsh
-cls
-targz dist
-ls
-zsh
-cls
-cls
-zsh
-targz font.py
-ls
-targz fonts.py
-ls
-zsh
-targz tree
-ls
-rm -rf tree.tar
-cd tree
-ls
-rm -rf node_modules/
-ls
-zsh
-targz helpQuif3/
 sftp root@137.184.126.173 
 ssh root@137.184.126.173 
 ls
@@ -498,3 +381,120 @@ ls
 zsh
 ls
 cls
+cls
+zsh
+cls
+ls
+c
+ls
+cd
+ls
+cd
+ls
+c
+cd /opt
+ls
+ls -al
+cd x11
+ls
+cd ..
+chown -R $(whoami) x11
+sudo chown -R $(whoami) x11
+ls
+ls -al
+cd homebrew/
+ls
+cd ..
+sudo chown -R anit:anti X11/
+sudo chown -R a:staff x11 
+ls
+ls -al
+sudo chown -R $(whoami_ a:admin
+sudo chown -R $(whoami) a:admin 
+sudo chown -R a:admin X11
+ls
+ls -al
+cd homebrew/
+ls
+ls -al
+sudo chown -R $(whoami) anaconda3/
+ls
+znap clean
+zsh
+ls
+zsh
+exit
+ls
+vi prompt34
+zsh
+shasum 256 
+shasum256 yabai
+ls
+cdcls
+ls
+brew install gnutils
+brew reinstall gnutils
+shasum
+shasum256
+cls
+  echo 'export PATH="/opt/homebrew/opt/binutils/bin:$PATH"' >> ~/.bashrc
+vi .bashrc
+cls
+ls
+shasum256
+zsh
+hcxpcapngtool bettercap-wifi-handshakes.pcap 
+hcxpcapngtool bettercap-wifi-handshakes.pcap -o cat.hash
+hashcat cat.hash 
+hashcat cat.hash 
+hashcat --h
+hashcat --help
+hashcat
+hastcat f.hccap 
+hashcat f.hccap 
+hashcat f.hccap  wifi
+hashcat f.hccap -h
+hashcat -a 3 -m 0 f.hccap 
+hashcat -a 3 -m 0 f.hccap ?a?a?a?a?a?a
+hashcat -a 4 hashcat -a 0 -m 0 example0.hash example.dict -r rules/best64.rule -m 0 f.hccap
+hash f.hccap 
+hcxpcapngtool f.hccap 
+hcxpcapngtool f.hccap  
+hcxpcapngtool -h
+hcxpcapngtool --all f.hccap 
+ls
+hcxpcapngtool bettercap-wifi-handshakes.pcap 
+ls
+cat hashcat -a 0 -m 0 example0.hash example.dict -r rules/best64.rule
+hcxpcapngtool bettercap-wifi-handshakes.pcap 
+hcxpcapngtool bettercap-wifi-handshakes.pcap -o hashcatf
+ls
+hashcat hashcatf 
+ls
+vi .bashrc
+airdecap-ng 
+airdecap-ng en0
+airdecap-ng -w en0
+airdecap-ng 
+cd
+airdecap-ng -w bettercap-wifi-handshakes.pcap 
+airdecap-ng -w 61  bettercap-wifi-handshakes.pcap  
+airdecap-ng  bettercap-wifi-handshakes.pcap   
+ls
+hashcat hashcatf 
+hashcat -h
+zsh
+hashcat capture.hccapx 
+sudo hashcat capture.hccapx 
+ls
+ls -al
+ls /opt/homebrew/Cellar/zsh/5.9/share/zsh/functions/
+-s al /opt/homebrew/Cellar/zsh/5.9/share/zsh/functions/
+ls -l /opt/homebrew/Cellar/zsh/5.9/share/zsh/functions/
+lsperms /opt/homebrew/Cellar/zsh/5.9/share/zsh/functions/
+/opt/homebrew/Cellar/zsh/5.9/share/zsh/functions
+lsperms
+chmod +x .
+ls
+ls -al
+sudo -s 
