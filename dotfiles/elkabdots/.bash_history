@@ -1,109 +1,3 @@
-sftp root@137.184.126.173 
-ssh root@137.184.126.173 
-ls
-help
-cd 
-cd st
-ls
-cd st
-cls
-ls
-cd spa-backend-ts/
-ls
-npm install
-npm run dev
-ls
-cd dist
-ls
-cd ..
-cd src
-ls
-open .
-code .
-cls
-cd Nuke
-ls
-yarn run dev
-yarn run dev
-cls
-ccls
-ls
-cls
-cd Nuke
-ls
-npm run dev
-cls
-for bitclouds eyes
-cls
-cd nuke
-ls
-yarn run dev
-cls
-cd
-cd st
-zsh
-npm run client
-fsociety
-ls
-ls
-zsh
-equtils 
-proxy
-proxychains4 
-pro
-zsh
-ls
-sh lazyaircrack.sh 
-./lazyaircrack.sh 
-chmod +x lazyaircrack.sh 
-sudo lazy
-sudo sh lazyaircrack.sh 
-ls
-sh lazyaircrack.sh q
-zs
-hzsh
-zsh
-scraper
-./scraper
-cd Desktop/
-./scraper
-chmod +x scraper
-./scraper
-exit
-cd installer.eq
-ls
-sh dotfile.sh
-ls
-cd
-s
-ls
-vi .zshrc
-v
-cls
-alacritty
-cls
-bash
-cls
-cls
-which bash
-which sh
-zsh
-cls
-zsh
-cls
-zsh
-targz projects
-btop
-ls
-cd
-vi .bashrc
-vi .bash_profile
-vi .bashrc
-ls
-vi .bashprofile
-vi .bash_pro
-vi .bash_profile
-zsh
 zsh
 ls
 cls
@@ -498,3 +392,109 @@ chmod +x .
 ls
 ls -al
 sudo -s 
+sh rea
+./reaver 
+reaver
+ls
+cd dotfiles
+ls
+source .aliases
+ls
+airport
+airport --scan
+ls
+airport en0 sniff 
+sudo airport en0 sniff
+aircrack-ng /tmp airportSniff24usAy.cap
+aircrack-ng /tmp airportSniff24usAy.cap
+aircrack-ng /tmp/airportSniff24usAy.cap
+aircrack-ng /tmp/airportSniffbBUOGp.cap
+sudo aircrack-ng /tmp/airportSniffbBUOGp.cap 1 
+sudo aircrack-ng /tmp/airportSniffbBUOGp.cap 25 ~/installer.eq/docs/Hacking_Cheat_Sheet/RockYou-MostPopular500000PassesLetters_less50000.dic 
+sudo aircrack-ng /tmp/airportSniffbBUOGp.cap 3  ~/installer.eq/docs/Hacking_Cheat_Sheet/RockYou-MostPopular500000PassesLetters_less50000.dic  
+sudo aircrack-ng /tmp/airportSniffbBUOGp.cap 3  -w ~/installer.eq/docs/Hacking_Cheat_Sheet/RockYou-MostPopular500000PassesLetters_less50000.dic   
+bettercap
+sudo airport -s
+bash
+airodump-ng start
+airodump-ng en0
+sudo airodump-ng en0
+ifconfig
+sudo airodump-ng gif0
+sudo airodump-ng awdl0
+sudo airodump-ng-oui-update
+airodump-ng
+ap-ng  bettercap-wifi-handshakes.pcap   
+airodump-ng -s
+man airodump-ng
+aireplay-ng 
+aireplay-ng -iface en0
+aireplay-ng -iface en0 -4
+aireplay-ng -iface en0 --test
+air
+airbase-ng
+airbase -ng en0
+airbase-ng en0
+airbase-ng en0 start
+airbase-ng start en0
+ls
+brew reinstall aircrack-ng
+brew reinstall aircrack-ng
+airodump-ng-oui-update
+ls
+airodump-ng-oui-update
+airbase-ng 
+airbase-ng en0
+airbase-ng en0 start
+ls
+cd ...
+ls
+cd ..
+ls
+cd naive-hashcat/
+sl
+ls
+ls
+cd naive-hashcat/
+ls
+./naive-hashcat.sh 
+./build-hashcat-osx.sh 
+./install 
+cd /opt/homebrew/share/
+ls
+cd bash-completion/
+ls
+cd completions/
+ls
+ls
+hashcat bettercap-wifi-handshakes.pcap
+bashcat -m 2005  bettercap-wifi-handshakes.pcap
+hashcat
+cd WiFiCrack/
+ls
+vi WiFiCrack.sh 
+vi .zshrc
+ls
+cls
+nmap 
+cls
+bash
+kitty
+ls
+ls
+cls
+ls
+open LigaSFMonoNerdFont-MediumItalic.ttc 
+vi .zshrc
+cd 
+ls
+cd dots
+ls
+vi .install.sh 
+ls
+ls
+sh .install.sh 
+vi .zshrc
+ls
+./run.sh 
+exit

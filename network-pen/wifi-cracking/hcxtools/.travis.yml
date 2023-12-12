@@ -1,0 +1,26 @@
+dist: trusty
+sudo: false
+cache:
+  ccache: true
+
+language: none
+ 
+matrix:
+ include:
+   - os: linux
+     addons:
+       apt:
+         sources:
+           - ubuntu-toolchain-r-test
+         packages:
+           - gcc-12
+           - ccache
+           - make
+           - libcurl4-gnutls-dev
+     env:
+       - MATRIX_EVAL="CC=gcc-12 DO_INSTALL=1"
+before_install:
+  - eval "${MATRIX_EVAL}"
+  - export "CC=ccache $CC"
+script:
+  - "make"

@@ -1,0 +1,9 @@
+{
+	"id": "YSp6qU9sZToAjnN",
+	"json": "{\"id\":\"YSp6qU9sZToAjnN\",\"url\":\"https://playvalorant.com/en-us/media\",\"loadedUrl\":\"https://playvalorant.com/en-us/media/\",\"uniqueKey\":\"https://playvalorant.com/en-us/media\",\"method\":\"GET\",\"noRetry\":false,\"retryCount\":0,\"errorMessages\":[],\"headers\":{},\"userData\":{\"__crawlee\":{\"state\":4}},\"handledAt\":\"2023-11-28T00:19:12.434Z\"}",
+	"method": "GET",
+	"orderNo": null,
+	"retryCount": 0,
+	"uniqueKey": "https://playvalorant.com/en-us/media",
+	"url": "https://playvalorant.com/en-us/media"
+}

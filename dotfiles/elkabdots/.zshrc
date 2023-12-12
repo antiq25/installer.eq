@@ -30,15 +30,6 @@ for file in "${files[@]}"; do
   fi
 done
 
-[ -d "/opt/homebrew/share/zsh-autosuggestions/" ] && source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh \
-                                                  || source ~/.config/zsh-snap/zsh-users/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-[ -d "/opt/homebrew/share/zsh-syntax-highlighting/highlighters" ] && export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=/opt/homebrew/share/zsh-syntax-highlighting/highlighters \
-                                                                  || export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR=~/.config/zsh-snap/zsh-users/zsh-syntax-highlighting/highlighters \
-
-
-[ -d "/opt/homebrew/share/zsh-syntax-highlighting/" ] && source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh \
-                                                  || source  ~/.config/zsh-snap/zsh-users/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # Define and source plugins array
 plugins=(
   "marlonrichert/zsh-autocomplete"
