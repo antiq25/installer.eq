@@ -7,6 +7,8 @@
 
  sudo nvram boot-args=-arm64e_preview_abi
 
+sudo ln -s /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport /usr/local/bin/airport
+
 
 To generate a key for a specific binary follow these steps:
 

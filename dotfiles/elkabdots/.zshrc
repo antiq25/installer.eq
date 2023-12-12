@@ -72,3 +72,4 @@ source "$HOME/prompt34"
 
 
 
+export PATH="/opt/homebrew/opt/libpcap/bin:$PATH"

@@ -1,78 +1,3 @@
-zsh
-ls
-git clone https://github.com/antiq25/installer.eq
-cls
-ls
-vi .zshenv
-ls
-ls -al
-rm -rf .local
-ls
-ls
-ls -al
-rm -rf installer.eq
-ls
-zsh
-cls
-ls
-znap
-zsh
-cls
-zs
-eq
-cd i
-cd 
-cd .local
-ls
-cd state
-ls
-rm -rf znap zsh-autocomplete/
-ls
-ls
-zsh
-chsh -s 
-chsh -l
-chsh -l shell
-chsh -s anti
-chsh -s antiq
-chsh -s zsh
-chsh -s /opt/homebrew/bin/zsh:w
-chsh -s /opt/homebrew/bin/zsh
-cd /private/
-ls
-cd etc
-ls
-vi shell
-vi shells
-which zsh
-brew
-brew doctor
-brew config
-ls
-chsh
-cd /etc
-ls
-vi shells
-cls
-zsh
-zsh
-cls
-ls
-eq
-ls
-echo $0
-echo $ZDOTDIR
-ps -p $$
-chsh -s /opt/homebrew/bin/zsh
-ps -p $$
-topgrade
--p $
--p
-ps -p $
-ps -p $$
-/opt/homebrew/bin/zsh
-softwareupdate --install-rosetta
-sudo softwareupdate --install--rosetta
 sudo softwareupdate  --install-rosetta	
 update
 zsh
@@ -498,3 +423,78 @@ chmod +x concatfiles
 ./concatfiles 
 ./concatfiles profiles.json response.json
 vi combined.txt 
+ls
+ls
+cd profiles
+ls
+cls
+cd ..
+cd hashcat-utils/
+ls
+cd bin
+ls
+cd 
+cd src
+ls
+cd hashcat-utils/
+ls
+cd src
+ls
+make 
+ls
+cd ..
+ls
+rm -rf .git .github
+ls
+rm -rf .gitignore 
+ls
+cd ..
+ls
+mv hashcat-utils installer.eq/network-pen/
+ls
+vi combined.txt 
+ls
+vi .profile
+cls
+bash
+systemct
+cls
+ls
+sudo pkill all -u 
+1234
+sudo killall -u 
+sudo killall -u  a
+ls
+pythn setup.py 
+cd wifiphisher/
+ls
+python pywifiphisher.py 
+brew install wifiphisher
+cd ..
+ls
+python -m setup.py
+dnsmasq
+sudo dnsmasq start
+brew services start dnsmasq
+python3 setup.py 
+cls
+ls
+ls
+cd installer.eq
+ls
+cd network-pen/
+ls
+cd fsociety/
+ls
+python fsociety.py 
+python use python2
+sh install.sh
+ls
+fsociety
+sudo insta..sh
+sudo install.sh
+sudo sh install.sh
+fsociety
+ls
+conda install python2
+conda install python-2
