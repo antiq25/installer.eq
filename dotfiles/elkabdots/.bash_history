@@ -1,15 +1,5 @@
 zsh
 ls
-cls
-cls
-zsh
-source .zshrc
-zsh
-ls
-zsh
-ls
-zsh
-ls
 git clone https://github.com/antiq25/installer.eq
 cls
 ls
@@ -498,3 +488,13 @@ vi .zshrc
 ls
 ./run.sh 
 exit
+cls
+ls
+vi concatfiles.sh
+concat
+./concat
+ls
+chmod +x concatfiles
+./concatfiles 
+./concatfiles profiles.json response.json
+vi combined.txt 

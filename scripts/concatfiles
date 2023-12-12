@@ -1,0 +1,27 @@
+#!/bin/bash
+
+# Check if at least two arguments are provided
+if [ "$#" -lt 2 ]; then
+  echo "Usage: $0 file1 file2 [file3 ...]"
+  exit 1
+fi
+
+# Name of the output file
+output_file="combined.txt"
+
+# Empty the output file if it already exists
+> "$output_file"
+
+# Loop through all arguments
+for file in "$@"; do
+  # Check if the file exists
+  if [ -f "$file" ]; then
+    # Concatenate the file to the output file
+    cat "$file" >> "$output_file"
+  else
+    echo "Warning: '$file' does not exist and will be skipped."
+  fi
+done
+
+echo "All files have been concatenated into $output_file."
+
