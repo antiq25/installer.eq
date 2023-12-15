@@ -1,21 +1,3 @@
-sudo softwareupdate  --install-rosetta	
-update
-zsh
-ls
-zsh
-ls
-cd .config/alacritty/
-vi alacritty.yml 
-cls
-cd .config
-vi alacritty/
-vi alacritty/alacritty.yml 
-zsh
-cls
-pwd
-ls
-gh repo clone components
-rm -rf components/*
 cd components/
 git initt
 git init 
@@ -498,3 +480,21 @@ fsociety
 ls
 conda install python2
 conda install python-2
+kp kitty
+kp zsh
+ppidof kittyt
+pidof kitty
+pidof ssh
+kp 
+kp 49504
+ls
+ls
+cd installer.eq
+ls
+cd
+ls
+cd installer.eq
+ls
+vi linuxdeps.sh 
+ls
+vi linuxdeps.sh 
