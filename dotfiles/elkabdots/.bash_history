@@ -1,30 +1,3 @@
-cd components/
-git initt
-git init 
-git add .
-git commit -m new
-git push
-pwd
-cd desktop
-ls
-gh repo clone client
-cd client/
-ls
-npm i
-ls -0al
-ls- al
-ls
-code api
-ls
-cd client
-ls
-code .
-cd
-cd api
-cd client
-ls
-rm -rf node_modules/ package-lock.json yarn.lock
-ls
 gh repo create
 ls
 mv api dist package.json  tsconfig.json  client
@@ -498,3 +471,30 @@ ls
 vi linuxdeps.sh 
 ls
 vi linuxdeps.sh 
+ls
+multipass 
+multipass shell
+ls
+vi .bashenv
+vi
+cls
+zzsh
+zsh
+ls
+ifconfig
+ipconfig
+ifconfig
+dig 10.0.0.217
+nmap 10.0.0.217
+sbin/ifconfig
+ifconfig
+cls
+ls
+cls
+cls
+ls
+func
+func
+fn
+function
+zsh

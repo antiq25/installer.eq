@@ -89,6 +89,7 @@
 	repo = /Users/a/.config/zsh-snap/marlonrichert/zsh-hist
 	repo = /Users/a/.config/zsh-snap/trapd00r/LS_COLORS
 	repo = /Users/a/.config/zsh-snap/zsh-users/zsh-syntax-highlighting
+	repo = /Users/a/.config/zsh-snap/zsh-users/zsh-autosuggestions
 [safe]
 	directory = /Users/antiq/vde_vmnet
 [init]

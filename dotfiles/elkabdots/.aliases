@@ -23,8 +23,6 @@ else # macOS `ls`
 	colorflag="-G"
 	export LSCOLORS='BxBxhxDxfxhxhxhxhxcxcx'
 fi
-
-
 # Replace some more things with better alternatives
 #[ $(command -v bat) ] && alias cat='bat'
 [ $(command -v nvim) ] && alias vim='nvim'
@@ -164,3 +162,5 @@ alias loadhelp="source ~/.local/bin/helper"
 alias eqproject="cd ~/desktop/projects"
 
 alias ssheq="ssh root@137.184.126.173"
+
+alias killnode="sudo killall -KILL node && killall -KILL next-server"

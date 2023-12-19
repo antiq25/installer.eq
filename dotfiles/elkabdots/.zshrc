@@ -7,46 +7,61 @@ if [[ -e "${HOME}/.zprofile" ]]; then
   source "${HOME}/.zprofile"
 fi
 
-# Install zsh-snap if it doesn't exist
+# Define variables
 ZSH_SNAP_PATH="$HOME/.config/zsh-snap/znap"
 GIT_REPO="https://github.com/marlonrichert/zsh-snap.git"
+AUTOSUGGESTIONS_PATH="/opt/homebrew/share/zsh-autosuggestions/"
+SYNTAX_HIGHLIGHTING_PATH="/opt/homebrew/share/zsh-syntax-highlighting/"
+HIGHLIGHTERS_PATH="/opt/homebrew/share/zsh-syntax-highlighting/highlighters"
+PLUGINS=(
+  "marlonrichert/zsh-autocomplete"
+  "marlonrichert/zsh-edit"
+  "marlonrichert/zsh-hist"
+)
+FILES=(
+  ".functions"
+  ".fzf.zsh"
+  ".aliases"
+  ".funcs"
+	".lscolors"
+)
+
+# Source zsh-snap if it doesn't exist
 if [[ ! -r "$ZSH_SNAP_PATH/znap.zsh" ]]; then
   git clone --depth 1 "$GIT_REPO" "$ZSH_SNAP_PATH"
 fi
 source "$ZSH_SNAP_PATH/znap.zsh"
 
+# Source zsh-autosuggestions and zsh-syntax-highlighting
+if [ -d "$AUTOSUGGESTIONS_PATH" ]; then
+  source "$AUTOSUGGESTIONS_PATH/zsh-autosuggestions.zsh"
+else
+  source "/usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh"
+fi
+
+if [ -d "$SYNTAX_HIGHLIGHTING_PATH" ]; then
+  source "$SYNTAX_HIGHLIGHTING_PATH/zsh-syntax-highlighting.zsh"
+  export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR="$HIGHLIGHTERS_PATH"
+else
+  source "/usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+  export ZSH_HIGHLIGHT_HIGHLIGHTERS_DIR="/usr/local/share/zsh-syntax-highlighting/highlighters"
+fi
+
 # Source files
-files=(
-  ".functions"
-  ".fzf.zsh"
-  ".lscolors"
-  ".aliases"
-  ".funcs"
-)
-for file in "${files[@]}"; do
+for file in "${FILES[@]}"; do
   file="$HOME/$file"
   if [[ -f "$file" ]]; then
     source "$file"
   fi
 done
 
-# Define and source plugins array
-plugins=(
-  "marlonrichert/zsh-autocomplete"
-  "marlonrichert/zsh-edit"
-  "marlonrichert/zsh-hist"
-)
-for plugin in "${plugins[@]}"; do
+# Source plugins
+for plugin in "${PLUGINS[@]}"; do
   znap source "$plugin"
 done
 
-# Source zsh-autosuggestions and set strategy to 'history'
+# Set autosuggestions strategy to 'history'
 ZSH_AUTOSUGGEST_STRATEGY=( history )
-znap source "zsh-users/zsh-autosuggestions"
-
-# Source zsh-syntax-highlighting
-
-znap source "zsh-users/zsh-syntax-highlighting"
 
 # Source LS_COLORS and zcolors
 znap source "trapd00r/LS_COLORS"
@@ -62,14 +77,11 @@ bindkey -r "^Q" "^[Q"
 # Load git plugin
 znap eval omz-git 'curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/plugins/git/git.plugin.zsh'
 
-#zle -N reverse-yank-pop
+# Set PATH
 export PATH="$HOME/miniforge3/bin:opt/homebrew/anaconda3/bin:$PATH"
 
 # Source prompt
 source "$HOME/prompt34"
-#znap prompt
 
-
-
-
+# Add to PATH
 export PATH="/opt/homebrew/opt/libpcap/bin:$PATH"
